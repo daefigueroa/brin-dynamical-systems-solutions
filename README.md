@@ -1,1 +1,1 @@
-# dssols
+# Solutions to selected exercises from 'Introduction to Dynamical Systems' by Brin & Stuck. 

@@ -1,0 +1,45 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{proofsteps}[2025/04/05 Custom proof statements]
+
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{xparse}
+
+\newcounter{stm}
+\renewcommand{\thestm}{(\arabic{stm})}
+
+\newcommand{\sectionlabel}[1]{%
+  \par\vspace{1.2ex}%
+  \noindent\textbf{#1}\par\vspace{0.8ex}%
+}
+
+\NewDocumentEnvironment{stm}{m O{}}{%
+  \refstepcounter{stm}\label{#1}%
+  \begingroup
+  \setlength{\belowdisplayskip}{0pt}%
+  \setlength{\belowdisplayshortskip}{-12pt}%
+  \ifstrequal{#2}{final-proof}
+    {\color{black}}
+    {%
+      \ifstrequal{#2}{reasoning}
+        {\color{blue!100!black}}
+        {%
+          \ifstrequal{#2}{exercise}
+            {\color{green!50!black}}
+            {%
+              \ifstrequal{#2}{unused}
+                {\color{purple!70!black}}
+                {%
+                  \color{black}%
+                }%
+            }%
+        }%
+    }%
+  \noindent
+  \ignorespaces
+}{%
+  \hfill
+  \thestm
+  \endgroup
+  \par\vspace{0.8ex}
+}
