@@ -4,5 +4,3 @@ Detailed solutions to selected exercises, including the reasoning used to get to
 Statements that are not needed for the final proof displayed in a different color.
 
 Exercises are taken from the 2015 paperback edition.
-
-Still a work in progress. 
