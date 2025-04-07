@@ -8,38 +8,45 @@
 \newcounter{stm}
 \renewcommand{\thestm}{(\arabic{stm})}
 
+% Reserve a fixed width for the statement number.
+\newlength{\stmnumwidth}
+\setlength{\stmnumwidth}{3em} % adjust this value if needed
+
 \newcommand{\sectionlabel}[1]{%
   \par\vspace{1.2ex}%
-  \noindent\textbf{#1}\par\vspace{0.8ex}%
+  \noindent\textbf{#1}\par\vspace{1.6ex}%
 }
 
+% The stm environment: usage remains
+%   \begin{stm}{<label>}[<kind>]
+%   ... statement text ...
+%   \end{stm}
 \NewDocumentEnvironment{stm}{m O{}}{%
+  % Beginning code: increment counter, set label, choose color.
   \refstepcounter{stm}\label{#1}%
   \begingroup
-  \setlength{\belowdisplayskip}{0pt}%
-  \setlength{\belowdisplayshortskip}{-12pt}%
-  \ifstrequal{#2}{final-proof}
-    {\color{black}}
-    {%
-      \ifstrequal{#2}{reasoning}
-        {\color{blue!100!black}}
-        {%
-          \ifstrequal{#2}{exercise}
-            {\color{green!50!black}}
-            {%
-              \ifstrequal{#2}{unused}
-                {\color{purple!70!black}}
-                {%
-                  \color{black}%
-                }%
-            }%
+    \setlength{\belowdisplayskip}{0pt}%
+    \setlength{\belowdisplayshortskip}{-12pt}%
+    \ifstrequal{#2}{final-proof}{\color{black}}{%
+      \ifstrequal{#2}{reasoning}{\color{blue!100!black}}{%
+        \ifstrequal{#2}{exercise}{\color{black!100!black}}{%
+          \ifstrequal{#2}{unused}{\color{purple!70!black}}{\color{black}}%
         }%
+      }%
     }%
-  \noindent
-  \ignorespaces
+    \noindent
+    % Place the statement text in a minipage.
+    % Its width is the full linewidth minus the reserved width.
+    % Using [b] ensures that the baseline of the minipage is the bottom of the text.
+    \begin{minipage}[b]{\dimexpr\linewidth-\stmnumwidth\relax}%
+      \ignorespaces
 }{%
-  \hfill
-  \thestm
+      \unskip
+    \end{minipage}%
+    % Now, immediately after the minipage, reserve horizontal space
+    % for the statement number. The \makebox is set to the reserved width,
+    % and its contents (the number) are right-aligned.
+    \makebox[\stmnumwidth][r]{\thestm}%
   \endgroup
-  \par\vspace{0.8ex}
+  \par\vspace{0.6ex}%
 }
