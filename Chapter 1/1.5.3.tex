@@ -17,11 +17,11 @@ Let's work out the meanings of the assumptions and of the required result.
 \end{stm}
 
 \begin{stm}{stm:q2}[reasoning]
-What is an attracting fixed point for $f$? A fixed point $p$ is attracting if there exists a neighborhood $U$ of $p$ such that $\overline{U}$ is compact, $f(\overline{U}) \subseteq U$, and $\bigcap_{n \ge 0} f^n(\overline{U}) = \{p\}$.
+What is an attracting fixed point for $f$? A fixed point $p$ is attracting if there exists a neighborhood $U$ of $p$ such that $\overline{U}$ is compact, $f(\overline{U}) \subseteq U$, and $\bigcap_{n \ge 0} f^n(U) = \{p\}$.
 \end{stm}
 
 \begin{stm}{stm:q4}[reasoning]
-From the definition of $p$, we are already given a candidate neighborhood $U$ of $p$. Intuitively, it seems that $f^n(U)$ form a sequence of sets in which each is contained in the previous, with a single point $p$ in the intersection, so orbits should converge to $p$ or to a point in $\bigcap_{n \ge 0} f^n(U)$. But $f(\overline{U}) \subseteq U$ makes it likely that $\bigcap_{n \ge 0} f^n(\overline{U}) = \bigcap_{n \ge 0} f^n(U)$. Let's prove those intuitions.
+From the definition of $p$, we are already given a candidate neighborhood $U$ of $p$. Intuitively, it seems that $f^n(U)$ form a sequence of sets in which each is contained in the previous, with a single point $p$ in the intersection, so orbits should converge to $p$ or to a point in $\bigcap_{n \ge 0} f^n(\overline{U})$. But $f(\overline{U}) \subseteq U$ makes it likely that $\bigcap_{n \ge 0} f^n(\overline{U}) = \bigcap_{n \ge 0} f^n(U)$. Let's prove those intuitions.
 \end{stm}
 
 \begin{stm}{stm:q4a}[reasoning]
