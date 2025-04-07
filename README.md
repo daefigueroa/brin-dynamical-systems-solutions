@@ -1,4 +1,4 @@
-## Solutions to selected exercises from 'Introduction to Dynamical Systems' by G. Brin & M. Stuck. 
+## Solutions to selected exercises from 'Introduction to Dynamical Systems' by M. Brin & G. Stuck. 
 
 Detailed solutions to selected exercises, including the reasoning used to get to the final proof.
 Statements that are not needed for the final proof displayed in a different color.
