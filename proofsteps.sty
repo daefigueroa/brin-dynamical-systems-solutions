@@ -10,14 +10,14 @@
 
 % Reserve a fixed width for the statement number.
 \newlength{\stmnumwidth}
-\setlength{\stmnumwidth}{3em} % adjust this value if needed
+\setlength{\stmnumwidth}{3em}
 
 \newcommand{\sectionlabel}[1]{%
   \par\vspace{1.2ex}%
   \noindent\textbf{#1}\par\vspace{1.6ex}%
 }
 
-% The stm environment: usage remains
+% usage:
 %   \begin{stm}{<label>}[<kind>]
 %   ... statement text ...
 %   \end{stm}
