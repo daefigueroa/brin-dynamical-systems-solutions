@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage{../proofsteps}
+
+\newtheorem{conj}{Conjecture}
+
+\begin{document}
+
+\sectionlabel{Exercise 1.11.3.}
+
+\begin{stm}{stm:setup}[exercise]
+Suppose $1, s$ and $\alpha s$ are real numbers that are linearly independent over $\mathbb{Q}$.
+\end{stm}
+
+\begin{stm}{stm:setup2}[exercise]
+Show that every orbit of the time-$s$ map $\phi_\alpha^s$ is dense in $\mathbb{T}^2$.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue}+ reasoning}:}
+
+\begin{stm}{stm:3}[reasoning]
+Let's try to adapt the proof that $R_\alpha$ has dense semiorbits if $\alpha$ is irrational.
+\end{stm}
+
+\begin{stm}{stm:4}[reasoning]
+The idea in \ref{stm:3} is to divide $S^1$ into disjoint $\varepsilon$-sized intervals, and use the pigeonhole principle to show that there exist $k > m$ such that $R_\alpha^k(x)$ and $R_\alpha^m(x)$ belong to the same interval, hence that $R_\alpha^{k-m}$ is a translation by less than $\varepsilon$. In our case, we need to use rectangles instead of intervals, and the translation is not simply defined as the addition of an irrational number.
+\end{stm}
+
+\begin{stm}{stm:5}[proof]
+Let $x \in \mathbb{T}^2$, $y \in \mathbb{T}^2$, $\varepsilon' > 0$ and $\varepsilon = \frac{\varepsilon'}{2\sqrt{2}}$. 
+\end{stm}
+
+\begin{stm}{stm:5b}[proof]
+Let $\mathcal{P}_\varepsilon$ be a partition of $\mathbb{T}^2$ into finitely many squares of the form $[a,b)^2$, where $\frac{\varepsilon}{2} < |a-b| < \varepsilon$.
+\end{stm}
+
+\begin{stm}{stm:6}[proof]
+By the pigeonhole principle, there exists a $P \in \mathcal{P}_\varepsilon$ and $k > m$ in $\mathbb{Z}$ such that $\phi_\alpha^{ks}(x)$ and $\phi_\alpha^{ms}(x)$ are in $P$.
+\end{stm}
+
+\begin{stm}{stm:7}[proof]
+By \ref{stm:6}, $d(z, \phi_\alpha^{(k-m)s}(z)) < \sqrt{2} \varepsilon$ for all $z \in \mathbb{T}^2$, where $d$ is the metric on $\mathbb{T}^2$.
+\end{stm}
+
+\begin{stm}{stm:8}[reasoning]
+Intuitively, $\phi_\alpha^{(k-m)s}$ is a translation of size less than $\sqrt{2} \varepsilon$, seemingly with an irrational slope. So, if the line from $x$ in the direction of that translation eventually intersects an $\varepsilon$-ball around $y$, then there should exist an iterate of $x$ that is within $\varepsilon'$ of $y$. Let's make this precise. Note that we can state the conjecture first, and prove it only after we know that it gives the required result.
+\end{stm}
+
+\begin{conj}\label{conj:slope}
+There exists a  $\beta \in \mathbb{R} \setminus \mathbb{Q}$ such that for all $y \in \mathbb{T}^2$
+\[
+\frac{(\phi_\alpha^{(k-m)s}(y))_2 - y_2}{(\phi_\alpha^{(k-m)s}(y))_1 - y_1} = \beta.
+\]
+\end{conj}
+
+\begin{proof}
+    Suppose for contradiction that $s = 0$. Then for $p = 1, q = 1, r = 0$ we have $p \alpha s + q s + r = 0$, a contradiction, so $s \ne 0$. Similarly, $\alpha s \ne 0$. Suppose for contradiction that $\alpha s \in \mathbb{Q}$. Let $p = 1, q = -\alpha s, r = 0$. Then $p \alpha s + q s + r = 0$, a contradiction, so $\alpha s \not\in \mathbb{Q}$. Suppose for contradiction that $\frac{1}{\alpha} \in \mathbb{Q}$. Then $s$ is irrational. Let $p = \frac{1}{\alpha}, q = -1, r = 0$. Then $p \alpha s + q s + r = 0$, a contradiction, so $\frac{1}{\alpha}$ is irrational. Let $y \in \mathbb{T}^2$. Then $$\frac{(\phi_\alpha^{(k+m)s}(y))_2 - y_2}{(\phi_\alpha^{(k+m)s}(y))_1 - y_1} = \frac{(k-m)s}{(k-m)\alpha s} = \frac{1}{\alpha}$$
+    So, with $\beta = \frac{1}{\alpha}$, the statement follows.
+\end{proof}
+
+\begin{stm}{stm:11}[proof]
+Let $\gamma$ be the line in $\mathbb{T}^2$ starting from $x$ in the direction of $x - \phi_\alpha^{m-k}(x)$.
+\end{stm}
+
+\begin{stm}{stm:12}[proof]
+Let $\beta$ be the slope of $\gamma$, which is finite and in $\mathbb{R} \setminus \mathbb{Q}$ by \ref{conj:slope}.
+\end{stm}
+
+\begin{stm}{stm:13}[proof]
+By \ref{stm:12}, considering $\gamma$ as a subset of $\mathbb{T}^2$, we have
+\begin{align*}
+\gamma \cap (y_1 \times \mathbb{T})
+&= \bigcup_{n \ge 0} \left\{ \left( y_1, (x_2 + \beta(y_1 - x_1) + \beta n) \bmod 1 \right) \right\} \\
+&= \bigcup_{n \ge 0} \left\{ \left( y_1, R_\beta^n(x_2 + \beta(y_1 - x_1)) \right) \right\}.
+\end{align*}
+\end{stm}
+
+
+\begin{stm}{stm:14}[proof]
+By \ref{stm:12}, $R_\beta$ has dense semiorbits.
+\end{stm}
+
+\begin{stm}{stm:15}[proof]
+By \ref{stm:14} and \ref{stm:13}, there exists a $z \in \gamma \cap (y_1 \times (y_2 - \varepsilon, y_2 + \varepsilon))$.
+\end{stm}
+
+\begin{stm}{stm:16}[proof]
+By \ref{stm:8} and Conjecture \ref{conj:slope}, there exists a $p \in \mathbb{N}$ such that $$d(\phi_\alpha^{p(k-m)s}(x), z) < \sqrt{2} \varepsilon$$
+\end{stm}
+
+\begin{stm}{stm:17}[proof]
+By \ref{stm:16} and \ref{stm:15},
+\begin{align*}
+d(\phi_\alpha^{p(k-m)s}(x), y)
+&\le d(\phi_\alpha^{p(k-m)s}(x), z) + d(z, y) \\
+&\le \sqrt{2} \varepsilon + \varepsilon \\
+&\le 2\sqrt{2} \varepsilon \\
+&\le \varepsilon'.
+\end{align*}
+\end{stm}
+
+
+\begin{stm}{stm:18}[proof]
+By \ref{stm:17}, every orbit of $\phi_\alpha^s$ is dense in $\mathbb{T}^2$.
+\end{stm}
+
+\end{document}
