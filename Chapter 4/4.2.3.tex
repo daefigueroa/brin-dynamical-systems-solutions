@@ -1,0 +1,288 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{../proofsteps}
+
+\newtheorem{conj}{Conjecture}
+
+\begin{document}
+
+\sectionlabel{Exercise 4.2.3}
+
+\begin{stm}{stm:423}[exercise]
+Prove that if $T$ is a measure-preserving transformation, then so are the induced transformations.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue}+ reasoning}:}
+
+\begin{stm}{stm:a4}[proof]
+Let $T : (X, \mathcal{A}, \mu) \to (X, \mathcal{A}, \mu)$ be a measure-preserving transformation.
+\end{stm}
+
+\begin{stm}{stm:7}[reasoning]
+The primitive transformation is similar to a suspension with ceiling $f$.
+\end{stm}
+
+\begin{stm}{stm:q12}[reasoning]
+What is the natural measure on $(X_f, \mathcal{F})$? The only obvious one is the product of $\mu$ and the counting measure on $\mathbb{N}$. Although not explicitly stated, this is exactly the measure $\mu_f$
+\end{stm}
+
+\begin{stm}{stm:12b}[proof]
+Let's start with proving that the derivative transformation is measure preserving. First, let's check that it is measurable. 
+\end{stm}
+
+\begin{stm}{stm:13c}[reasoning]
+What is the natural $\sigma$-algebra on $A$? Clearly, it should be the ‘subspace’ sigma algebra, also referred to as the trace $\sigma$-algebra.
+\end{stm}
+
+\begin{stm}{stm:a14}[proof]
+Let $\mathcal{E}$ be the trace $\sigma$-algebra with respect to $A$ and $A \in \mathcal{A}$.
+\end{stm}
+
+\begin{stm}{stm:a15}[proof]
+Let $B \in \mathcal{E}$.
+\end{stm}
+
+\begin{stm}{stm:16}[proof]
+By definition, $B = C \cap A$, $C \in \mathcal{A}$.
+\end{stm}
+
+\begin{stm}{stm:r17}[reasoning]
+We want to show that $T_A^{-1}(B) \in \mathcal{E}$, i.e. that $T_A^{-1}(B) = B' \cap A$ for some $B' \in \mathcal{E}$.
+\end{stm}
+
+\begin{stm}{stm:r18}[reasoning]
+A standard way to show that a set such as $T_A^{-1}(B)$ is measurable is to equate it to a countable combination of measurable sets.
+\end{stm}
+
+\begin{stm}{stm:18c}[reasoning]
+\[
+T_A^{-1}(B) = \bigcup_{k \geq 1} (T^{-k} \cap A)?
+\]
+\end{stm}
+
+\begin{stm}{stm:19}[reasoning]
+Statement \ref{stm:18c} seems false, in that $\bigcup_{k \geq 1}(T^{-k} \cap A)$ contains points that aren't in $T_A^{-1}(A)$, i.e. given $y \in A$, if $x \in T^{-1}(y)$, and $\exists z \in A$ s.t. $T(z) = x$, then $z \in \bigcup_{k=1}^{\infty} T^{-k}(y)$ but $z \notin T_A^{-1}(y)$.
+\end{stm}
+
+\begin{stm}{stm:24}[reasoning]
+Let's try a different idea. Intuitively, the set $T^{-1}(B)$ can be partitioned into $T^{-1}(B) \cap A$, which clearly is a subset of $T_A^{-1}(B)$, and the ‘remainder’, $T^{-1}(B) \setminus A$. The remainder may still contain points $x$ of which the inverse image 'eventually' intersects with A, meaning that there exists a $k \in \mathbf{N}$ with $T^{-k}(x) \in A$.  By repeatedly taking the inverse image of the remainder and intersecting with $A$, we should obtain all points in $T_A^{-1}(B)$. Let's formalize this.
+\end{stm}
+
+\begin{stm}{stm:27}[proof]
+Let $(R_n)$ and $(D_n)$ be sequences of sets defined inductively by letting
+\begin{align*}
+R_0 &= B, & D_0 &= \emptyset \\
+R_1 &= T^{-1}(B) \setminus A, & D_1 &= T^{-1}(B) \cap A \\
+R_{n+1} &= T^{-1}(R_n) \setminus A, & D_{n+1} &= T^{-1}(R_n) \cap A \quad \forall n \ge 2
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:29}[proof]
+Let $D := \bigcup_{n \ge 1} D_n$
+\end{stm}
+
+\begin{conj}\label{conj:28}
+$D = T_A^{-1}(B)$
+\end{conj}
+
+\begin{proof}
+Let $n \ge 2$
+\begin{align*}
+R_n &= T^{-1}(R_{n-1}) \setminus A \\
+&= T^{-1}(R_{n-1}) \cap A^c \\
+&= T^{-1}(T^{-1}(R_{n-2}) \cap A^c) \cap A^c \\
+&= (T^{-2}(R_{n-2}) \cap T^{-1}(A^c)) \cap A^c \\
+&= (T^{-n}(B) \cap \cdots \cap T^{-1}(A^c)) \cap A^c \\
+&= T^{-n}(B) \cap \left( \bigcap_{i=0}^{n-1} T^{-i}(A^c) \right).
+\end{align*}
+
+This gives
+\[
+D_n = T^{-n}(B) \cap \left( \bigcap_{i=1}^{n-1} T^{-i}(A^c) \right) \cap A.
+\]
+
+By definition, $T_A^{-1}(B)$ is the set of points $y \in A$ such that $T(y) \in B$ or such that there exists a $k \in \mathbb{N}$ with $k \ge 2$ such that $T^k(y) \in B$ and $T^i(y) \notin A$ for all $i \in \{1, \ldots, k-1\}$.
+
+From the above, , it follows that $D = T_A^{-1}(B)$.
+\end{proof}
+
+\begin{stm}{stm:44}[proof]
+$T$ is $\mathcal{A}$-measurable, so from $D_n = T^{-n}(B) \cap \left( \bigcap_{i=1}^{n-1} T^{-i}(A^c) \right) \cap A$ it follows that $D_n \in \mathcal{E}$. Since $D$ is a countable union of such $D_n$, $D \in \mathcal{E}$, so by conjecture \ref{conj:28}, $T_A^{-1}(B) \in \mathcal{E}$, so $T_A$ is $\mathcal{E}$-measurable.
+\end{stm}
+
+\begin{stm}{stm:45}[reasoning]
+Now we need to show that $T_A$ is measure-preserving. I think the sets $D_n$ are disjoint. Let's prove this using contradiction.
+\end{stm}
+
+\begin{stm}{stm:47}[proof]
+Let $i, j \in \mathbb{N}$ with $i > j \ge 1$.
+\end{stm}
+
+\begin{stm}{stm:48}[proof]
+Suppose $D_j \cap D_i \ne \emptyset$.
+\end{stm}
+
+\begin{stm}{stm:49}[proof]
+By \ref{stm:48}, there exists $x \in D_j \cap D_i$. By the fact that $D_n = T^{-n}(B) \cap \left( \bigcap_{i=1}^{n-1} T^{-i}(A^c) \right) \cap A$, it follows that $T^j(x) \in B$.  
+\end{stm}
+
+\begin{stm}{stm:49b}[proof]
+Since $j < i$, $T^j(x) \in A^c$, but this contradicts $\ref{stm:49}$, so $D_j$ and $D_i$ are disjoint.
+\end{stm}
+
+\begin{stm}{stm:s1}[reasoning]
+We haven't used any results from the given section. The only theorem mentioned in section 4.2 is the Poincaré recurrence theorem, which essentially states that almost all points in $B$ eventually return to $B$. In our case, it seems to imply that $\mu(B)$ is a lower bound of $\mu(D)$. 
+\end{stm}
+
+\begin{stm}{stm:53}[reasoning]
+What can I say about the measure of the sequence $D_n$ and $R_n$? Intuitively, at each step $n$, the measure of $R_n$ is preserved, but divided among $D_{n+1}$ and $R_{n+1}$. This, together with the disjointness of $D_i$, seems to imply that the measure of all $D_i$ up to $D_n$ together with the measure of $R_n$ is constant over time, and equal to $\mu(R_0) = \mu(B)$. That could give us an upper bound for $\mu(D)$, which together with $\ref{stm:s1}$ might allow us to conclude.
+\end{stm}
+
+\begin{stm}{stm:54}[proof]
+From \ref{stm:27}, it is clear that $\forall n \in \mathbb{N}$, $D_n \cap R_n = \emptyset$
+\end{stm}
+
+\begin{stm}{stm:56}[proof]
+\[
+\mu(R_{n+1}) + \mu(D_{n+1}) = \mu(R_n) \quad \forall n \in \mathbb{N}
+\]
+\end{stm}
+
+\begin{stm}{stm:57}[proof]
+From \ref{stm:56}, $\mu(R_n)$ is decreasing.
+\end{stm}
+
+\begin{stm}{stm:58}[proof]
+By \ref{stm:49b}, 
+\[
+\mu(D) = \sum_{n \ge 1} \mu(D_n)
+\]
+\end{stm}
+
+\begin{stm}{stm:59}[proof]
+From \ref{stm:56},
+\[
+\sum_{1 \le i \le n} \mu(D_n) = \mu(B) - \mu(R_n) \quad \forall n \in \mathbb{N}
+\]
+\end{stm}
+
+\begin{stm}{stm:60}[proof]
+By \ref{stm:58}, \ref{stm:59} and \ref{stm:57},
+\[
+\mu(D) = \lim_{n \to \infty} \sum_{1 \le i \le n} \mu(D_n) = \mu(B) - \lim_{n \to \infty} \mu(R_n)
+\]
+\end{stm}
+
+\begin{stm}{stm:61}[proof]
+By the Poincaré recurrence theorem, 
+\[
+\mu(T_A^{-1}(B)) \ge \mu(B)
+\]
+\end{stm}
+
+\begin{stm}{stm:62}[proof]
+By conjecture \ref{conj:28} and \ref{stm:61}, $\mu(D) \ge \mu(B)$.
+\end{stm}
+
+\begin{stm}{stm:63}[proof]
+By \ref{stm:62} and \ref{stm:60}, 
+\[
+\mu(B) - \lim_{n \to \infty} \mu(R_n) = \mu(D) \ge \mu(B)
+\]
+\end{stm}
+
+\begin{stm}{stm:64}[proof]
+From \ref{stm:63}, 
+\[
+\lim_{n \to \infty} \mu(R_n) = 0
+\]
+\end{stm}
+
+\begin{stm}{stm:65}[proof]
+From \ref{stm:64}, \ref{stm:60} and conjecture \ref{conj:28},
+\[
+\mu(T_A^{-1}(B)) = \mu(D) = \mu(B)
+\]
+\end{stm}
+
+\begin{stm}{stm:66}[proof]
+By \ref{stm:65}, $T_A$ is measure-preserving.
+\end{stm}
+
+\begin{stm}{stm:67}[reasoning]
+Next, we want to show that the primitive transformation is measure-preserving.
+\end{stm}
+
+\begin{stm}{stm:68}[proof]
+Let $T_f : X_f \to X_f$ be the primitive transformation, where $f : X \to \mathbb{N}$ is measurable.
+\end{stm}
+
+\begin{stm}{stm:68b}[reasoning]
+By basic measure theory, it suffices to show, to prove $T_f$ is measure-preserving, that $T_f$ preserves the measure of all elements of a generating set of the $\sigma$-algebra.
+\end{stm}
+
+\begin{stm}{stm:69}[proof]
+Let $A \in \mathcal{A}$ and $k \in \mathbb{N}$.
+\end{stm}
+
+\begin{stm}{stm:70}[proof]
+Note, $(A \times \{k\}) \cap X_f = (A \cap C_k) \times \{k\}$ where $C_k = f^{-1}(\{n \in \mathbb{N} : n \ge k\})$
+\end{stm}
+
+\begin{stm}{stm:71}[proof]
+$X_f = \{(x,k) : x \in X, 1 \le k \le f(x)\} \subseteq X \times \mathbb{N}$
+\end{stm}
+
+\begin{stm}{stm:73}[proof]
+Suppose $k > 1$. By \ref{stm:70}:
+\[
+T_f^{-1}((A \times \{k\}) \cap X_f) = T_f^{-1}((A \cap C_k) \times \{k\}) = (A \cap C_k) \times \{k-1\}
+\]
+\end{stm}
+
+\begin{stm}{stm:74}[proof]
+Suppose $k = 1$
+\end{stm}
+
+\begin{stm}{stm:75}[proof]
+\[
+T_f^{-1}(A \times \{k\}) = \bigcup_{i \ge 1} (T^{-1}(f^{-1}(i) \cap A) \times \{i\})
+\]
+\end{stm}
+
+\begin{stm}{stm:76}[proof]
+From \ref{stm:73} and \ref{stm:75}, $T_f^{-1}(A \times \{k\}) \cap X_f \in \mathcal{U}_f \quad \forall k$
+\end{stm}
+
+\begin{stm}{stm:77}[reasoning]
+Now we show that $T_f$ preserves the measure:
+\end{stm}
+
+\begin{stm}{stm:78}[proof]
+If $k > 1$, then by \ref{stm:73} and \ref{stm:70},
+\begin{align*}
+\mu_f(T_f^{-1}((A \times \{k\}) \cap X_f)) &= \mu_f((A \cap C_k) \times \{k-1\}) \\
+&= \mu_f((A \cap C_k) \times \{k\} \cap X_f)
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:79}[proof]
+If $k = 1$, then by \ref{stm:75} and $T$ being measure-preserving,
+\begin{align*}
+\mu_f(T_f^{-1}(A \times \{1\})) &= \mu_f\left(\bigcup_{i \ge 1} (T^{-1}(f^{-1}(i) \cap A) \times \{i\})\right) \\
+&= \sum_{i \ge 1} \mu_f(T^{-1}(f^{-1}(i) \cap A) \times \{i\}) \\
+&= \sum_{i \ge 1} \mu(T^{-1}(f^{-1}(i) \cap A)) \\
+&= \mu\left(\bigcup_{i \ge 1} T^{-1}(f^{-1}(i) \cap A)\right) \\
+&= \mu(T^{-1}(f^{-1}(\mathbb{N}) \cap A)) \\
+&= \mu(T^{-1}(A)) \\
+&= \mu(A) \\
+&= \mu_f(A \times \{1\})
+\end{align*}
+\end{stm}
+
+
+\begin{stm}{stm:80}[proof]
+By \ref{stm:78} and \ref{stm:79}, the primitive transformation is measure-preserving.
+\end{stm}
+
+\end{document}
