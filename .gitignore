@@ -4,5 +4,4 @@
 *.aux
 *.gz
 *.fdb_latexmk
-test.tex
-test.pdf
+local
