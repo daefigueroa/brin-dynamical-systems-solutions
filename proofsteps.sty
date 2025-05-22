@@ -4,9 +4,15 @@
 \usepackage{xcolor}
 \usepackage{etoolbox}
 \usepackage{xparse}
+\usepackage{amsmath, amssymb, amsthm}
 
+\newcounter{thm}
 \newcounter{stm}
 \renewcommand{\thestm}{(\arabic{stm})}
+
+\makeatletter
+\pretocmd{\@include}{\setcounter{stm}{0}}{}{}
+\makeatother
 
 \newlength{\stmnumwidth}
 \setlength{\stmnumwidth}{3em}
@@ -19,28 +25,20 @@
 \NewDocumentEnvironment{stm}{m O{}}{%
   \refstepcounter{stm}\label{#1}%
   \begingroup
-    \setlength{\belowdisplayskip}{7pt}%
-    \setlength{\abovedisplayskip}{5pt}%
-    % \setlength{\belowdisplayshortskip}{-12pt}%
-    \setlength{\abovedisplayshortskip}{-12pt}%
     \ifboolexpr{
-      test {\ifstrequal{#2}{final-proof}} 
-      or 
       test {\ifstrequal{#2}{proof}}
     }{\color{black}}{%
-      \ifstrequal{#2}{reasoning}{\color{blue!100!black}}{%
+      \ifstrequal{#2}{reasoning}{\color{blue!80!black}}{%
         \ifstrequal{#2}{exercise}{\color{black!100!black}}{%
-          \ifstrequal{#2}{unused}{\color{purple!70!black}}{\color{black}}%
         }%
       }%
     }%
     \noindent
     \begin{minipage}[b]{\dimexpr\linewidth-\stmnumwidth\relax}%
-      \ignorespaces
 }{%
       \unskip
     \end{minipage}%
     \makebox[\stmnumwidth][r]{\thestm}%
   \endgroup
-  \par\vspace{0.7ex}%
+  \par\vspace{1ex}%
 }

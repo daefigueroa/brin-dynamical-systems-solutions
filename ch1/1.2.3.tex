@@ -1,0 +1,211 @@
+\sectionlabel{Exercise 1.2.3}
+
+\begin{stm}{stm:setup}[exercise]
+Let $G$ be a topological group.  
+\end{stm}
+
+\begin{stm}{stm:x1}[exercise]
+Prove that for each $g \in G$, the closure $H(g)$ of the set $\{g^n\}_{n=-\infty}^\infty$ is a commutative subgroup of $G$.
+\end{stm}
+
+\begin{stm}{stm:x2}[exercise]
+Thus, if $G$ has a minimal left translation, then $G$ is abelian.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue} + reasoning}:}
+
+\begin{stm}{stm:d3}[reasoning]
+First, let's show the closure of $\{g^n\}_{n=-\infty}^\infty$ is a subgroup of $G$, starting with showing closure under the group operation.
+\end{stm}
+
+\begin{stm}{stm:d3def}[final-proof]
+Define ${\langle g \rangle} := \{g^n\}_{n=-\infty}^\infty$.
+\end{stm}
+
+\begin{stm}{stm:a4}[final-proof]
+Let $g \in G$. Let $a, b \in \mathrm{cl}({\langle g \rangle})$.
+\end{stm}
+
+\begin{stm}{stm:r4}[reasoning]
+What do I know about closures? The closure of $A$ is the set $X$ of points such that any neighborhood of $x \in X$ contains a point in $A$.
+\end{stm}
+
+\begin{stm}{stm:r5}[reasoning]
+My intuition is that the required proof will resemble the one I would follow if $G$ were a metric space. In a metric space, if $a$ and $b$ are limits of $g^{k_n}$ and $g^{l_n}$ we should have $g^{k_n} g^{l_n} \to ab$. Here we do not have a metric, so there is no notion of convergent sequences, but instead of neighborhoods: $x$ is a limit point of $A$ if every neighborhood of $x$ contains a point in $A$ other than $x$ itself.
+\end{stm}
+
+\begin{stm}{stm:d6}[reasoning]
+Intuitively, since $a$ and $b$ are in ${\langle g \rangle}$ or limit points of ${\langle g \rangle}$, the product of the two points that ‘witness’ this property should be the point that witnesses $ab$ being a limit point.
+\end{stm}
+
+\begin{stm}{stm:l7}[reasoning]
+Let $C$ be a neighborhood of $ab$, and $U \subseteq C$ an open set containing $ab$.
+\end{stm}
+
+\begin{stm}{stm:8}[reasoning]
+$a^{-1}U$ and $Ub^{-1}$ are open.
+\end{stm}
+
+\begin{stm}{stm:9}[reasoning]
+$b \in a^{-1}U$ and $a \in Ub^{-1}$. Since $a$ and $b$ are limit points of ${\langle g \rangle}$, $\exists k, m \in \mathbb{Z}$ such that $g^m \in a^{-1}U$ and $g^k \in Ub^{-1}$.
+\end{stm}
+
+\begin{stm}{stm:10}[reasoning]
+$g^k g^m$ should be in $U$, but I can't show why. What tools can I give myself to help prove $g^k g^m \in U$?
+\end{stm}
+
+\begin{stm}{stm:r11}[reasoning]
+Well, $g^m$ and $g^k$ are homeomorphisms, so $g^k g^m \in g^k a^{-1}U$, $g^k g^m \in Ub^{-1} g^m$, and $(g^k a^{-1}U) \cup (Ub^{-1} g^m)$ is open.
+\end{stm}
+
+\begin{stm}{stm:r11b}[reasoning]
+Now I am stuck.
+\end{stm}
+
+\begin{stm}{stm:m12}[reasoning]
+What given assumptions have I not used? 
+\end{stm}
+
+\begin{stm}{stm:m12b}[reasoning]
+I have not used the fact that the group operation $G \times G \to G$ is continuous. I only used that, $\forall g \in G$, left and right multiplication by $g$ is a continuous function $G \to G$, which seems to be a weaker statement. Using the ‘joint’ continuity should work.
+\end{stm}
+
+\begin{stm}{stm:13}[final-proof]
+Since the group multiplication $\alpha: G \times G \to G$ is continuous, $\alpha^{-1}(U)$ is open in $G \times G$. Since $(a,b) \in \alpha^{-1}(U)$, and since sets of the form $A \times B$, where $A$ and $B$ are open, form a basis for the topology on $G \times G$, there exist open $V$ and $W$ such that $a \in V$, $b \in W$, and such that $V \times W \subseteq \alpha^{-1}(U)$.
+\end{stm}
+
+\begin{stm}{stm:14}[final-proof]
+Since $a,b \in \mathrm{cl}({\langle g \rangle})$ there exist $g^\ell \in V$ and $g^p \in W$. By \ref{stm:13}, $g^\ell g^p \in U$, hence $g^{\ell+p} \in U$, so $ab \in \mathrm{cl}({\langle g \rangle}) = H(g)$.
+\end{stm}
+
+\begin{stm}{stm:15}[final-proof]
+By \ref{stm:14}, $H(g)$ is closed under taking products.
+\end{stm}
+
+\begin{stm}{stm:16}[reasoning]
+Now we need to show that $H(g)$ has inverses, by showing $a^{-1} \in H(g)$.
+\end{stm}
+
+\begin{stm}{stm:17}[final-proof]
+Let $C$ be a neighborhood of $a^{-1}$ and $U \subseteq C$ an open set such that $a^{-1} \in U$. Since the inverse is continuous, $U' := \{x \in G : x^{-1} \in U\}$ is open, and it contains $a$.
+\end{stm}
+
+\begin{stm}{stm:18}[final-proof]
+Since $a \in H(g)$, there exists $g^q \in U'$, where $q \in \mathbb{Z}$.
+\end{stm}
+
+\begin{stm}{stm:20}[final-proof]
+By \ref{stm:18}, $g^{-q} = (g^q)^{-1} \in U$, so $a^{-1} \in H(g)$.
+\end{stm}
+
+\begin{stm}{stm:21}[final-proof]
+By \ref{stm:20}, $H(g)$ is closed under taking inverses.
+\end{stm}
+
+\begin{stm}{stm:q23}[reasoning]
+Now to prove that $H(g)$ is commutative.
+\end{stm}
+
+\begin{stm}{stm:q24}[reasoning]
+We need to show that $ab = ba$. If $G$ were a metric space, the proof would follow from the fact that the limits of convergent sequences are unique. Is there something like uniqueness of limit points in a general topological space? The answer seems to be no, only when adding separation properties.
+\end{stm}
+
+\begin{stm}{stm:q25}[reasoning]
+Let’s take a few steps back and try again. Note, the product in $H(g)$ is just the restriction of the one in $G$, so if $ab \ne ba$ in $G$, $ab \ne ba$ in $H(g)$. So, the only way in which $H(g)$ can be commutative is if it excludes at least all non-commutative elements in $G$.
+\end{stm}
+
+\begin{stm}{stm:r25}[reasoning]
+So, $H(g)$ must be a proper subgroup if $G$ is not abelian. Considering \ref{stm:q25}, I think we should try to prove the contrapositive instead, i.e. prove if two elements of $G$ are not commutative, then at least one of them is not in $H(g)$.
+\end{stm}
+
+\begin{stm}{stm:l26}[final-proof]
+  Let $c, d \in G$ with $cd \ne dc$.
+\end{stm}
+
+\begin{stm}{stm:q27}[reasoning]
+Why is $(c,d) \notin H(g) \times H(g)$? I am stuck here.
+\end{stm}
+
+\begin{stm}{stm:m28}[reasoning]
+Why has my best attempt not worked? To show \ref{stm:q27}, we need to show that there exists a neighborhood of $(c,d)$ containing no element of ${\langle g \rangle}$, but I can't find any obvious neighborhood. There is no given neighborhood from the definitions. I think the exercise is not correct without adding a separation property, so let's add it ourselves.
+\end{stm}
+
+\begin{stm}{stm:29}[final-proof]
+Suppose that $G$ is Hausdorff. 
+\end{stm}
+
+\begin{stm}{stm:30}[final-proof]
+By \ref{stm:29} and \ref{stm:l26}, there exist open neighborhoods $U$ of $cd$ and $U'$ of $dc$ such that $U \cap U' = \emptyset$.
+\end{stm}
+
+\begin{stm}{stm:a32}[final-proof]
+Suppose $c,d \in H(g)$.
+\end{stm}
+
+\begin{stm}{stm:33}[final-proof]
+Similarly to \ref{stm:13}, $(c,d) \in \alpha^{-1}(U)$ and $(d,c) \in \alpha^{-1}(U')$.
+\end{stm}
+
+\begin{stm}{stm:34}[final-proof]
+So there are open sets $V,V',W,W'$ such that $(c,d) \in V \times W \subseteq \alpha^{-1}(U)$ and $(d,c) \in V' \times W' \subseteq \alpha^{-1}(U')$.
+\end{stm}
+
+\begin{stm}{stm:35}[final-proof]
+From \ref{stm:34}, $c \in V \cap V'$ and $d \in W \cap W'$, and $V \cap V'$ and $W \cap W'$ are open.
+\end{stm}
+
+\begin{stm}{stm:36}[final-proof]
+So, by \ref{stm:a32}, there exist $s,t \in \mathbb{Z}$ such that $g^s \in V \cap V'$ and $g^t \in W \cap W'$.
+\end{stm}
+
+\begin{stm}{stm:37}[final-proof]
+By \ref{stm:36}, $(g^s, g^t) \in V \times W$ and $(g^t, g^s) \in W' \times V'$.
+\end{stm}
+
+\begin{stm}{stm:38}[final-proof]
+By \ref{stm:37} and \ref{stm:34}, $g^s g^t \in U$ and $g^t g^s \in U'$, so $g^{t+s} \in U \cap U'$.
+\end{stm}
+
+\begin{stm}{stm:39}[final-proof]
+\ref{stm:38} contradicts \ref{stm:29}, so \ref{stm:a32} is false, hence $c \notin H(g)$ or $d \notin H(g)$, so $H(g)$ is commutative.
+\end{stm}
+
+\begin{stm}{stm:40}[final-proof]
+By \ref{stm:39}, \ref{stm:15} and \ref{stm:21}, $H(g)$ is a commutative subgroup of $G$.
+\end{stm}
+
+\begin{stm}{40b}[reasoning]
+We still need to prove that if $G$ has a minimal left translation, then $G$ is Abelian.
+\end{stm}
+
+\begin{stm}{stm:a41}[final-proof]
+Suppose that $G$ has a minimal left translation $L_h : G \to G$ where $h \in G$.
+\end{stm}
+
+\begin{stm}{stm:a41b}[final-proof]
+By \ref{stm:40}, $H(h)$ is a commutative subgroup of $G$.
+\end{stm}
+
+\begin{stm}{stm:42}[final-proof]
+By definition, $L_h$ has no proper closed non-empty invariant subsets.
+\end{stm}
+
+\begin{stm}{stm:43}[final-proof]
+$H(h)$ is a closed non-empty subset of $G$.
+\end{stm}
+
+\begin{stm}{stm:44}[reasoning]
+Is $H(h)$ invariant with respect to $L_h$?
+\end{stm}
+
+\begin{stm}{stm:45}[final-proof]
+Let $a \in H(h)$. Let $C$ be a neighborhood of $ha$ and $U$ open with $ha \in U \subseteq C$. $a \in h^{-1}U$, and $h^{-1}U$ is open, so $\exists q \in \mathbb{Z}$ such that $h^q \in h^{-1}U$.
+\end{stm}
+
+\begin{stm}{stm:47}[final-proof]
+By \ref{stm:45}, $h^{q+1} \in U$, so $H(h)$ is invariant.
+\end{stm}
+
+\begin{stm}{stm:48}[final-proof]
+By \ref{stm:47}, \ref{stm:43} and \ref{stm:42}, $H(h) = G$, so $G$ is abelian.
+\end{stm}

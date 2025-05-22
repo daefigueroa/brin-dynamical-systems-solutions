@@ -1,0 +1,80 @@
+\sectionlabel{Exercise 1.1.2}
+
+\begin{stm}{stm:statement}[exercise]
+Suppose $(X,f)$ is a factor of $(Y,g)$ by a semi-conjugacy $\pi\colon Y \to X$.
+\end{stm}
+
+\begin{stm}{stm:setup}[exercise]
+Show that if $y \in Y$ is a periodic point, then $\pi(y) \in X$ is periodic.
+\end{stm}
+
+\begin{stm}{stm:setup2}[exercise]
+Give an example to show that the preimage of a periodic point does not necessarily contain a periodic point.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue} + reasoning}:}
+
+\begin{stm}{}[reasoning]
+Let's start with \ref{stm:setup}.
+\end{stm}
+
+\begin{stm}{stm:verify}
+Let $y \in Y$ be periodic.
+\end{stm}
+
+\begin{stm}{stm:write}[reasoning]
+We can just write out the definitions and see if the correct answer follows.
+\end{stm}
+
+\begin{stm}{stm:calc}
+$$
+f(\pi(y)) \;=\; \pi\bigl(g(y)\bigr) \;=\; \pi(y).
+$$
+\end{stm}
+
+\begin{stm}{stm:calc-conclusion}
+So, \ref{stm:setup} follows from \ref{stm:calc}.
+\end{stm}
+
+\begin{stm}{stm:counterexample-intro}[reasoning]
+Now, we want to construct a counterexample. Let's think of any semiconjugacy and iterate from there. An obvious example is a projection.
+\end{stm}
+
+\begin{stm}{stm:AB-sets}
+Let $A$ and $B$ be sets, and $\pi_A\colon A \times B \to A$ the projection.
+\end{stm}
+
+\begin{stm}{stm:diagram}
+For all $\alpha$ and $\beta$, the following diagram commutes:
+\[
+\begin{array}{c@{\quad}c@{\quad}c}
+A \times B & \xrightarrow{\;\alpha \times \beta\;} & A \times B\\[6pt]
+\downarrow{\pi_A} && \downarrow{\pi_A}\\[4pt]
+A & \xrightarrow{\;\alpha\;} & A
+\end{array}
+\]
+\end{stm}
+
+\begin{stm}{stm:intuition}[reasoning]
+Intuitively, by taking projections, we 'forget' about the effect of $\beta$. So, we can simply choose $\beta$ such that all points in $A \times B$ are non-periodic with respect to $\beta$, while choosing $\alpha$ so that all points in $A$ are periodic with respect to $\alpha$. 
+\end{stm}
+
+\begin{stm}{stm:final-example}[reasoning]
+Let $A$ be any set, $B = [0,1]$, $\alpha = \mathrm{id}_A$ and $\beta: (x \mapsto \frac{1}{2}x)$
+\end{stm}
+
+\begin{stm}{}[reasoning]
+Wait, $0$ is still a periodic point in the example above. Let's modify it.
+\end{stm}
+
+\begin{stm}{stm:final-example}
+    Let $A$ be any nonempty set, $B = (0,1]$, $\alpha = \mathrm{id}_A$ and $\beta: (x \mapsto \frac{1}{2}x)$
+\end{stm}
+    
+\begin{stm}{stm:counterexample}
+Clearly, $\beta$ has no periodic points, so $\alpha \times \beta$ has no periodic points, but all points in $A$ are periodic with respect to $\alpha$. 
+\end{stm}
+
+\begin{stm}{}
+By \ref{stm:counterexample}, \ref{stm:setup2} follows.
+\end{stm}

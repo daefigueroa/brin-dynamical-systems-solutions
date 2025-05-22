@@ -1,0 +1,65 @@
+\sectionlabel{Exercise 2.1.3.}
+
+\begin{stm}{stm:213-1}[exercise]
+Let $f : X \to X$ be a topological dynamical system.
+\end{stm}
+
+\begin{stm}{stm:213-2}[exercise]
+Show that $\mathcal{R}(f) \subseteq \operatorname{NW}(f)$.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue}+ reasoning}:}
+
+\begin{stm}{stm:213-3}[proof]
+Let $x \in \mathcal{R}(f)$. 
+\end{stm}
+
+\begin{stm}{stm:213-4}[proof]
+Let $U$ be a neighborhood of $x$, and $V$ an open set such that $V \subseteq U$ and $x \in V$.
+\end{stm}
+
+\begin{stm}{stm:213-5}[reasoning]
+We need to show that there exists an $n \geq 1$ such that $f^n(U) \cap U \neq \emptyset$.
+\end{stm}
+
+\begin{stm}{stm:213-6}[reasoning]
+By \ref{stm:213-3} and \ref{stm:213-4}, there exists a recurrent point $y$ in $U$.
+\end{stm}
+
+\begin{stm}{stm:213-7}[reasoning]
+By \ref{stm:213-6}, there exists an increasing sequence $(n_k)$ such that 
+\[
+f^{n_k}(y) \to y \quad \text{and} \quad n_k \to \infty.
+\]
+\end{stm}
+
+\begin{stm}{stm:213-8}[reasoning]
+Intuitively, the sequence of sets $f^{n_k}(U)$ should eventually intersect with $U$, giving our required result.
+\end{stm}
+
+\begin{stm}{stm:213-9}[reasoning]
+A possible problem in the proof so far is that $y$ may not be in the interior of $U$, so $x$ is not necessarily in a neighborhood of $y$, so it is possible that $f^{n_k}(U)$ comes arbitrarily close to y but never intersects with $U$.
+\end{stm}
+
+\begin{stm}{stm:213-10}[reasoning]
+I think we can avoid this problem by making a stronger statement than \ref{stm:213-6}, using $V$ instead of $U$:
+\end{stm}
+
+\begin{stm}{stm:213-11}[proof]
+By \ref{stm:213-3} and \ref{stm:213-4}, there exists a recurrent point $z$ in $V$.
+\end{stm}
+
+\begin{stm}{stm:213-12}[proof]
+By \ref{stm:213-11}, there exists an increasing sequence $(m_k)$ such that 
+\[
+f^{m_k}(z) \to z \quad \text{and} \quad m_k \to \infty.
+\]
+\end{stm}
+
+\begin{stm}{stm:213-13}[proof]
+Since $V$ is a neighborhood of $z$, by \ref{stm:213-12} there exists an $M \geq 1$ such that $\forall i \geq M$, $f^{m_i}(z) \in V$, so $f^{m_M}(z) \in U$, hence $f^{m_M}(U) \cap U \neq \emptyset$.
+\end{stm}
+
+\begin{stm}{stm:213-14}[proof]
+By \ref{stm:213-13}, $\mathcal{R}(f) \subseteq \operatorname{NW}(f)$.
+\end{stm}

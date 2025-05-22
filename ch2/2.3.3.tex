@@ -1,0 +1,37 @@
+\sectionlabel{Exercise 2.3.3.}
+
+\begin{stm}{stm:223setup}[exercise]
+Show that a factor of a topologically mixing system is also topologically mixing.
+\end{stm}
+
+\sectionlabel{Proof}
+
+\begin{stm}{stm:1}[proof]
+Let $f : X \to X$ and $g : Y \to Y$ be topological dynamical systems, and $\pi$ a topological semiconjugacy from $f$ to $g$.
+\end{stm}
+
+\begin{stm}{stm:2}[proof]
+Let $U$ and $V$ be nonempty open sets in $Y$.
+\end{stm}
+
+\begin{stm}{stm:3}[proof]
+Since $\pi$ is surjective and continuous, $\pi^{-1}(U)$ and $\pi^{-1}(V)$ are nonempty and open.
+\end{stm}
+
+\begin{stm}{stm:4}[proof]
+By \ref{stm:1} and \ref{stm:3}, there exists an $N \in \mathbf{N}$ such that for all $n \geq N$, $f^n(\pi^{-1}(U)) \cap \pi^{-1}(V) \neq \varnothing$.
+\end{stm}
+
+\begin{stm}{stm:5}[proof]
+By \ref{stm:1}, 
+\begin{align*}
+\pi\left(f^n(\pi^{-1}(U)) \cap \pi^{-1}(V)\right) 
+&\subseteq \pi(f^n(\pi^{-1}(U))) \cap \pi(\pi^{-1}(V)) \\
+&= g^n(\pi(\pi^{-1}(U))) \cap \pi(\pi^{-1}(V)) \\
+&= g^n(U) \cap V.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:6}[proof]
+By \ref{stm:5} and \ref{stm:4}, $g^n(U) \cap V \neq \varnothing$, so $g$ is topologically mixing, hence a factor of a topologically mixing system is topologically mixing.
+\end{stm}

@@ -1,0 +1,154 @@
+\sectionlabel{Exercise 1.5.3.}
+
+\begin{stm}{stm:setup}[exercise]
+Suppose $p$ is an attracting fixed point for $f$. Show that there is a neighborhood $U$ of $p$ such that the forward orbit of every point in $U$ converges to $p$.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue} + reasoning}:}
+
+\begin{stm}{stm:m1}[reasoning]
+Let's work out the meanings of the assumptions and of the required result.
+\end{stm}
+
+\begin{stm}{stm:q2}[reasoning]
+What is an attracting fixed point for $f$? A fixed point $p$ is attracting if there exists a neighborhood $U$ of $p$ such that $\overline{U}$ is compact, $f(\overline{U}) \subseteq U$, and $\bigcap_{n \ge 0} f^n(U) = \{p\}$.
+\end{stm}
+
+\begin{stm}{stm:q4}[reasoning]
+From the definition of $p$, we are already given a candidate neighborhood $U$ of $p$. Intuitively, it seems that $f^n(U)$ form a sequence of sets in which each is contained in the previous, with a single point $p$ in the intersection, so orbits should converge to $p$ or to a point in $\bigcap_{n \ge 0} f^n(\overline{U})$. But $f(\overline{U}) \subseteq U$ makes it likely that $\bigcap_{n \ge 0} f^n(\overline{U}) = \bigcap_{n \ge 0} f^n(U)$. Let's prove those intuitions.
+\end{stm}
+
+\begin{stm}{stm:q4a}[reasoning]
+Is $f^{n+1}(U) \subseteq f^n(U)$ for all $n \in \mathbb{N}$?
+\end{stm}
+
+\begin{stm}{stm:5}[final-proof]
+By assumption, there exists a neighborhood $U$ of $p$ such that $\overline{U}$ is compact, $f(\overline{U}) \subseteq U$, and $\bigcap_{n \ge 0} f^n(\overline{U}) = \{p\}$.
+\end{stm}
+
+
+\begin{stm}{stm:6}[final-proof]
+Clearly,
+$$U \subset \overline{U}.$$
+\end{stm}
+
+\begin{stm}{stm:7}[final-proof]
+From \ref{stm:6} and \ref{stm:5}
+$$f(U) \subseteq f(\overline{U}) \subseteq U.$$
+\end{stm}
+
+\begin{stm}{stm:10}[final-proof]
+Therefore, 
+$$f^{n+1}(U) \subseteq f^n(U) \text{ for all } n \in \mathbb{N}$$
+\end{stm}
+    
+\begin{stm}{stm:q11}[reasoning]
+Is it true that $\bigcap_{n \ge 0} f^n(\overline{U}) = \bigcap_{n \ge 0} f^n(U)$?
+\end{stm}
+
+\begin{stm}{stm:12}[final-proof]
+Clearly,
+$$\bigcap_{n \ge 0} f^n(U) \subseteq \bigcap_{n \ge 0} f^n(\overline{U})$$
+\end{stm}
+
+\begin{stm}{stm:13}[final-proof]
+Conversely, 
+$$\bigcap_{n \ge 0} f^n(\overline{U}) \subseteq \bigcap_{n \ge 1} f^n(\overline{U}) = \bigcap_{n \ge 0} f^{n+1}(\overline{U}) \subseteq \bigcap_{n \ge 0} f^n(U)$$
+\end{stm}
+
+\begin{stm}{stm:14}[final-proof]
+So, from \ref{stm:13}
+$$\bigcap_{n \ge 0} f^n(U) = \bigcap_{n \ge 0} f^n(\overline{U})$$
+\end{stm}
+
+\begin{stm}{stm:915}[reasoning]
+The answer to \ref{stm:q11} is yes. Now, let's try to prove convergence of forward orbits. 
+\end{stm}
+
+\begin{stm}{stm:916}[]
+Let $x \in U$. Define $(x_n)_{n \in \mathbb{N}} = (f^n(x))_{n \in \mathbb{N}}$.
+\end{stm}
+
+\begin{stm}{stm:q16}[reasoning]
+Does $(x_n)$ converge to $p$?
+\end{stm}
+
+\begin{stm}{stm:a17}[reasoning]
+Let's try proof by contradiction. 
+\end{stm}
+
+\begin{stm}{stm:18}[final-proof]
+Assume $(x_n)$ does not converge. Then $\exists \varepsilon' > 0$ such that $\forall n : \exists k \ge n : d(f^k(x), p) > \varepsilon'$.
+\end{stm}
+
+\begin{stm}{stm:m15}[reasoning]
+I'm stuck. I know there are infinitely many points in $U \setminus B(p, \varepsilon')$. Intuitively, this should contradict the fact that $\bigcap_{n \ge 0} f^n(\overline{U})$ only contains $p$.
+\end{stm}
+
+\begin{stm}{stm:m19}[reasoning]
+Let me check what given assumptions I haven't used in my proof yet. I haven't used that $p$ is a fixed point, that $f$ is continuous, or the compactness of $\overline{U}$.
+\end{stm}
+
+\begin{stm}{stm:20}[reasoning]
+Let me think of properties that we can use, or look up general consequences of these facts.
+\end{stm}
+
+\begin{stm}{stm:20b}[reasoning]
+ In a metric space, the intersection of compact sets is compact.
+\end{stm}
+
+\begin{stm}{stm:22}[reasoning]
+    If some $y \in U$ is not in $f^n(U)$ for some $n \in \mathbb{N}$, it won't be in any $f^k(U)$ for $k \ge n$.
+\end{stm}
+
+\begin{stm}{stm:21}[reasoning]
+In a compact metric space, all sequences have convergent subsequences.
+\end{stm}
+
+\begin{stm}{stm:r23}[reasoning]
+I think I can apply \ref{stm:21} to show a contradiction: 
+\end{stm}
+
+\begin{stm}{stm:23}[final-proof]
+From \ref{stm:18}, there exists a sequence $f^{m_n}(x)$ such that $d(f^{m_n}(x), p) \ge \varepsilon$ for all $n \ge 0$. By compactness of $\overline{U}$, this sequence has a convergent subsequence $(f^{z_n}(x))_{n \ge 0}$ with $f^{z_n}(x) \to z \in \overline{U}$ and $z_n \to \infty$.
+\end{stm}
+
+\begin{stm}{stm:25a}[final-proof]
+Since $f$ is continuous and $\overline{U}$ compact, $f^n(\overline{U})$ is compact for all $n \ge 0$. 
+\end{stm}
+
+\begin{stm}{stm:25}[final-proof]
+$\forall n \ge 0$ there exists $K$ s.t. $f^{z_K}(x) \in f^n(\overline{U})$, hence $\forall m \ge K$, $f^{z_m}(x) \in f^n(\overline{U})$.
+\end{stm}
+
+\begin{stm}{stm:27}[final-proof]
+From \ref{stm:25}, the limit point $z$ must be in $f^n(\overline{U})$ for all $n \ge 0$.
+\end{stm}
+
+\begin{stm}{stm:28}[final-proof]
+Therefore, $z \in \bigcap_{n \ge 0} f^n(\overline{U}) = \{p\}$.
+\end{stm}
+
+\begin{stm}{stm:29}[final-proof]
+So, $z = p$, which contradicts \ref{stm:18}, so assumption \ref{stm:a17} is false. Hence $(x_n)$ converges.
+\end{stm}
+
+\begin{stm}{stm:q31}[reasoning]
+We still need to show that $(x_n)$ converges to $p$, but the proof will likely be almost the same as above.
+\end{stm}
+
+\begin{stm}{stm:31}[final-proof]
+Suppose $x_n \to q$ and $q \ne p$.
+\end{stm}
+
+\begin{stm}{stm:32}[final-proof]
+Let $n \ge 0$. The sequence $(x_i)_{i \ge n}$ is contained in $f^n(\overline{U})$, which is compact, so $q \in f^n(\overline{U})$. Therefore, $q \in \bigcap_{n \ge 0} f^n(\overline{U})$.
+\end{stm}
+
+\begin{stm}{stm:34}[final-proof]
+By \ref{stm:14}, $q \in \bigcap_{n \ge 0} f^n(U) = \{p\}$, which is a contradiction. Hence, \ref{stm:31} is false.
+\end{stm}
+
+\begin{stm}{stm:36}[final-proof]
+From \ref{stm:34} and \ref{stm:29} it follows that $x_n \to p$. Therefore, the forward orbit of any point in $U$ converges to $p$.
+\end{stm}

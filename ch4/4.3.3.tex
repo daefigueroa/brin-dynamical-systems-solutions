@@ -1,0 +1,309 @@
+\sectionlabel{Exercise 4.3.3.}
+
+\begin{stm}{stm:1}[exercise]
+A measure-preserving transformation or flow $T$ of a probability space $(X, \mathcal{U}, \mu)$ is called \textit{(strong) mixing} if
+\[
+\lim_{t \to \infty} \mu(T^t(A) \cap B) = \mu(A) \cdot \mu(B)
+\]
+for any two measurable sets $A, B \in \mathcal{U}$.
+\end{stm}
+
+\begin{stm}{stm:2}[exercise]
+Equivalently, $T$ is mixing if
+\[
+\lim_{t \to \infty} \int_X f(T^t(x)) g(x) \, d\mu = \int_X f \, d\mu \int_X g \, d\mu
+\]
+for any two bounded measurable functions.
+\end{stm}
+
+\begin{stm}{stm:3}[exercise]
+Transformation $T$ is called \textit{weak mixing} if $\forall A, B \in \mathcal{U}$,
+\[
+\lim_{n \to \infty} \frac{1}{n} \sum_{i=0}^{n-1} \left| \mu(T^{-i}(A) \cap B) - \mu(A)\mu(B) \right| = 0.
+\]
+\end{stm}
+
+\begin{stm}{stm:4}[exercise]
+Equivalently, $T$ is weak mixing if for all bounded measurable functions,
+\[
+\lim_{n \to \infty} \frac{1}{n} \sum_{i=0}^{n-1} \left| \int_X f(T^i(x)) g(x) \, d\mu - \int_X f \, d\mu \int_X g \, d\mu \right| = 0.
+\]
+\end{stm}
+
+\begin{stm}{stm:5}[exercise]
+Flow $T$ is called weak mixing if $\forall A, B \in \mathcal{U}$,
+\[
+\lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \mu(T^{-s}(A) \cap B) - \mu(A)\mu(B) \right| \, ds = 0.
+\]
+\end{stm}
+
+\begin{stm}{stm:6}[exercise]
+Equivalently, $T$ is weak mixing if for all bounded measurable functions,
+\[
+\lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \int_X f(T^s(x))g(x) \, d\mu - \int_X f \, d\mu \int_X g \, d\mu \right| ds = 0.
+\]
+\end{stm}
+
+\begin{stm}{stm:7}[exercise]
+Show that the two definitions of strong and weak mixing given in terms of sets and bounded measurable functions are equivalent.
+\end{stm}
+
+\sectionlabel{Proof {\color{blue}+ reasoning}:}
+
+\begin{stm}{stm:8}[reasoning]
+Let's start with the most complicated implication, namely $\ref{stm:5} \Rightarrow \ref{stm:6}$.
+\end{stm}
+
+\begin{stm}{stm:9}[proof]
+Let $T$ be a measure-preserving flow on $(X, \mathcal{U}, \mu)$.
+\end{stm}
+
+\begin{stm}{stm:10}[proof]
+Assume \ref{stm:5} holds.
+\end{stm}
+
+\begin{stm}{stm:11}[reasoning]
+Let's make some observations first. The left-hand side of \ref{stm:5} contains only one integral, unlike that of \ref{stm:5}. My guess is that we can relate these via "standard machinery", which means to prove the equivalence for $f, g$ simple, and then use the fact that $f$ and $g$ are both limits of simple functions, together with suitable convergence theorems.
+\end{stm}
+
+\begin{stm}{stm:13}[proof]
+Suppose $f$ and $g$ are simple, with 
+\[
+f = \sum_{i \leq n} \mathbf{1}_{A_i} a_i, \quad g = \sum_{j \leq n} \mathbf{1}_{A_j} b_j.
+\]
+\end{stm}
+
+\begin{stm}{stm:14}[proof]
+Define
+\[
+M:= \lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \int_X f(T^s(x))g(x) \, d\mu - \int_X f \, d\mu \int_X g \, d\mu \right| ds.
+\]
+\end{stm}
+
+\begin{stm}{stm:15}[proof]
+Then
+\[
+M= \lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \int_X f(T^s(x))g(x) \, d\mu - \sum_{i,j \leq n} \mu(A_i) \mu(A_j) a_i b_j \right| ds.
+\]
+\end{stm}
+
+\begin{stm}{stm:16}[reasoning]
+How can we simplify $\int_X f(T^s(x)) g(x) \, d\mu$? I think we can write the composition of a simple function after an arbitrary function as a simple function:
+\end{stm}
+
+\begin{stm}{stm:17}[proof]
+Let $h: \mathbb{R} \to \mathbb{R}$ be an arbitrary function. For all $x \in \mathbb{R}$, we have that $f(h(x)) = a_i$ if $h(x) \in A_i$. Hence, for all $x \in \mathbb{R}$,
+\begin{align*}
+f(h(x)) = \sum_{i \leq n} a_i \mathbf{1}_{h_{-1}(A_i)}(x).
+\end{align*}
+
+\end{stm}
+
+\begin{stm}{stm:18}[proof]
+By \ref{stm:17},
+\begin{align*}
+\int_X f(T^s(x))g(x) \, d\mu &= \int_X \left( \sum_{i \leq n} \mathbf{1}_{T^{-s}(A_i)} a_i \right) \left( \sum_{j \leq n} \mathbf{1}_{A_j} b_j \right) d\mu \\
+&= \sum_{i,j \leq n} \mu(T^{-s}(A_i) \cap A_j) a_i b_j.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:19}[proof]
+Clearly,
+\[
+\int_X f \, d\mu \int_X g \, d\mu = \left( \sum_{i \leq n} \mu(A_i) a_i \right) \left( \sum_{j \leq n} \mu(A_j) b_j \right) = \sum_{i,j \leq n} \mu(A_i)\mu(A_j) a_i b_j.
+\]
+\end{stm}
+
+\begin{stm}{stm:20}[proof]
+By \ref{stm:18} and \ref{stm:19},
+\[
+M= \lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \sum_{i,j \leq n} a_i b_j \left( \mu(T^{-s}(A_i) \cap A_j) - \mu(A_i)\mu(A_j) \right) \right| ds.
+\]
+\end{stm}
+
+\begin{stm}{stm:21}[reasoning]
+We would like to interchange the summation and the absolute value operation, but the absolute value operation is not linear, except if each term is positive. Perhaps, if we prove the statement for positive simple functions first, we can conclude for all bounded simple functions?
+\end{stm}
+
+\begin{stm}{stm:22}[reasoning]
+That seems unnecessary. Crucially, $M$ is nonnegative so we only need to prove $0$ is an upper bound and we can still use the subadditive property of the absolute value, i.e., $|a + b| \leq |a| + |b|$:
+\end{stm}
+
+\begin{stm}{stm:23}[proof]
+By \ref{stm:20},
+\begin{align*}
+M&\leq \lim_{t \to \infty} \frac{1}{t} \int_0^t \sum_{i,j \leq n} |a_i b_j| \left| \mu(T^{-s}(A_i) \cap A_j) - \mu(A_i)\mu(A_j) \right| ds \\
+&= \sum_{i,j \leq n} |a_i b_j| \lim_{t \to \infty} \frac{1}{t} \int_0^t \left| \mu(T^{-s}(A_i) \cap A_j) - \mu(A_i)\mu(A_j) \right| ds \\
+&= 0.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:24}[reasoning]
+Now we can prove the equivalence for general $f, g$.
+\end{stm}
+
+\begin{stm}{stm:36}[proof]
+Assume that $f$ and $g$ are measurable and bounded by some $C > 0$. 
+\end{stm}
+
+\begin{stm}{stm:37}[proof]
+By (36), $f$ and $g$ are the uniform limits of sequences $(f_n)$ and $(g_n)$ respectively, where $f_n$ and $g_n$ are simple functions that are bounded by $C$.
+\end{stm}
+
+\begin{stm}{stm:38}[proof]
+By the dominated convergence theorem,
+\begin{align*}
+M &= \lim_{t \to \infty} \frac{1}{t} \int_0^t 
+\Big| \int_X \lim_{n \to \infty} f_n(T^s(x)) \lim_{n \to \infty} g_n(x) \, d\mu 
+- \int_X \lim f_n \, d\mu \int_X \lim g_n \, d\mu \Big| \, ds \\
+&= \lim_{t \to \infty} \frac{1}{t} \int_0^t 
+\lim_{n \to \infty} 
+\Big| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f_n \, d\mu \int_X g_n \, d\mu \Big| \, ds
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:39b}[reasoning]
+Can we place the limit outside?
+\end{stm}
+
+\begin{stm}{stm:40}[proof]
+Note,
+\[
+\left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f_n \, d\mu \int_X g_n \, d\mu \right| \leq 2C \mu(X).
+\]
+
+\end{stm}
+
+\begin{stm}{stm:41}[proof]
+By \ref{stm:38}, by the fact that the absolute value is continuous, and by \ref{stm:40} together with the  dominated convergence theorem,
+\begin{align*}
+M
+&= \lim_{t \to \infty} \frac{1}{t} \int_0^t 
+\lim_{n \to \infty} 
+\left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f_n \, d\mu \int_X g_n \, d\mu \right| \, ds \\
+&= \lim_{t \to \infty} \lim_{n \to \infty} \frac{1}{t} \int_0^t 
+\left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f_n \, d\mu \int_X g_n \, d\mu \right| \, ds
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:43}[reasoning]
+Can we switch the limits? Is there any general result that can help? Yes, we might be able to use the Moore–Osgood theorem.
+\end{stm}
+
+\begin{stm}{stm:44}[reasoning]
+This theorem states that the two limits are interchangable under certain conditions, including the condition that
+$$
+h_n(t) := \frac{1}{t} \int_0^t 
+\left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f \, d\mu \int_X g \, d\mu \right| ds
+$$
+has the property that there exists a $\delta > 0$ such that $h_n(t): (0,\delta) \rightarrow \mathbb{R}$ converges uniformly to some limit as $n \rightarrow \infty$.
+\end{stm}
+
+\begin{stm}{stm:45}[proof]
+Let $\mathcal{T} = (0,\delta)$, where $\delta > 0$.
+\end{stm}
+
+\begin{stm}{stm:47}[proof]
+Let $\Delta_1 > 0$.
+\end{stm}
+
+\begin{stm}{stm:50}[proof]
+There exists a $ k \in \mathbb{N}$ such that for all $ n \geq k $ and all $x \in X$, $f_n(T^s(x)) g_n(x) \in B(f(T^s(x)) g(x), \Delta_1)$, where $B(x,\epsilon)$ denotes a ball around $x$ of radius $\epsilon$, so
+\[
+\int_X f_n(T^s(x)) g_n(x) \, d\mu 
+\in B \left( \int_X f(T^s(x)) g(x) \, d\mu, \Delta_1 \mu(X) \right)
+\]
+\end{stm}
+
+\begin{stm}{stm:52}[proof]
+Let $\Delta_2 \geq 0$. Then there exists an $m$ such that for $n \geq m$,
+\[
+\int_X f_n \, d\mu \in B \left( \int_X f \, d\mu, \Delta_2 \mu(X) \right)
+\quad \text{and} \quad 
+\int_X g_n \, d\mu \in B \left( \int_X g \, d\mu, \Delta_2 \mu(X) \right).
+\]
+\end{stm}
+
+\begin{stm}{stm:55}[proof]
+By \ref{stm:50} and \ref{stm:52}, for all $n \geq \max(m,k)$,
+\begin{align*}
+&\frac{1}{t} \int_0^t \left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f \, d\mu \int_X g \, d\mu \right| ds \\
+&\in B \Big( \frac{1}{t} \int_0^t \left| \int_X f(T^s(x)) g(x) \, d\mu 
+- \int_X f \, d\mu \int_X g \, d\mu \right| ds, \Delta_1 \mu(X) + 2 \Delta_2 \mu(X) \Big)
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:56}[proof]
+Since $\Delta_1$ and $\Delta_2$ were arbitrary, and \ref{stm:55} does not depend on $t$, 
+\[
+\| h_n(t) - h(t) \|_{\mathcal{T}} \to 0.
+\]
+\end{stm}
+
+\begin{stm}{stm:57}[proof]
+Therefore, by the Moore–Osgood theorem,
+\begin{align*}
+M
+= \lim_{n \to \infty} \lim_{t \to \infty} \frac{1}{t} \int_0^t 
+\left| \int_X f_n(T^s(x)) g_n(x) \, d\mu 
+- \int_X f_n \, d\mu \int_X g_n \, d\mu \right| ds = 0.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:58a}[proof]
+Clearly, \ref{stm:6} implies \ref{stm:5}, so \ref{stm:5} and \ref{stm:6} are equivalent.
+\end{stm}
+
+\begin{stm}{stm:58b}[proof]
+We will skip the proof of \ref{stm:3} $\Leftrightarrow$ \ref{stm:4}, since it is likely very similar to the one for \ref{stm:5} $\Leftrightarrow$ \ref{stm:6}. 
+\end{stm}
+
+\begin{stm}{stm:60}[proof]
+Next, suppose 
+\[
+\lim_{t \to \infty} \mu(T^{-t}(A) \cap B) = \mu(A) \cdot \mu(B)
+\]
+for any two measurable sets $A, B \in \mathcal{U}$.
+\end{stm}
+
+\begin{stm}{stm:61a}[proof]
+By \ref{stm:60} and by dominated convergence,
+\begin{align*}
+\lim_{t \to \infty} \int_X f_n(T^{-t}(x)) g_n(x) \, d\mu 
+&= \lim_{t \to \infty} \int_X \left( \sum_{i=1}^n \mathbf{1}_{T^{-t}(A_i)} a_i^n \right) \left( \sum_{j=1}^n \mathbf{1}_{A_j} b_j^n \right) \, d\mu \\
+&= \lim_{t \to \infty} \int_X \left( \sum_{i,j \leq n} \mathbf{1}_{T^{-t}(A_i) \cap A_j}(x) a_i^n b_j^n \right) \, d\mu \\
+&= \sum_{i,j \leq n} \lim_{t \to \infty} \int_X \mathbf{1}_{T^{-t}(A_i) \cap A_j}(x) a_i^n b_j^n \, d\mu \\
+&= \sum_{i,j \leq n} \lim_{t \to \infty} \mu(T^{-t}(A_i) \cap A_j) a_i^n b_j^n \\
+&= \sum_{i,j \leq n} \mu(A_i) \mu(A_j) a_i^n b_j^n.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:61b}[proof]
+So,
+\[
+\int_X f \, d\mu \int_X g \, d\mu.
+\]
+\end{stm}
+
+\begin{stm}{stm:insert62a}[proof]
+Using \ref{stm:37}, \ref{stm:61b} and dominated convergence, it follows from an argument similar to the one used to derive \ref{stm:57} that
+\begin{align*}
+M_s(f, g) 
+&:= \lim_{t \to \infty} \int_X f(T^t(x)) g(x) \, d\mu \\
+&= \lim_{t \to \infty} \int_X \lim_{n \to \infty} f_n(T^t(x)) \lim_{n \to \infty} g_n(x) \, d\mu \\
+&= \lim_{t \to \infty} \lim_{n \to \infty} \int_X f_n(T^t(x)) g_n(x) \, d\mu \\
+&= \lim_{n \to \infty} \lim_{t \to \infty} \int_X f_n(T^t(x)) g_n(x) \, d\mu \\
+&= \lim_{n \to \infty} \int_X f_n \, d\mu \int_X g_n \, d\mu \\
+&= \int_X f \, d\mu \int_X g \, d\mu.
+\end{align*}
+\end{stm}
+
+\begin{stm}{stm:62}[proof]
+In other words, statement \ref{stm:1} implies statement \ref{stm:2}. Since the converse is trivial, \ref{stm:1} and \ref{stm:2} are equivalent.
+\end{stm}
