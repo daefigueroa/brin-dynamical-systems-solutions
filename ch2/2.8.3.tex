@@ -1,71 +1,71 @@
 \sectionlabel{Exercise 2.8.3.}
 
-\begin{stm}{stm:283statement}[exercise]
+\begin{stm}{stm:ex2.8.3-283statement}[exercise]
 Prove the following generalization of Proposition 2.1.2. If a commutative group $G$ acts by homeomorphisms on a compact metric space $X$, then there is a non-empty, closed $G$-invariant subset $X'$ on which $G$ acts minimally.
 \end{stm}
 
 \sectionlabel{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:1}[reasoning]
+\begin{stm}{stm:ex2.8.3-1}[reasoning]
 Let's try to adapt the proof of Proposition 2.1.2 to the more general case.
 \end{stm}
 
-\begin{stm}{stm:2}[reasoning]
+\begin{stm}{stm:ex2.8.3-2}[reasoning]
 There are four theorems stated in section 2.8, but they don't seem applicable in this exercise.
 \end{stm}
 
-\begin{stm}{stm:3}[proof]
+\begin{stm}{stm:ex2.8.3-3}[proof]
 Let $\mathcal{C}$ be the collection of non-empty, closed $G$-invariant subsets of $X$, with the partial ordering given by inclusion.
 \end{stm}
 
-\begin{stm}{stm:4}[proof]
+\begin{stm}{stm:ex2.8.3-4}[proof]
 Since $X \in \mathcal{C}$, $\mathcal{C}$ is not empty.
 \end{stm}
 
-\begin{stm}{stm:5}[proof]
+\begin{stm}{stm:ex2.8.3-5}[proof]
 Suppose $\mathcal{K} \subseteq \mathcal{C}$ is a totally ordered subset. Then, any finite intersection of elements of $\mathcal{K}$ is nonempty, so by the finite intersection property for compact sets, $\bigcap_{K \in \mathcal{K}} K \ne \emptyset$. Thus, by Zorn's lemma, $\mathcal{C}$ contains a minimal element $M$.
 \end{stm}
 
-\begin{stm}{stm:6}[reasoning]
+\begin{stm}{stm:ex2.8.3-6}[reasoning]
 So far, we have followed the proof of 2.1.2 almost exactly. How can we conclude that $G$ acts minimally on $M$?
 \end{stm}
 
-\begin{stm}{stm:7}[reasoning]
+\begin{stm}{stm:ex2.8.3-7}[reasoning]
 Intuitively speaking, we have very little constructive information about $M$, so proof by contradiction seems like a good strategy.
 \end{stm}
 
-\begin{stm}{stm:8}[proof]
+\begin{stm}{stm:ex2.8.3-8}[proof]
 Suppose that $G$ does not act minimally on $M$.
 \end{stm}
 
-\begin{stm}{stm:9}[proof]
+\begin{stm}{stm:ex2.8.3-9}[proof]
 Then, there exists a point $b \in M$ and a nonempty open set $C \subseteq M$ such that $Gb \cap C = \emptyset$.
 \end{stm}
 
-\begin{stm}{stm:10}[reasoning]
-To conclude the proof, we should find a contradiction, given \ref{stm:9} and \ref{stm:5}. We want to find some set $Y \subseteq M$ that is closed, nonempty, and $G$-invariant. Let's start with some possible natural choices for $Y$, and work from there.
+\begin{stm}{stm:ex2.8.3-10}[reasoning]
+To conclude the proof, we should find a contradiction, given \ref{stm:ex2.8.3-9} and \ref{stm:ex2.8.3-5}. We want to find some set $Y \subseteq M$ that is closed, nonempty, and $G$-invariant. Let's start with some possible natural choices for $Y$, and work from there.
 \end{stm}
 
-\begin{stm}{stm:11}[reasoning]
+\begin{stm}{stm:ex2.8.3-11}[reasoning]
 Note $C$ is not closed, $\text{cl}(C)$ is not necessarily $G$-invariant, and $M \setminus C$ is also not necessarily $G$-invariant. On the other hand, $M \setminus GC$ seems like a good candidate.
 \end{stm}
 
-\begin{stm}{stm:12}[proof]
+\begin{stm}{stm:ex2.8.3-12}[proof]
 Since $GC = \bigcup_{g \in G} gC$, and each $g \in G$ is a homeomorphism, $GC$ is open.
 \end{stm}
 
-\begin{stm}{stm:13}[proof]
+\begin{stm}{stm:ex2.8.3-13}[proof]
 So, since $M$ is closed, $M \setminus GC$ is closed.
 \end{stm}
 
-\begin{stm}{stm:14}[proof]
+\begin{stm}{stm:ex2.8.3-14}[proof]
 Since $b \in M$ and $Gb \cap C = \emptyset$, $b \in M \setminus GC$, so $M \setminus GC$ is nonempty.
 \end{stm}
 
-\begin{stm}{stm:15}[proof]
+\begin{stm}{stm:ex2.8.3-15}[proof]
 If $m \in M \setminus GC$ and $g \in G$, then $m \ne g^{-1}c$, so $gm \ne C$, so since $M$ is $G$-invariant, $gm \in M \setminus GC$, so $M \setminus GC$ is $G$-invariant.
 \end{stm}
 
-\begin{stm}{stm:16}[proof]
-By \ref{stm:13}–\ref{stm:15}, $M \setminus GC$ is a closed, nonempty, $G$-invariant proper subset of $M$, which contradicts \ref{stm:5}, so \ref{stm:8} is false. Hence, $G$ acts minimally on $M$.
+\begin{stm}{stm:ex2.8.3-16}[proof]
+By \ref{stm:ex2.8.3-13}–\ref{stm:ex2.8.3-15}, $M \setminus GC$ is a closed, nonempty, $G$-invariant proper subset of $M$, which contradicts \ref{stm:ex2.8.3-5}, so \ref{stm:ex2.8.3-8} is false. Hence, $G$ acts minimally on $M$.
 \end{stm}

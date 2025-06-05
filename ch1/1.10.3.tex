@@ -1,108 +1,108 @@
 \sectionlabel{Exercise 1.10.3.}
 
-\begin{stm}{stm:setup}[exercise]
+\begin{stm}{stm:ex1.10.3-setup}[exercise]
 Let $f : \mathbb{R}^n \to \mathbb{R}$ be a smooth function. 
 \end{stm}
 
-\begin{stm}{stm:setup1}[exercise]
+\begin{stm}{stm:ex1.10.3-setup1}[exercise]
 Show that $-f$ is a Lyapunov function for the gradient flow.
 \end{stm}
     
-\begin{stm}{stm:setup2}[exercise]
+\begin{stm}{stm:ex1.10.3-setup2}[exercise]
 Show that the trajectories of the gradient flow are orthogonal to the level sets of $f$.
 \end{stm}
 
 \sectionlabel{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:3}[reasoning]
+\begin{stm}{stm:ex1.10.3-3}[reasoning]
 Let's write out the relevant definitions.
 \end{stm}
 
-\begin{stm}{stm:4}[reasoning]
+\begin{stm}{stm:ex1.10.3-4}[reasoning]
 The gradient flow is the flow of the differential equation $\dot{x} = \nabla f(x)$.
 \end{stm}
 
-\begin{stm}{stm:5}[reasoning]
+\begin{stm}{stm:ex1.10.3-5}[reasoning]
 Denote the time-$t$ gradient flow by $g^t : \mathbb{R}^n \to \mathbb{R}^n$. For all $x \in \mathbb{R}^n$ and $t \in \mathbb{R}^+$, write $g_x(t) := g^t(x)$.
 \end{stm}
 
-\begin{stm}{stm:6}[reasoning]
+\begin{stm}{stm:ex1.10.3-6}[reasoning]
 For each $x$ this defines $g_x : \mathbb{R}^+ \to \mathbb{R}^n$.
 \end{stm}
 
-\begin{stm}{stm:7}[reasoning]
+\begin{stm}{stm:ex1.10.3-7}[reasoning]
 Let $x \in \mathbb{R}^n$ and $t \in \mathbb{R}^+$. Note $(f \circ g_x)(0) = f(x)$ and $(f \circ g_x)(t) = f(g^t(x))$.
 \end{stm}
 
-\begin{stm}{stm:8}[proof]
-By \ref{stm:7}, if $(f \circ g_x)'(s) \ge 0$ for all $s \in \mathbb{R}^+$ then $-f$ is Lyapunov.
+\begin{stm}{stm:ex1.10.3-8}[proof]
+By \ref{stm:ex1.10.3-7}, if $(f \circ g_x)'(s) \ge 0$ for all $s \in \mathbb{R}^+$ then $-f$ is Lyapunov.
 \end{stm}
 
-\begin{stm}{stm:10}[proof]
-By \ref{stm:4}, $g_x'(t) = \nabla f(g_x(t))$. 
+\begin{stm}{stm:ex1.10.3-10}[proof]
+By \ref{stm:ex1.10.3-4}, $g_x'(t) = \nabla f(g_x(t))$. 
 \end{stm}
 
-\begin{stm}{stm:11}[proof]
-By the multivariate chain rule and \ref{stm:10}, $$(f \circ g_x)'(t) = \langle \nabla f(g_x(t)), g_x'(t) \rangle = \langle g_x'(t), g_x'(t) \rangle$$ where $\langle \cdot, \cdot \rangle$ is the inner product in $\mathbb{R}^n$. 
+\begin{stm}{stm:ex1.10.3-11}[proof]
+By the multivariate chain rule and \ref{stm:ex1.10.3-10}, $$(f \circ g_x)'(t) = \langle \nabla f(g_x(t)), g_x'(t) \rangle = \langle g_x'(t), g_x'(t) \rangle$$ where $\langle \cdot, \cdot \rangle$ is the inner product in $\mathbb{R}^n$. 
 \end{stm}
 
-\begin{stm}{stm:12}[proof]
+\begin{stm}{stm:ex1.10.3-12}[proof]
 By definition of inner products, $\langle g_x'(t), g_x'(t) \rangle \ge 0$.
 \end{stm}
 
-\begin{stm}{stm:13}[proof]
-By \ref{stm:11}, \ref{stm:12} and \ref{stm:8}, $-f$ is Lyapunov.
+\begin{stm}{stm:ex1.10.3-13}[proof]
+By \ref{stm:ex1.10.3-11}, \ref{stm:ex1.10.3-12} and \ref{stm:ex1.10.3-8}, $-f$ is Lyapunov.
 \end{stm}
 
-\begin{stm}{stm:14}[reasoning]
+\begin{stm}{stm:ex1.10.3-14}[reasoning]
 Next, we want to show statement (2).
 \end{stm}
 
-\begin{stm}{stm:15}[reasoning]
+\begin{stm}{stm:ex1.10.3-15}[reasoning]
 To express orthogonality, we need a common inner product space, but this is just $\mathbb{R}^n$ in our case.
 \end{stm}
 
-\begin{stm}{stm:insert15a}[reasoning]
+\begin{stm}{stm:ex1.10.3-insert15a}[reasoning]
 Which vectors are we trying to prove are orthogonal? I think, given some point $x \in \mathbb{R}^n$, we should compare the time derivative of the orbit of $x$ at $t=0$, with a vector in $\mathbb{R}^n$ ‘tangent’ to the level set of $f$ at $f(x)$.
 \end{stm}
 
-\begin{stm}{stm:17}[reasoning]
+\begin{stm}{stm:ex1.10.3-17}[reasoning]
 How can we define the tangent vector?
 \end{stm}
 
-\begin{stm}{stm:18}[proof]
+\begin{stm}{stm:ex1.10.3-18}[proof]
 Let $x \in \mathbb{R}^n$.
 \end{stm}
 
-\begin{stm}{stm:19}[proof]
+\begin{stm}{stm:ex1.10.3-19}[proof]
 Define the level set $C := f^{-1}(f(x))$.
 \end{stm}
 
-\begin{stm}{stm:insert19a}[reasoning]
+\begin{stm}{stm:ex1.10.3-insert19a}[reasoning]
 $C$ is a subset of $\mathbb{R}^n$, but I don't think it is necessarily a smooth manifold. Still, we can define tangent vectors in terms of smooth paths in $\mathbb{R}^n$:
 \end{stm}
 
-\begin{stm}{stm:22}[proof]
+\begin{stm}{stm:ex1.10.3-22}[proof]
 Let $T_x = \{ \dot{\gamma}(0) : \exists \varepsilon > 0 \text{ s.t. } \gamma : (-\varepsilon, \varepsilon) \to C \text{ is smooth and } \gamma(0) = x \}$.
 \end{stm}
 
-\begin{stm}{stm:23}[proof]
-By \ref{stm:10}, $(f \circ g_x)'(0) = \nabla f(g_x(0)) = \nabla f(x) = g_x'(0)$.
+\begin{stm}{stm:ex1.10.3-23}[proof]
+By \ref{stm:ex1.10.3-10}, $(f \circ g_x)'(0) = \nabla f(g_x(0)) = \nabla f(x) = g_x'(0)$.
 \end{stm}
 
-\begin{stm}{stm:24}[proof]
+\begin{stm}{stm:ex1.10.3-24}[proof]
 Let $V \in T_x$, with corresponding path $\gamma : (-\varepsilon, \varepsilon) \to C$.
 \end{stm}
 
-\begin{stm}{stm:25}[reasoning]
+\begin{stm}{stm:ex1.10.3-25}[reasoning]
 We need to show $\langle V, \nabla f(x) \rangle = 0$.
 \end{stm}
 
-\begin{stm}{stm:28}[proof]
+\begin{stm}{stm:ex1.10.3-28}[proof]
 Since $\gamma(t) \in C$ for all $t \in (-\varepsilon, \varepsilon)$, $f(\gamma(t)) = f(\gamma(0))$ for all $t \in (-\varepsilon, \varepsilon)$. 
 \end{stm}
 
-\begin{stm}{stm:29}[proof]
+\begin{stm}{stm:ex1.10.3-29}[proof]
 By the multivariate chain rule,
 \begin{align*}
 \langle \nabla f(x), V \rangle 
@@ -113,6 +113,6 @@ By the multivariate chain rule,
 \end{align*}
 \end{stm}
 
-\begin{stm}{stm:30}[proof]
-By \ref{stm:28}, $(f \circ \gamma)'(0) = 0$, so by \ref{stm:29}, $\langle \nabla f(x), V \rangle = 0$, so by \ref{stm:23}, the trajectories of the gradient flow are orthogonal to the level sets of $f$.
+\begin{stm}{stm:ex1.10.3-30}[proof]
+By \ref{stm:ex1.10.3-28}, $(f \circ \gamma)'(0) = 0$, so by \ref{stm:ex1.10.3-29}, $\langle \nabla f(x), V \rangle = 0$, so by \ref{stm:ex1.10.3-23}, the trajectories of the gradient flow are orthogonal to the level sets of $f$.
 \end{stm}

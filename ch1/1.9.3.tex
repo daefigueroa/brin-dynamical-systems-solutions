@@ -1,23 +1,23 @@
 \sectionlabel{Exercise 1.9.3.}
 
-\begin{stm}{stm:193setup}[exercise]
+\begin{stm}{stm:ex1.9.3-193setup}[exercise]
 Let $\mathbb{T}$ denote the set of sequences $(\phi_i)_{i=0}^{\infty}$ where $\phi_i \in S^1$ and $\phi_i = 2 \phi_{i+1} \mod 1$ for all $i$. Let $\alpha : \mathbb{T} \to \mathbb{T}$ be defined by 
 \[
 (\phi_0, \phi_1, \dots) \mapsto (2\phi_1, \phi_1, \phi_2, \dots).
 \]
 \end{stm}
-\begin{stm}{stm:193q1}[exercise]
+\begin{stm}{stm:ex1.9.3-193q1}[exercise]
 Show that $\mathbb{T}$ is a topological group.
 \end{stm}
 
-\begin{stm}{stm:193q2}[exercise]
+\begin{stm}{stm:ex1.9.3-193q2}[exercise]
 Show that $\alpha$ is an automorphism
 \end{stm}
     
 
 \sectionlabel{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:start}[reasoning]
+\begin{stm}{stm:ex1.9.3-start}[reasoning]
 Let's first formulate basic lemmas to use throughout the exercise.
 \end{stm}
 
@@ -45,16 +45,16 @@ $\forall x, y \in \mathbb{R}, \ \forall k \in \mathbb{N}$, $( x \mod k ) + ( y \
 $x + y = ( x \mod k ) + ( y \mod k ) + pk + qk = (x \mod k) + (y \mod k) + (p+q)k$. So, $x + y \equiv_k (x \mod k) + (y \mod k)$.
 \end{proof}
 
-\begin{stm}{stm:additiondef}[final-proof]
+\begin{stm}{stm:ex1.9.3-additiondef}[final-proof]
 Given $\psi$ and $\phi$ in $\mathbb{T}$, define $(\psi + \phi)_i = (\psi_i + \phi_i) \mod 1$.
 \end{stm}
 
-\begin{stm}{stm:groupclosuregoal}[final-proof]
+\begin{stm}{stm:ex1.9.3-groupclosuregoal}[final-proof]
 Let $\psi$ and $\phi$ be elements of $\mathbb{T}$. It suffices to show $\psi_i + \phi_i \equiv_1 2(\psi + \phi)_{i+1}$.
 \end{stm}
 
-\begin{stm}{stm:groupclosurecalc}[final-proof]
-By \ref{stm:193setup}, lemma \ref{lemma:4} and lemma \ref{lemma:3},
+\begin{stm}{stm:ex1.9.3-groupclosurecalc}[final-proof]
+By \ref{stm:ex1.9.3-193setup}, lemma \ref{lemma:4} and lemma \ref{lemma:3},
 \begin{align*}
 \psi_i + \phi_i &= (2\psi_{i+1} \mod 1) + (2\phi_{i+1} \mod 1) \\
 &\equiv_1 2\psi_{i+1} + 2\phi_{i+1} \\
@@ -64,35 +64,35 @@ By \ref{stm:193setup}, lemma \ref{lemma:4} and lemma \ref{lemma:3},
 \end{align*}
 \end{stm}
 
-\begin{stm}{stm:groupclosureconclude}[final-proof]
-From \ref{stm:groupclosurecalc} and \ref{stm:groupclosuregoal}, $\mathbb{T}$ is closed under addition.
+\begin{stm}{stm:ex1.9.3-groupclosureconclude}[final-proof]
+From \ref{stm:ex1.9.3-groupclosurecalc} and \ref{stm:ex1.9.3-groupclosuregoal}, $\mathbb{T}$ is closed under addition.
 \end{stm}
 
-\begin{stm}{stm:inverse}[final-proof]
+\begin{stm}{stm:ex1.9.3-inverse}[final-proof]
 For $\phi \in \mathbb{T}$, define $(-\phi)_i := -\phi_i$.
 \end{stm}
 
-\begin{stm}{stm:inversecheck}[final-proof]
+\begin{stm}{stm:ex1.9.3-inversecheck}[final-proof]
 Clearly, this is the inverse of $\phi$.
 \end{stm}
 
-\begin{stm}{stm:contgoal}[reasoning]
+\begin{stm}{stm:ex1.9.3-contgoal}[reasoning]
 Now, let's check continuity.
 \end{stm}
 
-\begin{stm}{stm:contsetup}[final-proof]
+\begin{stm}{stm:ex1.9.3-contsetup}[final-proof]
 Suppose that $\phi^n \to \phi$ and $\psi^n \to \psi$ in $(S^1)^{\mathbb{N}_0}$. Let $n \ge 0$. By assumption, $\exists K_n$ s.t. $\forall j \le n, \ \phi_j^i = \phi_j$, $\psi_j^i = \psi_j$, hence $(\phi^i - \psi^i)_j = \phi_j - \psi_j$.
 \end{stm}
 
-\begin{stm}{stm:contconclude}[final-proof]
-By \ref{stm:contsetup}, $\forall \varepsilon > 0, \exists k$ s.t. $d(\phi^i - \psi^i, \phi - \psi) \le \varepsilon \ \forall i \ge k$, so $\lim_{n \to \infty} d(\phi^n - \psi^n, \phi - \psi) = 0$, hence $(\phi, \psi) \mapsto \phi - \psi$ is continuous.
+\begin{stm}{stm:ex1.9.3-contconclude}[final-proof]
+By \ref{stm:ex1.9.3-contsetup}, $\forall \varepsilon > 0, \exists k$ s.t. $d(\phi^i - \psi^i, \phi - \psi) \le \varepsilon \ \forall i \ge k$, so $\lim_{n \to \infty} d(\phi^n - \psi^n, \phi - \psi) = 0$, hence $(\phi, \psi) \mapsto \phi - \psi$ is continuous.
 \end{stm}
 
-\begin{stm}{stm:autogoal}[reasoning]
+\begin{stm}{stm:ex1.9.3-autogoal}[reasoning]
 Now, we check $\alpha$ is a group automorphism. Is it possible to take a shortcut? I think that if $\alpha$ preserves the product and identity and is bijective, then it follows that $\alpha$ preserves inverses and that $\alpha^{-1}$ is a group homomorphism.
 \end{stm}
 
-\begin{stm}{stm:alphalinear}[final-proof]
+\begin{stm}{stm:ex1.9.3-alphalinear}[final-proof]
     Let $\phi, \psi \in \mathbb{T}$. Show $\alpha(\phi) + \alpha(\psi) = \alpha(\phi + \psi)$. By lemma \ref{lemma:4} and lemma \ref{lemma:3},
     \begin{align*}
     (\alpha(\phi) + \alpha(\psi))_i 
@@ -103,48 +103,48 @@ Now, we check $\alpha$ is a group automorphism. Is it possible to take a shortcu
     \end{align*}
 \end{stm}
 
-\begin{stm}{stm:alphainv}[final-proof]
+\begin{stm}{stm:ex1.9.3-alphainv}[final-proof]
 Clearly, $\alpha$ preserves the identity.
 \end{stm}
 
-\begin{stm}{stm:alphabijective}[reasoning]
+\begin{stm}{stm:ex1.9.3-alphabijective}[reasoning]
 Now, let’s show $\alpha$ is bijective.
 \end{stm}
 
-\begin{stm}{stm:injective}[final-proof]
+\begin{stm}{stm:ex1.9.3-injective}[final-proof]
 Suppose $\alpha(\phi) = \alpha(\psi)$. Then $\phi_{i-1} = \alpha(\phi)_i = \alpha(\psi)_i = \psi_{i-1} \ \forall i \ge 1$, so $\phi = \psi$, hence $\alpha$ is injective.
 \end{stm}
 
-\begin{stm}{stm:surjectiondef}[final-proof]
+\begin{stm}{stm:ex1.9.3-surjectiondef}[final-proof]
 Let $\phi \in \mathbb{T}$. Let $(\phi')_i := \phi_{i+1} \ \forall i \ge 1$.
 \end{stm}
 
-\begin{stm}{stm:surjectioncheck}[final-proof]
+\begin{stm}{stm:ex1.9.3-surjectioncheck}[final-proof]
 $\alpha(\phi') = \phi$, so $\alpha$ is surjective.
 \end{stm}
 
-\begin{stm}{stm:autoconclude}[final-proof]
-By \ref{stm:injective} and \ref{stm:surjectioncheck}, $\alpha$ is bijective. By \ref{stm:alphalinear}, \ref{stm:alphainv}, and \ref{stm:injective}, $\alpha$ is a group automorphism.
+\begin{stm}{stm:ex1.9.3-autoconclude}[final-proof]
+By \ref{stm:ex1.9.3-injective} and \ref{stm:ex1.9.3-surjectioncheck}, $\alpha$ is bijective. By \ref{stm:ex1.9.3-alphalinear}, \ref{stm:ex1.9.3-alphainv}, and \ref{stm:ex1.9.3-injective}, $\alpha$ is a group automorphism.
 \end{stm} 
 
-\begin{stm}{stm:homeocheck}[reasoning]
+\begin{stm}{stm:ex1.9.3-homeocheck}[reasoning]
 Now we need to show $\alpha$ is a homeomorphism. Note that $\alpha$ is a map between product topologies. This should simplify our proofs.
 \end{stm}
 
-\begin{stm}{stm:subbasis}[final-proof]
+\begin{stm}{stm:ex1.9.3-subbasis}[final-proof]
 For product topologies the 1-d cylinders form a subbasis. So, to show that $\alpha$ is continuous it suffices to show that $\forall i \in \mathbb{N}, \pi_i \circ \alpha$ is continuous.
 \end{stm}
 
-\begin{stm}{stm:alphaprojection}[final-proof]
+\begin{stm}{stm:ex1.9.3-alphaprojection}[final-proof]
 Let $i \in \mathbb{N}$. Note $\pi_i \circ \alpha : (\phi_0, \phi_1, \dots) \mapsto \begin{cases} \phi_{i-1} & \text{if } i \ge 1 \\ 2\phi_0 & \text{if } i = 0 \end{cases}$.
 \end{stm}
 
-\begin{stm}{stm:2smap}[final-proof]
+\begin{stm}{stm:ex1.9.3-2smap}[final-proof]
 The map $r : S^1 \to S^1 : s \mapsto 2s \mod 1$ is clearly continuous.
 \end{stm}
 
-\begin{stm}{stm:pullback}[final-proof]
-By \ref{stm:2smap}, if $A \in \mathcal{T}(S^1)$, then 
+\begin{stm}{stm:ex1.9.3-pullback}[final-proof]
+By \ref{stm:ex1.9.3-2smap}, if $A \in \mathcal{T}(S^1)$, then 
 \[
 (\pi_i \circ \alpha)^{-1}(A) = 
 \begin{cases}
@@ -154,10 +154,10 @@ r^{-1}(A) \times S^1 \times \cdots & \text{if } i = 0
 \]
 \end{stm}
 
-\begin{stm}{stm:alphacontinuous}[final-proof]
-By \ref{stm:pullback} and \ref{stm:2smap}, $\pi_i \circ \alpha$ is continuous, so by \ref{stm:subbasis}, $\alpha$ is continuous.
+\begin{stm}{stm:ex1.9.3-alphacontinuous}[final-proof]
+By \ref{stm:ex1.9.3-pullback} and \ref{stm:ex1.9.3-2smap}, $\pi_i \circ \alpha$ is continuous, so by \ref{stm:ex1.9.3-subbasis}, $\alpha$ is continuous.
 \end{stm}
 
-\begin{stm}{stm:alphainvcontproof}[final-proof]
-Note $\pi_i \circ \alpha^{-1} : (\phi_0, \phi_1, \dots) \mapsto \phi_{i+1}$. This is clearly continuous, so by \ref{stm:subbasis}, $\alpha^{-1}$ is continuous, so by \ref{stm:alphacontinuous} and \ref{stm:autoconclude}, $\alpha$ is a homeomorphism.
+\begin{stm}{stm:ex1.9.3-alphainvcontproof}[final-proof]
+Note $\pi_i \circ \alpha^{-1} : (\phi_0, \phi_1, \dots) \mapsto \phi_{i+1}$. This is clearly continuous, so by \ref{stm:ex1.9.3-subbasis}, $\alpha^{-1}$ is continuous, so by \ref{stm:ex1.9.3-alphacontinuous} and \ref{stm:ex1.9.3-autoconclude}, $\alpha$ is a homeomorphism.
 \end{stm}
