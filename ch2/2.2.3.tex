@@ -1,71 +1,71 @@
-\sectionlabel{Exercise 2.2.3.}
+\subsection*{Exercise 2.2.3.}
 
-\begin{stm}{stm:ex2.2.3-223setup1}[exercise]
+\begin{exercise}{stm:ex2.2.3-223setup1}
 Is the product of two topologically transitive systems topologically transitive?
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:ex2.2.3-223setup2}[exercise]
+\begin{exercise}{stm:ex2.2.3-223setup2}
 Is a factor of a topologically transitive system topologically transitive?
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex2.2.3-1}[reasoning]
+\begin{explanation}{stm:ex2.2.3-1}
 I think the statement is false. Let's construct a counterexample, by starting with the simplest non-trivial product of topologically transitive systems, and iterating from there.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.2.3-2}[proof]
+\begin{statement}{stm:ex2.2.3-2}
 Let $R_\alpha$ be the circle translation, where $\alpha$ is irrational.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-3}[proof]
+\begin{statement}{stm:ex2.2.3-3}
 It is known that $R_\alpha$ is topologically transitive.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-4}[reasoning]
+\begin{explanation}{stm:ex2.2.3-4}
 $R_\alpha \times R_\alpha$ already seems to form a counterexample, since $R_\alpha \times R_\alpha$ preserves the distance between the components of points in $S^1 \times S^1$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.2.3-5}[proof]
+\begin{statement}{stm:ex2.2.3-5}
 Let $(a,b) \in S^1 \times S^1$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-5b}[proof]
+\begin{statement}{stm:ex2.2.3-5b}
 If $a \geq b$, then the orbit of $(a,b)$ under $R_\alpha \times R_\alpha$ is contained in $l_1 \cup l_2$ where
 \begin{align*}
 l_1 &= \left\{ t(a-b,0) + (1 - t)(1, b-a+1) : t \in [0,1] \right\}, \\
 l_2 &= \left\{ t(1, b-a+1) + (1 - t)(1, b-a+1) : t \in [0,1] \right\}.
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-6}[proof]
+\begin{statement}{stm:ex2.2.3-6}
 If $b \geq a$, then the same holds with
 \begin{align*}
 l_1 &= \left\{ t(0, a-b+1) + (1 - t)(b - a, 1) : t \in [0,1] \right\}, \\
 l_2 &= \left\{ t(b-a, 0) + (1 - t)(1, a-b+1) : t \in [0,1] \right\}.
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-7}[proof]
+\begin{statement}{stm:ex2.2.3-7}
 In both cases, $l_1$ and $l_2$ are lines contained in $[0,1) \times [0,1)$. Since these lines are clearly not dense in $S^1 \times S^1$, the forward orbit of $(a,b)$ is not dense in $S^1 \times S^1$. Hence, $R_\alpha \times R_\alpha$ is not topologically transitive.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-insert9}[proof]
+\begin{statement}{stm:ex2.2.3-insert9}
 Suppose $f: X \to X$ and $g: Y \to Y$ are topological dynamical systems, that $\pi$ is a topological semiconjugacy from $f$ to $g$, and that $f$ is topologically transitive with point $x \in X$ with dense forward orbit.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-10}[reasoning]
+\begin{explanation}{stm:ex2.2.3-10}
 We want to show that the forward orbit of $\pi(x)$ is dense.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.2.3-11}[proof]
-Let $U \subseteq Y$ be open. Since $\pi$ is continuous, $\pi^{-1}(U)$ is open, so by \ref{stm:ex2.2.3-insert9}, there exists a $k \in \mathbb{N}$ such that $f^k(x) \in \pi^{-1}(U)$.
-\end{stm}
+\begin{statement}{stm:ex2.2.3-11}
+Let $U \subseteq Y$ be open. Since $\pi$ is continuous, $\pi^{-1}(U)$ is open, so by (\ref{stm:ex2.2.3-insert9}), there exists a $k \in \mathbb{N}$ such that $f^k(x) \in \pi^{-1}(U)$.
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-12}[proof]
-By \ref{stm:ex2.2.3-insert9}, $\pi \circ f^k(x) = g^k(\pi(x))$.
-\end{stm}
+\begin{statement}{stm:ex2.2.3-12}
+By (\ref{stm:ex2.2.3-insert9}), $\pi \circ f^k(x) = g^k(\pi(x))$.
+\end{statement}
 
-\begin{stm}{stm:ex2.2.3-13}[proof]
-By \ref{stm:ex2.2.3-11} and \ref{stm:ex2.2.3-12}, $g^k(\pi(x)) \in U$, so $\pi(x)$ is dense, hence a factor of a topologically transitive system is topologically transitive.
-\end{stm}
+\begin{statement}{stm:ex2.2.3-13}
+By (\ref{stm:ex2.2.3-11}) and (\ref{stm:ex2.2.3-12}), $g^k(\pi(x)) \in U$, so $\pi(x)$ is dense, hence a factor of a topologically transitive system is topologically transitive.
+\end{statement}

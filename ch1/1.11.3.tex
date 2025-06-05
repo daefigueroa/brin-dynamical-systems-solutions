@@ -1,42 +1,42 @@
-\sectionlabel{Exercise 1.11.3.}
+\subsection*{Exercise 1.11.3.}
 
-\begin{stm}{stm:ex1.11.3-setup}[exercise]
+\begin{exercise}{stm:ex1.11.3-setup}
 Suppose $1, s$ and $\alpha s$ are real numbers that are linearly independent over $\mathbb{Q}$.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:ex1.11.3-setup2}[exercise]
+\begin{exercise}{stm:ex1.11.3-setup2}
 Show that every orbit of the time-$s$ map $\phi_\alpha^s$ is dense in $\mathbb{T}^2$.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex1.11.3-3}[reasoning]
+\begin{explanation}{stm:ex1.11.3-3}
 Let's try to adapt the proof that $R_\alpha$ has dense semiorbits if $\alpha$ is irrational.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.11.3-4}[reasoning]
-The idea in \ref{stm:ex1.11.3-3} is to divide $S^1$ into disjoint $\varepsilon$-sized intervals, and use the pigeonhole principle to show that there exist $k > m$ such that $R_\alpha^k(x)$ and $R_\alpha^m(x)$ belong to the same interval, hence that $R_\alpha^{k-m}$ is a translation by less than $\varepsilon$. In our case, we need to use rectangles instead of intervals, and the translation is not simply defined as the addition of an irrational number.
-\end{stm}
+\begin{explanation}{stm:ex1.11.3-4}
+The idea in (\ref{stm:ex1.11.3-3}) is to divide $S^1$ into disjoint $\varepsilon$-sized intervals, and use the pigeonhole principle to show that there exist $k > m$ such that $R_\alpha^k(x)$ and $R_\alpha^m(x)$ belong to the same interval, hence that $R_\alpha^{k-m}$ is a translation by less than $\varepsilon$. In our case, we need to use rectangles instead of intervals, and the translation is not simply defined as the addition of an irrational number.
+\end{explanation}
 
-\begin{stm}{stm:ex1.11.3-5}[proof]
+\begin{statement}{stm:ex1.11.3-5}
 Let $x \in \mathbb{T}^2$, $y \in \mathbb{T}^2$, $\varepsilon' > 0$ and $\varepsilon = \frac{\varepsilon'}{2\sqrt{2}}$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-5b}[proof]
+\begin{statement}{stm:ex1.11.3-5b}
 Let $\mathcal{P}_\varepsilon$ be a partition of $\mathbb{T}^2$ into finitely many squares of the form $[a,b)^2$, where $\frac{\varepsilon}{2} < |a-b| < \varepsilon$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-6}[proof]
+\begin{statement}{stm:ex1.11.3-6}
 By the pigeonhole principle, there exists a $P \in \mathcal{P}_\varepsilon$ and $k > m$ in $\mathbb{Z}$ such that $\phi_\alpha^{ks}(x)$ and $\phi_\alpha^{ms}(x)$ are in $P$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-7}[proof]
-By \ref{stm:ex1.11.3-6}, $d(z, \phi_\alpha^{(k-m)s}(z)) < \sqrt{2} \varepsilon$ for all $z \in \mathbb{T}^2$, where $d$ is the metric on $\mathbb{T}^2$.
-\end{stm}
+\begin{statement}{stm:ex1.11.3-7}
+By (\ref{stm:ex1.11.3-6}), $d(z, \phi_\alpha^{(k-m)s}(z)) < \sqrt{2} \varepsilon$ for all $z \in \mathbb{T}^2$, where $d$ is the metric on $\mathbb{T}^2$.
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-8}[reasoning]
+\begin{explanation}{stm:ex1.11.3-8}
 Intuitively, $\phi_\alpha^{(k-m)s}$ is a translation of size less than $\sqrt{2} \varepsilon$, seemingly with an irrational slope. So, if the line from $x$ in the direction of that translation eventually intersects an $\varepsilon$-ball around $y$, then there should exist an iterate of $x$ that is within $\varepsilon'$ of $y$. Let's make this precise. We can state the conjecture first, and prove it only after we know that it gives the required result.
-\end{stm}
+\end{explanation}
 
 \begin{conj}\label{conj:slope1}
 There exists a  $\beta \in \mathbb{R} \setminus \mathbb{Q}$ such that for all $y \in \mathbb{T}^2$
@@ -50,38 +50,38 @@ There exists a  $\beta \in \mathbb{R} \setminus \mathbb{Q}$ such that for all $y
     So, with $\beta = \frac{1}{\alpha}$, the statement follows.
 \end{proof}
 
-\begin{stm}{stm:ex1.11.3-11}[proof]
+\begin{statement}{stm:ex1.11.3-11}
 Let $\gamma$ be the line in $\mathbb{T}^2$ starting from $x$ in the direction of $x - \phi_\alpha^{m-k}(x)$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-12}[proof]
+\begin{statement}{stm:ex1.11.3-12}
 Let $\beta$ be the slope of $\gamma$, which is finite and in $\mathbb{R} \setminus \mathbb{Q}$ by \ref{conj:slope1}.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-13}[proof]
-By \ref{stm:ex1.11.3-12}, considering $\gamma$ as a subset of $\mathbb{T}^2$, we have
+\begin{statement}{stm:ex1.11.3-13}
+By (\ref{stm:ex1.11.3-12}), considering $\gamma$ as a subset of $\mathbb{T}^2$, we have
 \begin{align*}
 \gamma \cap (y_1 \times \mathbb{T})
 &= \bigcup_{n \ge 0} \left\{ \left( y_1, (x_2 + \beta(y_1 - x_1) + \beta n) \bmod 1 \right) \right\} \\
 &= \bigcup_{n \ge 0} \left\{ \left( y_1, R_\beta^n(x_2 + \beta(y_1 - x_1)) \right) \right\}.
 \end{align*}
-\end{stm}
+\end{statement}
 
 
-\begin{stm}{stm:ex1.11.3-14}[proof]
-By \ref{stm:ex1.11.3-12}, $R_\beta$ has dense semiorbits.
-\end{stm}
+\begin{statement}{stm:ex1.11.3-14}
+By (\ref{stm:ex1.11.3-12}), $R_\beta$ has dense semiorbits.
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-15}[proof]
-By \ref{stm:ex1.11.3-14} and \ref{stm:ex1.11.3-13}, there exists a $z \in \gamma \cap (y_1 \times (y_2 - \varepsilon, y_2 + \varepsilon))$.
-\end{stm}
+\begin{statement}{stm:ex1.11.3-15}
+By (\ref{stm:ex1.11.3-14}) and (\ref{stm:ex1.11.3-13}), there exists a $z \in \gamma \cap (y_1 \times (y_2 - \varepsilon, y_2 + \varepsilon))$.
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-16}[proof]
-By \ref{stm:ex1.11.3-8} and Conjecture \ref{conj:slope1}, there exists a $p \in \mathbb{N}$ such that $$d(\phi_\alpha^{p(k-m)s}(x), z) < \sqrt{2} \varepsilon$$
-\end{stm}
+\begin{statement}{stm:ex1.11.3-16}
+By (\ref{stm:ex1.11.3-7}) and Conjecture \ref{conj:slope1}, there exists a $p \in \mathbb{N}$ such that $$d(\phi_\alpha^{p(k-m)s}(x), z) < \sqrt{2} \varepsilon$$
+\end{statement}
 
-\begin{stm}{stm:ex1.11.3-17}[proof]
-By \ref{stm:ex1.11.3-16} and \ref{stm:ex1.11.3-15},
+\begin{statement}{stm:ex1.11.3-17}
+By (\ref{stm:ex1.11.3-16}) and (\ref{stm:ex1.11.3-15}),
 \begin{align*}
 d(\phi_\alpha^{p(k-m)s}(x), y)
 &\le d(\phi_\alpha^{p(k-m)s}(x), z) + d(z, y) \\
@@ -89,10 +89,10 @@ d(\phi_\alpha^{p(k-m)s}(x), y)
 &\le 2\sqrt{2} \varepsilon \\
 &\le \varepsilon'.
 \end{align*}
-\end{stm}
+\end{statement}
 
 
-\begin{stm}{stm:ex1.11.3-18}[proof]
-By \ref{stm:ex1.11.3-17}, every orbit of $\phi_\alpha^s$ is dense in $\mathbb{T}^2$.
-\end{stm}
+\begin{statement}{stm:ex1.11.3-18}
+By (\ref{stm:ex1.11.3-17}), every orbit of $\phi_\alpha^s$ is dense in $\mathbb{T}^2$.
+\end{statement}
 

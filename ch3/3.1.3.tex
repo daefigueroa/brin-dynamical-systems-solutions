@@ -1,47 +1,47 @@
-\sectionlabel{Exercise 3.1.3.}
+\subsection*{Exercise 3.1.3.}
 
-\begin{stm}{stm:ex3.1.3-313setup}[exercise]
+\begin{exercise}{stm:ex3.1.3-313setup}
 Use a higher block presentation to prove that for any block code $c: X \to Y$ there is a subshift $Z$ and an isomorphism $f: Z \to X$ such that $c \circ f: Z \to Y$ is a $(0,0)$-block code.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex3.1.3-1}[proof]
+\begin{statement}{stm:ex3.1.3-1}
 Let $c: X \to Y$ be a block code, with corresponding function $\alpha: W_{a+b+1} \to \mathcal{A}_m$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-2}[reasoning]
+\begin{explanation}{stm:ex3.1.3-2}
 Clearly, any higher block presentation $f$ of $X$ gives an isomorphism $f: X \to \operatorname{im}(f)$, but it is not clear which one will make $f \circ c$ a $(0,0)$-block code. Intuitively, the most natural choice is the presentation of $X$ in which the blocks are aligned with those given by $c$. Let's check if this presentation has the required properties.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex3.1.3-3}[proof]
+\begin{statement}{stm:ex3.1.3-3}
 Letting $k = a + b + 1$ and $l = b$, the higher block presentation $d$ of $X$ can be written as
 \begin{align*}
 d(x)_i = x_{i-a} \ldots x_{i+b}, \quad i \in \mathbb{Z}
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-4}[proof]
+\begin{statement}{stm:ex3.1.3-4}
 Since $\operatorname{im}(d) \subseteq \Sigma_{W_{a+b+1}(X)}$ we have $W_1(\operatorname{im}(d)) \subseteq W_{{a+b+1}}(X)$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-5}[proof]
+\begin{statement}{stm:ex3.1.3-5}
 If $\omega \in W_{a+b+1}(X)$, then for some sequence $x \in X$ and $i \in \mathbb{Z}$,
 \[
 \omega = x_{i-a} \ldots x_{i+b}, \quad \text{so} \quad d(x)_i = \omega,
 \]
 so $\omega \in W_1(\operatorname{im}(d))$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-5b}[proof]
-By \ref{stm:ex3.1.3-5} and \ref{stm:ex3.1.3-4}, $W_1(\operatorname{im}(d)) = W_{a+b+1}(X)$.
-\end{stm}
+\begin{statement}{stm:ex3.1.3-5b}
+By (\ref{stm:ex3.1.3-5}) and (\ref{stm:ex3.1.3-4}), $W_1(\operatorname{im}(d)) = W_{a+b+1}(X)$.
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-6}[proof]
+\begin{statement}{stm:ex3.1.3-6}
 By Exercise 3.1.2, $d$ is an isomorphism onto its image. Let $d^{-1}: \operatorname{im}(d) \to X$ be its inverse.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-7}[proof]
+\begin{statement}{stm:ex3.1.3-7}
 If $z \in \operatorname{im}(d)$ and $i \in \mathbb{Z}$, then there exists a unique $x$ such that $d(x) = z$, so
 \begin{align*}
 (c \circ d^{-1})(z)_i &= c(d^{-1}(z))_i \\
@@ -49,8 +49,8 @@ If $z \in \operatorname{im}(d)$ and $i \in \mathbb{Z}$, then there exists a uniq
 &= \alpha(x_{i-a} \ldots x_{i+b}) \\
 &= \alpha(z_i)
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex3.1.3-8}[proof]
-By \ref{stm:ex3.1.3-7} and \ref{stm:ex3.1.3-5}, $c \circ d^{-1}: \operatorname{im}(d) \to Y$ is a $(0,0)$-block code and, by \ref{stm:ex3.1.3-6}, $d^{-1}$ is an isomorphism.
-\end{stm}
+\begin{statement}{stm:ex3.1.3-8}
+By (\ref{stm:ex3.1.3-7}) and (\ref{stm:ex3.1.3-5}), $c \circ d^{-1}: \operatorname{im}(d) \to Y$ is a $(0,0)$-block code and, by (\ref{stm:ex3.1.3-6}), $d^{-1}$ is an isomorphism.
+\end{statement}

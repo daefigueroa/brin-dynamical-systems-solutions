@@ -1,74 +1,74 @@
-\sectionlabel{Exercise 2.5.3.}
+\subsection*{Exercise 2.5.3.}
 
-\begin{stm}{stm:253setup}[exercise]
+\begin{exercise}{stm:253setup}
 Let $\{a_n\}$ be a subadditive sequence of non-negative real numbers, i.e.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:253cond1}[exercise]
+\begin{exercise}{stm:253cond1}
 $0 \le a_{m+n} \le a_m + a_n$ for all $m,n \ge 0$.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:253goal}[exercise]
+\begin{exercise}{stm:253goal}
 Show that $\lim_{n \to \infty} \frac{a_n}{n} = \inf_{n \ge 0} \frac{a_n}{n}$.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:reason1}[reasoning]
+\begin{explanation}{stm:reason1}
 We need to show $\lim_{n \to \infty} \frac{a_n}{n}$ is the infimum, which we can do by checking that it is a lower bound of $\left\{ \frac{a_n}{n} \right\}$, and that it is greater than or equal to any lower bound of $\left\{ \frac{a_n}{n} \right\}$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:choosek}[proof]
+\begin{statement}{stm:choosek}
 Let $k \in \mathbb{N}_+$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:reason2}[reasoning]
+\begin{explanation}{stm:reason2}
 We need to show $\lim_{n \to \infty} \frac{a_n}{n} \le \frac{a_k}{k}$. To do that, we could find $f(n) \to 0$ such that, for $n$ sufficiently large, 
 \[
 \frac{a_n}{n} \le \frac{a_k}{k} + f(n).
 \]
 What natural choice for $n$ can we make?
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ngeqk}[proof]
+\begin{statement}{stm:ngeqk}
 Let $n \ge k$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:reason4}[reasoning]
-To prove \ref{stm:reason2}, we will need to show that $\frac{a_n}{n} - \frac{a_k}{k} \to 0$ as $n \to \infty$. This should follow in some way from the nonnegativity and the subadditivity of $(a_i)$.
-\end{stm}
+\begin{explanation}{stm:reason4}
+To prove (\ref{stm:reason2}), we will need to show that $\frac{a_n}{n} - \frac{a_k}{k} \to 0$ as $n \to \infty$. This should follow in some way from the nonnegativity and the subadditivity of $(a_i)$.
+\end{explanation}
 
-\begin{stm}{stm:reason5}[reasoning]
+\begin{explanation}{stm:reason5}
 Observe that for any natural number $m$, the value $a_{mk}$ is bounded by $m a_k$, therefore,
 
 \[
 \frac{a_{mk}}{mk} \le \frac{ma_k}{mk} = \frac{a_k}{k}.
 \]
 In other words, for the subsequence of $a_i$ where $i$ is a multiple of $k$ we have the required convergence. And, again by subadditivity, any other element is at most $k a_1$ away from this subsequence.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:nform}[proof]
-By \ref{stm:ngeqk}, $n = mk + m'$, where $m \in \mathbb{N}$ and $m' < k$.
-\end{stm}
+\begin{statement}{stm:nform}
+By (\ref{stm:ngeqk}), $n = mk + m'$, where $m \in \mathbb{N}$ and $m' < k$.
+\end{statement}
 
-\begin{stm}{stm:applysubadd}[proof]
-By \ref{stm:nform}, and the subadditivity of $(a_n)$,
+\begin{statement}{stm:applysubadd}
+By (\ref{stm:nform}), and the subadditivity of $(a_n)$,
 \begin{align*}
 \frac{a_n}{n} - \frac{a_k}{k} &=\frac{a_{mk + m'}}{n} - \frac{a_k}{k} \\
 &\le \frac{a_{mk} + a_{m'}}{n} - \frac{a_k}{k} \\
 &\le \frac{ma_k}{mk + m'} + \frac{k a_1}{n} - \frac{a_k}{k} \\
 &\xrightarrow{n \to \infty} 0
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:limlowerbound}[proof]
+\begin{statement}{stm:limlowerbound}
 Hence, $\lim_{n \to \infty} \frac{a_n}{n}$ is a lower bound for $\left\{ \frac{a_n}{n} : n \ge 1 \right\}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:infproof}[proof]
-Additionally, if $C \le \frac{a_m}{m}$ for all $m \in \mathbb{N}$, then clearly $C \le \lim_{n \to \infty} \frac{a_n}{n}$, so by \ref{stm:limlowerbound},
+\begin{statement}{stm:infproof}
+Additionally, if $C \le \frac{a_m}{m}$ for all $m \in \mathbb{N}$, then clearly $C \le \lim_{n \to \infty} \frac{a_n}{n}$, so by (\ref{stm:limlowerbound}),
 
 \[
 \lim_{n \to \infty} \frac{a_n}{n} = \inf_{n \ge 0} \frac{a_n}{n}.
 \]
-\end{stm}
+\end{statement}

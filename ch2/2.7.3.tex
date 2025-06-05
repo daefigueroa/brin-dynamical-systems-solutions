@@ -1,28 +1,28 @@
-\sectionlabel{Exercise 2.7.3.}
+\subsection*{Exercise 2.7.3.}
 
-\begin{stm}{stm:ex2.7.3-273setup}[exercise]
+\begin{exercise}{stm:ex2.7.3-273setup}
 Give a non-trivial example of a homeomorphism $f$ of a compact metric space $(X,d)$ such that $d(f^n(x), f^n(y)) \to 0$ as $n \to \infty$ for every pair $x,y \in X$.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex2.7.3-insert1}[reasoning]
-Let's recall simple examples of continuous maps of compact metric spaces, and see if they satisfy \ref{stm:ex2.7.3-273setup}.
-\end{stm}
+\begin{explanation}{stm:ex2.7.3-insert1}
+Let's recall simple examples of continuous maps of compact metric spaces, and see if they satisfy (\ref{stm:ex2.7.3-273setup}).
+\end{explanation}
 
-\begin{stm}{stm:ex2.7.3-insert2}[reasoning]
+\begin{explanation}{stm:ex2.7.3-insert2}
 The translation $R_\alpha$ on $S^1$ is not valid, as it preserves distances.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.7.3-insert3}[reasoning]
+\begin{explanation}{stm:ex2.7.3-insert3}
 The map $h: x \mapsto \frac{1}{2}x$ on $S^1$ has the property that $d(h^n(x), h^n(y)) \to 0$ as $n \to \infty$ for every pair $x,y \in X$, but it is not surjective.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.7.3-insert4}[reasoning]
+\begin{explanation}{stm:ex2.7.3-insert4}
 To solve this issue, we can define a map that is the piecewise combination of a contraction (such as $f$) on one half of the circle and an expansion on the other half of the circle.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.7.3-3}[proof]
+\begin{statement}{stm:ex2.7.3-3}
 Define $f: S^1 \to S^1$ by
 \begin{align*}
 f(x) = 
@@ -31,8 +31,8 @@ f(x) =
 \frac{3}{2}x - \frac{1}{2} & \text{if } x \in [\frac{1}{2}, 1) \\
 \end{cases}
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.7.3-4}[proof]
+\begin{statement}{stm:ex2.7.3-4}
 Clearly, $f$ is a homeomorphism such that $d(f^n(x), f^n(y)) \to 0$ as $n \to \infty$ for all pairs $x, y$.
-\end{stm}
+\end{statement}

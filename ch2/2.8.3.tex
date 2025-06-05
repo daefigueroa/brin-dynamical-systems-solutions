@@ -1,71 +1,71 @@
-\sectionlabel{Exercise 2.8.3.}
+\subsection*{Exercise 2.8.3.}
 
-\begin{stm}{stm:ex2.8.3-283statement}[exercise]
+\begin{exercise}{stm:ex2.8.3-283statement}
 Prove the following generalization of Proposition 2.1.2. If a commutative group $G$ acts by homeomorphisms on a compact metric space $X$, then there is a non-empty, closed $G$-invariant subset $X'$ on which $G$ acts minimally.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex2.8.3-1}[reasoning]
+\begin{explanation}{stm:ex2.8.3-1}
 Let's try to adapt the proof of Proposition 2.1.2 to the more general case.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-2}[reasoning]
+\begin{explanation}{stm:ex2.8.3-2}
 There are four theorems stated in section 2.8, but they don't seem applicable in this exercise.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-3}[proof]
+\begin{statement}{stm:ex2.8.3-3}
 Let $\mathcal{C}$ be the collection of non-empty, closed $G$-invariant subsets of $X$, with the partial ordering given by inclusion.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-4}[proof]
+\begin{statement}{stm:ex2.8.3-4}
 Since $X \in \mathcal{C}$, $\mathcal{C}$ is not empty.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-5}[proof]
+\begin{statement}{stm:ex2.8.3-5}
 Suppose $\mathcal{K} \subseteq \mathcal{C}$ is a totally ordered subset. Then, any finite intersection of elements of $\mathcal{K}$ is nonempty, so by the finite intersection property for compact sets, $\bigcap_{K \in \mathcal{K}} K \ne \emptyset$. Thus, by Zorn's lemma, $\mathcal{C}$ contains a minimal element $M$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-6}[reasoning]
+\begin{explanation}{stm:ex2.8.3-6}
 So far, we have followed the proof of 2.1.2 almost exactly. How can we conclude that $G$ acts minimally on $M$?
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-7}[reasoning]
+\begin{explanation}{stm:ex2.8.3-7}
 Intuitively speaking, we have very little constructive information about $M$, so proof by contradiction seems like a good strategy.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-8}[proof]
+\begin{statement}{stm:ex2.8.3-8}
 Suppose that $G$ does not act minimally on $M$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-9}[proof]
+\begin{statement}{stm:ex2.8.3-9}
 Then, there exists a point $b \in M$ and a nonempty open set $C \subseteq M$ such that $Gb \cap C = \emptyset$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-10}[reasoning]
-To conclude the proof, we should find a contradiction, given \ref{stm:ex2.8.3-9} and \ref{stm:ex2.8.3-5}. We want to find some set $Y \subseteq M$ that is closed, nonempty, and $G$-invariant. Let's start with some possible natural choices for $Y$, and work from there.
-\end{stm}
+\begin{explanation}{stm:ex2.8.3-10}
+To conclude the proof, we should find a contradiction, given (\ref{stm:ex2.8.3-9}) and (\ref{stm:ex2.8.3-5}). We want to find some set $Y \subseteq M$ that is closed, nonempty, and $G$-invariant. Let's start with some possible natural choices for $Y$, and work from there.
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-11}[reasoning]
+\begin{explanation}{stm:ex2.8.3-11}
 Note $C$ is not closed, $\text{cl}(C)$ is not necessarily $G$-invariant, and $M \setminus C$ is also not necessarily $G$-invariant. On the other hand, $M \setminus GC$ seems like a good candidate.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex2.8.3-12}[proof]
+\begin{statement}{stm:ex2.8.3-12}
 Since $GC = \bigcup_{g \in G} gC$, and each $g \in G$ is a homeomorphism, $GC$ is open.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-13}[proof]
+\begin{statement}{stm:ex2.8.3-13}
 So, since $M$ is closed, $M \setminus GC$ is closed.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-14}[proof]
+\begin{statement}{stm:ex2.8.3-14}
 Since $b \in M$ and $Gb \cap C = \emptyset$, $b \in M \setminus GC$, so $M \setminus GC$ is nonempty.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-15}[proof]
+\begin{statement}{stm:ex2.8.3-15}
 If $m \in M \setminus GC$ and $g \in G$, then $m \ne g^{-1}c$, so $gm \ne C$, so since $M$ is $G$-invariant, $gm \in M \setminus GC$, so $M \setminus GC$ is $G$-invariant.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex2.8.3-16}[proof]
-By \ref{stm:ex2.8.3-13}–\ref{stm:ex2.8.3-15}, $M \setminus GC$ is a closed, nonempty, $G$-invariant proper subset of $M$, which contradicts \ref{stm:ex2.8.3-5}, so \ref{stm:ex2.8.3-8} is false. Hence, $G$ acts minimally on $M$.
-\end{stm}
+\begin{statement}{stm:ex2.8.3-16}
+By (\ref{stm:ex2.8.3-13})–(\ref{stm:ex2.8.3-15}), $M \setminus GC$ is a closed, nonempty, $G$-invariant proper subset of $M$, which contradicts (\ref{stm:ex2.8.3-5}), so (\ref{stm:ex2.8.3-8}) is false. Hence, $G$ acts minimally on $M$.
+\end{statement}

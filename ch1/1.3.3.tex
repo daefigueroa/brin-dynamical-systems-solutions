@@ -1,75 +1,79 @@
-\sectionlabel{Exercise 1.3.3}
+\subsection*{Exercise 1.3.3}
 
-\begin{stm}{stm:ex1.3.3-setup133}[exercise]
+\begin{exercise}{stm:ex1.3.3-setup133}
 For $m \in \mathbb{Z}$, $|m| > 1$, define the times-$m$ map $E_m : S^1 \to S^1$ by $E_m x = mx \mod 1$. Show that the set of points with dense orbits is uncountable.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue} + reasoning}:}
+\subsection*{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:ex1.3.3-m1}[reasoning]
-My first idea is to show that for any irrational $x$, the orbit under $E_m$ is dense. How would we show this? We could use the semiconjugacy from $(\Sigma_m, \sigma)$ to $(S^1, E_m)$. As stated in ch1.3, the orbit of a point $0.x_1 x_2 \dots$ is dense in $S^1$ iff every finite sequence of elements in $\{0, \dots, m-1\}$ appears in the sequence $(x_i)_{i \in \mathbb{N}}$.
-\end{stm}
+\begin{explanation}{stm:ex1.3.3-m1}
+My first idea is to show that for any irrational $x$, the orbit under $E_m$ is dense. How would we show this? We could use the semiconjugacy from $(\Sigma_m, \sigma)$ to $(S^1, E_m)$.
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-p2}[reasoning]
-Let's try proof by contradiction using \ref{stm:ex1.3.3-m1}.
-\end{stm}
+\begin{statement}{stm:ex1.3.3-m2}
+As stated in ch1.3, the orbit of a point $0.x_1 x_2 \dots$ is dense in $S^1$ iff every finite sequence of elements in $\{0, \dots, m-1\}$ appears in the sequence $(x_i)_{i \in \mathbb{N}}$.
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-a3}[reasoning]
+\begin{explanation}{stm:ex1.3.3-p2}
+Let's try proof by contradiction as described in (\ref{stm:ex1.3.3-m1}).
+\end{explanation}
+
+\begin{explanation}{stm:ex1.3.3-a3}
 Let $x$ be an irrational number.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-5}[reasoning]
+\begin{explanation}{stm:ex1.3.3-5}
 $x$ has a base-$m$ expansion $0.x_1 x_2 \dots$
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-a6}[reasoning]
+\begin{explanation}{stm:ex1.3.3-a6}
 Suppose that the orbit of $x$ is not dense. There exists a finite sequence $a_1 \dots a_n$ of elements in $\{0, \dots, m-1\}$ that does not occur anywhere in $x_1 x_2 \dots$
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-q8}[reasoning]
+\begin{explanation}{stm:ex1.3.3-q8}
 Is the statement that any irrational $x$ has a dense orbit true? Let's try a different approach.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-m13}[reasoning]
+\begin{explanation}{stm:ex1.3.3-m13}
 A more direct way to prove the statement is to construct an injective function from an uncountable set to the set of points in $S^1$ with dense orbits. It is noted in chapter 1.3 that we can construct a point in $S^1$ with dense orbit by simply concatenating all finite sequences. It seems likely that we can do something similar to construct the needed function.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.3.3-a13}[final-proof]
+\begin{statement}{stm:ex1.3.3-a13}
 Let $U$ be the set of points in $S^1$ with a unique base-$m$ expansion. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-a13b}[final-proof]
+\begin{statement}{stm:ex1.3.3-a13b}
 By the remarks in section 1.3, $U$ is uncountable.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-14}[final-proof]
+\begin{statement}{stm:ex1.3.3-14}
 Define $\phi : \Sigma_m \to S^1$. by $\phi((x_i)_{i \in \mathbb{N}}) := \sum_{i=1}^\infty x_i / m^i$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-15}[final-proof]
+\begin{statement}{stm:ex1.3.3-15}
 By the remarks in section 1.3, $\phi$ is bijective on $\phi^{-1}(U)$.
-\end{stm}{}
+\end{statement}{}
 
-\begin{stm}{stm:ex1.3.3-a15}[final-proof]
+\begin{statement}{stm:ex1.3.3-a15}
 Let $x \in U$, with base-$m$ expansion $(x_i)_{i \in \mathbb{N}}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-a16}[final-proof]
+\begin{statement}{stm:ex1.3.3-a16}
 Let $\mathcal{F}_m = \bigcup_{k=1}^\infty \{0, \dots, m-1\}^k$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-a16b}[final-proof]
+\begin{statement}{stm:ex1.3.3-a16b}
 Clearly, $\mathcal{F}_m$ is countable, so it can be indexed by $(\omega_i)_{i \in \mathbb{N}}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-17}[final-proof]
+\begin{statement}{stm:ex1.3.3-17}
 Define $\alpha : U \to \Sigma_m$ by letting $\alpha(x) = x_1 \omega_1 x_2 \omega_2 x_3 \omega_3 \dots$, and define $\beta = \phi \circ \alpha$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-19}[final-proof]
-Since every $y \in U$ has a unique base-$m$ expansion, $\alpha$ is injective, so by \ref{stm:ex1.3.3-15}, $\beta$ is bijective. By construction, every finite sequence appears in $\alpha(y)$ for every $y \in U$, so by \ref{stm:ex1.3.3-m1}, every point in $\beta(U)$ has a dense orbit.
-\end{stm}
+\begin{statement}{stm:ex1.3.3-19}
+Since every $y \in U$ has a unique base-$m$ expansion, $\alpha$ is injective, so by (\ref{stm:ex1.3.3-15}), $\beta$ is bijective. By construction, every finite sequence appears in $\alpha(y)$ for every $y \in U$, so by (\ref{stm:ex1.3.3-m2}), every point in $\beta(U)$ has a dense orbit.
+\end{statement}
 
-\begin{stm}{stm:ex1.3.3-20}[final-proof]
-From \ref{stm:ex1.3.3-20}, \ref{stm:ex1.3.3-19} and \ref{stm:ex1.3.3-a13b}, we get that the set of all points in $S^1$ with dense orbits is uncountable.
-\end{stm}
+\begin{statement}{stm:ex1.3.3-20}
+From (\ref{stm:ex1.3.3-20}), (\ref{stm:ex1.3.3-19}) and (\ref{stm:ex1.3.3-a13b}), we get that the set of all points in $S^1$ with dense orbits is uncountable.
+\end{statement}

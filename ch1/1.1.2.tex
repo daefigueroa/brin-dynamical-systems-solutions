@@ -1,50 +1,50 @@
-\sectionlabel{Exercise 1.1.2}
+\subsection*{Exercise 1.1.2}
 
-\begin{stm}{stm:112exstatement}[exercise]
+\begin{exercise}{stm:112eexercise}
 Suppose $(X,f)$ is a factor of $(Y,g)$ by a semi-conjugacy $\pi\colon Y \to X$.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:112exsetup}[exercise]
+\begin{exercise}{stm:112exsetup}
 Show that if $y \in Y$ is a periodic point, then $\pi(y) \in X$ is periodic.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:112exsetup2}[exercise]
+\begin{exercise}{stm:112exsetup2}
 Give an example to show that the preimage of a periodic point does not necessarily contain a periodic point.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue} + reasoning}:}
+\subsection*{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{reas1}[reasoning]
-Let's start with \ref{stm:112exsetup}.
-\end{stm}
+\begin{explanation}{reas1}
+Let's start with (\ref{stm:112exsetup}).
+\end{explanation}
 
-\begin{stm}{stm:112exverify}
+\begin{statement}{stm:112exverify}
 Let $y \in Y$ be periodic.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:112exwrite}[reasoning]
-We can just write out the definitions and see if the correct answer follows.
-\end{stm}
+\begin{explanation}{stm:112exwrite}
+We write the definitions and see if the correct answer follows.
+\end{explanation}
 
-\begin{stm}{stm:112excalc}
+\begin{statement}{stm:112excalc}
 $$
 f(\pi(y)) \;=\; \pi\bigl(g(y)\bigr) \;=\; \pi(y).
 $$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:112excalc-conclusion}
-So, \ref{stm:112exsetup} follows from \ref{stm:112excalc}.
-\end{stm}
+\begin{statement}{stm:112excalc-conclusion}
+So, (\ref{stm:112exsetup}) follows from (\ref{stm:112excalc}).
+\end{statement}
 
-\begin{stm}{stm:112excounterexample-intro}[reasoning]
+\begin{explanation}{stm:112excounterexample-intro}
 Now, we want to construct a counterexample. Let's think of any semiconjugacy and iterate from there. An obvious example is a projection.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:112exAB-sets}
+\begin{statement}{stm:112exAB-sets}
 Let $A$ and $B$ be sets, and $\pi_A\colon A \times B \to A$ the projection.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:112exdiagram}
+\begin{statement}{stm:112exdiagram}
 For all $\alpha$ and $\beta$, the following diagram commutes:
 \[
 \begin{array}{c@{\quad}c@{\quad}c}
@@ -53,28 +53,28 @@ A \times B & \xrightarrow{\;\alpha \times \beta\;} & A \times B\\[6pt]
 A & \xrightarrow{\;\alpha\;} & A
 \end{array}
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:112exintuition}[reasoning]
+\begin{explanation}{stm:112exintuition}
 Intuitively, by taking projections, we 'forget' about the effect of $\beta$. So, we can simply choose $\beta$ such that all points in $A \times B$ are non-periodic with respect to $\beta$, while choosing $\alpha$ so that all points in $A$ are periodic with respect to $\alpha$. 
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:112exfinal-example}[reasoning]
+\begin{explanation}{stm:112exfinal-example}
 Let $A$ be any set, $B = [0,1]$, $\alpha = \mathrm{id}_A$ and $\beta: (x \mapsto \frac{1}{2}x)$
-\end{stm}
+\end{explanation}
 
-\begin{stm}{reas2}[reasoning]
-Wait, $0$ is still a periodic point in the example above. Let's modify it.
-\end{stm}
+\begin{explanation}{reas2}
+We note $0$ is still a periodic point in the example above. Let's modify it.
+\end{explanation}
 
-\begin{stm}{stm:112exfinal-example2}
+\begin{statement}{stm:112exfinal-example2}
     Let $A$ be any nonempty set, $B = (0,1]$, $\alpha = \mathrm{id}_A$ and $\beta: (x \mapsto \frac{1}{2}x)$
-\end{stm}
+\end{statement}
     
-\begin{stm}{stm:112excounterexample}
+\begin{statement}{stm:112excounterexample}
 Clearly, $\beta$ has no periodic points, so $\alpha \times \beta$ has no periodic points, but all points in $A$ are periodic with respect to $\alpha$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{}
-By \ref{stm:112excounterexample}, \ref{stm:112exsetup2} follows.
-\end{stm}
+\begin{statement}{}
+By (\ref{stm:112excounterexample}), (\ref{stm:112exsetup2}) follows.
+\end{statement}

@@ -1,25 +1,25 @@
-\sectionlabel{Exercise 1.9.3.}
+\subsection*{Exercise 1.9.3.}
 
-\begin{stm}{stm:ex1.9.3-193setup}[exercise]
+\begin{exercise}{stm:ex1.9.3-193setup}
 Let $\mathbb{T}$ denote the set of sequences $(\phi_i)_{i=0}^{\infty}$ where $\phi_i \in S^1$ and $\phi_i = 2 \phi_{i+1} \mod 1$ for all $i$. Let $\alpha : \mathbb{T} \to \mathbb{T}$ be defined by 
 \[
 (\phi_0, \phi_1, \dots) \mapsto (2\phi_1, \phi_1, \phi_2, \dots).
 \]
-\end{stm}
-\begin{stm}{stm:ex1.9.3-193q1}[exercise]
+\end{exercise}
+\begin{exercise}{stm:ex1.9.3-193q1}
 Show that $\mathbb{T}$ is a topological group.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:ex1.9.3-193q2}[exercise]
+\begin{exercise}{stm:ex1.9.3-193q2}
 Show that $\alpha$ is an automorphism
-\end{stm}
+\end{exercise}
     
 
-\sectionlabel{Proof {\color{blue} + reasoning}:}
+\subsection*{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:ex1.9.3-start}[reasoning]
+\begin{explanation}{stm:ex1.9.3-start}
 Let's first formulate basic lemmas to use throughout the exercise.
-\end{stm}
+\end{explanation}
 
 \begin{lemma}\label{lemma:1}
 $\forall x \in \mathbb{R}, \forall y \in \mathbb{R}, \ a, b \in \mathbb{N} : x \equiv_a y \Rightarrow bx \equiv_{a} by$. 
@@ -45,16 +45,16 @@ $\forall x, y \in \mathbb{R}, \ \forall k \in \mathbb{N}$, $( x \mod k ) + ( y \
 $x + y = ( x \mod k ) + ( y \mod k ) + pk + qk = (x \mod k) + (y \mod k) + (p+q)k$. So, $x + y \equiv_k (x \mod k) + (y \mod k)$.
 \end{proof}
 
-\begin{stm}{stm:ex1.9.3-additiondef}[final-proof]
+\begin{statement}{stm:ex1.9.3-additiondef}
 Given $\psi$ and $\phi$ in $\mathbb{T}$, define $(\psi + \phi)_i = (\psi_i + \phi_i) \mod 1$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-groupclosuregoal}[final-proof]
+\begin{statement}{stm:ex1.9.3-groupclosuregoal}
 Let $\psi$ and $\phi$ be elements of $\mathbb{T}$. It suffices to show $\psi_i + \phi_i \equiv_1 2(\psi + \phi)_{i+1}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-groupclosurecalc}[final-proof]
-By \ref{stm:ex1.9.3-193setup}, lemma \ref{lemma:4} and lemma \ref{lemma:3},
+\begin{statement}{stm:ex1.9.3-groupclosurecalc}
+By (\ref{stm:ex1.9.3-193setup}), lemma \ref{lemma:4} and lemma \ref{lemma:3},
 \begin{align*}
 \psi_i + \phi_i &= (2\psi_{i+1} \mod 1) + (2\phi_{i+1} \mod 1) \\
 &\equiv_1 2\psi_{i+1} + 2\phi_{i+1} \\
@@ -62,37 +62,37 @@ By \ref{stm:ex1.9.3-193setup}, lemma \ref{lemma:4} and lemma \ref{lemma:3},
 &\equiv_1 2((\psi + \phi)_{i+1} \mod 1) \\
 &\equiv_1 2(\psi + \phi)_{i+1}
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-groupclosureconclude}[final-proof]
-From \ref{stm:ex1.9.3-groupclosurecalc} and \ref{stm:ex1.9.3-groupclosuregoal}, $\mathbb{T}$ is closed under addition.
-\end{stm}
+\begin{statement}{stm:ex1.9.3-groupclosureconclude}
+From (\ref{stm:ex1.9.3-groupclosurecalc}) and (\ref{stm:ex1.9.3-groupclosuregoal}), $\mathbb{T}$ is closed under addition.
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-inverse}[final-proof]
+\begin{statement}{stm:ex1.9.3-inverse}
 For $\phi \in \mathbb{T}$, define $(-\phi)_i := -\phi_i$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-inversecheck}[final-proof]
+\begin{statement}{stm:ex1.9.3-inversecheck}
 Clearly, this is the inverse of $\phi$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-contgoal}[reasoning]
+\begin{explanation}{stm:ex1.9.3-contgoal}
 Now, let's check continuity.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.9.3-contsetup}[final-proof]
+\begin{statement}{stm:ex1.9.3-contsetup}
 Suppose that $\phi^n \to \phi$ and $\psi^n \to \psi$ in $(S^1)^{\mathbb{N}_0}$. Let $n \ge 0$. By assumption, $\exists K_n$ s.t. $\forall j \le n, \ \phi_j^i = \phi_j$, $\psi_j^i = \psi_j$, hence $(\phi^i - \psi^i)_j = \phi_j - \psi_j$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-contconclude}[final-proof]
-By \ref{stm:ex1.9.3-contsetup}, $\forall \varepsilon > 0, \exists k$ s.t. $d(\phi^i - \psi^i, \phi - \psi) \le \varepsilon \ \forall i \ge k$, so $\lim_{n \to \infty} d(\phi^n - \psi^n, \phi - \psi) = 0$, hence $(\phi, \psi) \mapsto \phi - \psi$ is continuous.
-\end{stm}
+\begin{statement}{stm:ex1.9.3-contconclude}
+By (\ref{stm:ex1.9.3-contsetup}), $\forall \varepsilon > 0, \exists k$ s.t. $d(\phi^i - \psi^i, \phi - \psi) \le \varepsilon \ \forall i \ge k$, so $\lim_{n \to \infty} d(\phi^n - \psi^n, \phi - \psi) = 0$, hence $(\phi, \psi) \mapsto \phi - \psi$ is continuous.
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-autogoal}[reasoning]
+\begin{explanation}{stm:ex1.9.3-autogoal}
 Now, we check $\alpha$ is a group automorphism. Is it possible to take a shortcut? I think that if $\alpha$ preserves the product and identity and is bijective, then it follows that $\alpha$ preserves inverses and that $\alpha^{-1}$ is a group homomorphism.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.9.3-alphalinear}[final-proof]
+\begin{statement}{stm:ex1.9.3-alphalinear}
     Let $\phi, \psi \in \mathbb{T}$. Show $\alpha(\phi) + \alpha(\psi) = \alpha(\phi + \psi)$. By lemma \ref{lemma:4} and lemma \ref{lemma:3},
     \begin{align*}
     (\alpha(\phi) + \alpha(\psi))_i 
@@ -101,50 +101,50 @@ Now, we check $\alpha$ is a group automorphism. Is it possible to take a shortcu
     &\equiv_1 2\left((\phi + \psi)_i \bmod 1\right) \\
     &= \alpha(\phi + \psi)_i.
     \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-alphainv}[final-proof]
+\begin{statement}{stm:ex1.9.3-alphainv}
 Clearly, $\alpha$ preserves the identity.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-alphabijective}[reasoning]
+\begin{explanation}{stm:ex1.9.3-alphabijective}
 Now, let’s show $\alpha$ is bijective.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.9.3-injective}[final-proof]
+\begin{statement}{stm:ex1.9.3-injective}
 Suppose $\alpha(\phi) = \alpha(\psi)$. Then $\phi_{i-1} = \alpha(\phi)_i = \alpha(\psi)_i = \psi_{i-1} \ \forall i \ge 1$, so $\phi = \psi$, hence $\alpha$ is injective.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-surjectiondef}[final-proof]
+\begin{statement}{stm:ex1.9.3-surjectiondef}
 Let $\phi \in \mathbb{T}$. Let $(\phi')_i := \phi_{i+1} \ \forall i \ge 1$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-surjectioncheck}[final-proof]
+\begin{statement}{stm:ex1.9.3-surjectioncheck}
 $\alpha(\phi') = \phi$, so $\alpha$ is surjective.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-autoconclude}[final-proof]
-By \ref{stm:ex1.9.3-injective} and \ref{stm:ex1.9.3-surjectioncheck}, $\alpha$ is bijective. By \ref{stm:ex1.9.3-alphalinear}, \ref{stm:ex1.9.3-alphainv}, and \ref{stm:ex1.9.3-injective}, $\alpha$ is a group automorphism.
-\end{stm} 
+\begin{statement}{stm:ex1.9.3-autoconclude}
+By (\ref{stm:ex1.9.3-injective}) and (\ref{stm:ex1.9.3-surjectioncheck}), $\alpha$ is bijective. By (\ref{stm:ex1.9.3-alphalinear}), (\ref{stm:ex1.9.3-alphainv}), and (\ref{stm:ex1.9.3-injective}), $\alpha$ is a group automorphism.
+\end{statement} 
 
-\begin{stm}{stm:ex1.9.3-homeocheck}[reasoning]
+\begin{explanation}{stm:ex1.9.3-homeocheck}
 Now we need to show $\alpha$ is a homeomorphism. Note that $\alpha$ is a map between product topologies. This should simplify our proofs.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.9.3-subbasis}[final-proof]
+\begin{statement}{stm:ex1.9.3-subbasis}
 For product topologies the 1-d cylinders form a subbasis. So, to show that $\alpha$ is continuous it suffices to show that $\forall i \in \mathbb{N}, \pi_i \circ \alpha$ is continuous.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-alphaprojection}[final-proof]
+\begin{statement}{stm:ex1.9.3-alphaprojection}
 Let $i \in \mathbb{N}$. Note $\pi_i \circ \alpha : (\phi_0, \phi_1, \dots) \mapsto \begin{cases} \phi_{i-1} & \text{if } i \ge 1 \\ 2\phi_0 & \text{if } i = 0 \end{cases}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-2smap}[final-proof]
+\begin{statement}{stm:ex1.9.3-2smap}
 The map $r : S^1 \to S^1 : s \mapsto 2s \mod 1$ is clearly continuous.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-pullback}[final-proof]
-By \ref{stm:ex1.9.3-2smap}, if $A \in \mathcal{T}(S^1)$, then 
+\begin{statement}{stm:ex1.9.3-pullback}
+By (\ref{stm:ex1.9.3-2smap}), if $A \in \mathcal{T}(S^1)$, then 
 \[
 (\pi_i \circ \alpha)^{-1}(A) = 
 \begin{cases}
@@ -152,12 +152,12 @@ By \ref{stm:ex1.9.3-2smap}, if $A \in \mathcal{T}(S^1)$, then
 r^{-1}(A) \times S^1 \times \cdots & \text{if } i = 0
 \end{cases}
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-alphacontinuous}[final-proof]
-By \ref{stm:ex1.9.3-pullback} and \ref{stm:ex1.9.3-2smap}, $\pi_i \circ \alpha$ is continuous, so by \ref{stm:ex1.9.3-subbasis}, $\alpha$ is continuous.
-\end{stm}
+\begin{statement}{stm:ex1.9.3-alphacontinuous}
+By (\ref{stm:ex1.9.3-pullback}) and (\ref{stm:ex1.9.3-2smap}), $\pi_i \circ \alpha$ is continuous, so by (\ref{stm:ex1.9.3-subbasis}), $\alpha$ is continuous.
+\end{statement}
 
-\begin{stm}{stm:ex1.9.3-alphainvcontproof}[final-proof]
-Note $\pi_i \circ \alpha^{-1} : (\phi_0, \phi_1, \dots) \mapsto \phi_{i+1}$. This is clearly continuous, so by \ref{stm:ex1.9.3-subbasis}, $\alpha^{-1}$ is continuous, so by \ref{stm:ex1.9.3-alphacontinuous} and \ref{stm:ex1.9.3-autoconclude}, $\alpha$ is a homeomorphism.
-\end{stm}
+\begin{statement}{stm:ex1.9.3-alphainvcontproof}
+Note $\pi_i \circ \alpha^{-1} : (\phi_0, \phi_1, \dots) \mapsto \phi_{i+1}$. This is clearly continuous, so by (\ref{stm:ex1.9.3-subbasis}), $\alpha^{-1}$ is continuous, so by (\ref{stm:ex1.9.3-alphacontinuous}) and (\ref{stm:ex1.9.3-autoconclude}), $\alpha$ is a homeomorphism.
+\end{statement}

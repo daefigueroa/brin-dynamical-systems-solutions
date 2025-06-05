@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{statements}[2025/04/05 Custom proof statements]
+
+\usepackage{xcolor}
+
+\newcounter{stm}
+\newlength{\stmnumwidth}
+\setlength{\stmnumwidth}{3em}
+
+\newcommand{\statementbegin}[2]{%
+  \refstepcounter{stm}\label{#1}%
+  \begingroup
+  \color{#2}%
+  \noindent
+  \begin{minipage}[b]{\dimexpr\linewidth - \stmnumwidth\relax}%
+}
+
+\newcommand{\statementend}{%
+  \end{minipage}%
+  \makebox[\stmnumwidth][r]{(\arabic{stm})}%
+  \endgroup
+  \par
+  \vspace{1ex}%
+}
+
+\newenvironment{exercise}[1]{\statementbegin{#1}{black}}{\statementend}
+\newenvironment{statement}[1]{\statementbegin{#1}{black}}{\statementend}
+\newenvironment{explanation}[1]{\statementbegin{#1}{blue!80}}{\statementend}
+
+\newcommand{\exercise}[2]{\statementbegin{#1}{black}#2\statementend}
+\newcommand{\statement}[2]{\statementbegin{#1}{black}#2\statementend}
+\newcommand{\explanation}[2]{\statementbegin{#1}{blue!80}#2\statementend}

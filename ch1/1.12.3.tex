@@ -1,16 +1,16 @@
-\sectionlabel{Exercise 1.12.3.}
+\subsection*{Exercise 1.12.3.}
 
-\begin{stm}{stm:ex1.12.3-1123setup}[exercise]
+\begin{exercise}{stm:ex1.12.3-1123setup}
 Compute the Lyapunov exponents for the solenoid.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:ex1.12.3-1}[reasoning]
+\begin{explanation}{stm:ex1.12.3-1}
 We need to calculate the matrix corresponding to the total derivative of $F^n$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-2}[reasoning]
+\begin{explanation}{stm:ex1.12.3-2}
 Note the total derivative of $f \colon \mathbb{R}^n \to \mathbb{R}^n$ corresponds to the matrix
 \[
 \left[
@@ -21,33 +21,33 @@ Note the total derivative of $f \colon \mathbb{R}^n \to \mathbb{R}^n$ correspond
 \end{array}
 \right]
 \]
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-3}[reasoning]
+\begin{explanation}{stm:ex1.12.3-3}
 We need to compute $dF^n(x)v$. Is there a shortcut that we can take? Since we are calculating the derivative of a composition of functions, we might use the chain rule.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-4}[reasoning]
+\begin{explanation}{stm:ex1.12.3-4}
 The chain rule for total derivatives states $d(f \circ g)(a) = df(g(a)) \circ dg(a)$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-5}[reasoning]
+\begin{explanation}{stm:ex1.12.3-5}
 In our case, $d(f^n(x)) = df(f^{n-1}(a)) \circ df^{n-1}(a) = \cdots$
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-6}[reasoning]
+\begin{explanation}{stm:ex1.12.3-6}
 I'm not sure this will help us. Instead, let's calculate $f^n(x)$ directly, and from that the total derivative.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-7}[proof]
+\begin{statement}{stm:ex1.12.3-7}
 Let $F \colon S^1 \times D^2 \to S^1 \times D^2$ be the solenoid. Let $x, y \in \mathbb{R}$ and let $\lambda \in (0, \frac{1}{2})$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-8}[proof]
+\begin{statement}{stm:ex1.12.3-8}
 Note $F(\phi, x, y) = (2\phi, \lambda x + \frac{1}{2} \cos(2\pi\phi), \lambda y + \sin(2\pi\phi))$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-9}[proof]
+\begin{statement}{stm:ex1.12.3-9}
 By writing out the composition, we see that:
 \begin{align*}
 F^n(\phi, x, y)_1 &= 2^n \phi \\
@@ -55,11 +55,11 @@ F^n(\phi, x, y)_2 &= \lambda^n x + \frac{1}{2} \lambda^{n-1} \cos(2\pi \phi) + \
 &= \lambda^n x + \frac{1}{2} \sum_{i=0}^{n-1} \lambda^i \cos(2^{n-1-i} \pi \phi) \\
 F^n(\phi, x, y)_3 &= \lambda^n y + \frac{1}{2} \sum_{i=0}^{n-1} \lambda^i \sin(2^{n-1-i} \pi \phi)
 \end{align*}
-\end{stm}
+\end{statement}
 
 
-\begin{stm}{stm:ex1.12.3-10}[proof]
-By \ref{stm:ex1.12.3-9}, denoting $\delta_{ij} := \frac{\partial F_i}{\partial z_j}(\phi, x, y)$, we can express $dF^n(\phi, x, y)$ as follows:
+\begin{statement}{stm:ex1.12.3-10}
+By (\ref{stm:ex1.12.3-9}), denoting $\delta_{ij} := \frac{\partial F_i}{\partial z_j}(\phi, x, y)$, we can express $dF^n(\phi, x, y)$ as follows:
 \begin{align*}
 \delta_{11} &= 2^n \\
 \delta_{21} &= -\frac{1}{2} \sum_{i=0}^{n-1} \lambda^i 2^{n-1-i} \pi \sin(2^{n-1-i} \pi \phi) \\
@@ -69,41 +69,41 @@ By \ref{stm:ex1.12.3-9}, denoting $\delta_{ij} := \frac{\partial F_i}{\partial z
 \delta_{33} &= \lambda^n \\
 \delta_{ij} &= 0 \quad \text{otherwise}
 \end{align*}
-\end{stm}
+\end{statement}
 
 
-\begin{stm}{stm:ex1.12.3-11}[proof]
+\begin{statement}{stm:ex1.12.3-11}
 The Lyapunov exponent is defined as
 \[
 \chi(\phi, x, y, v) = \lim_{n \to \infty} \frac{1}{n} \log \| dF^n(\phi, x, y)v \|
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-12}[reasoning]
+\begin{explanation}{stm:ex1.12.3-12}
 Note the $\liminf$ in the above definition.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-14}[proof]
-By \ref{stm:ex1.12.3-10},
+\begin{statement}{stm:ex1.12.3-14}
+By (\ref{stm:ex1.12.3-10}),
 \[
 dF^n(\phi, x, y)v = v_1 (2^n + \delta_{21} + \delta_{31}) + \lambda^n (v_2 + v_3)
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-15}[reasoning]
+\begin{explanation}{stm:ex1.12.3-15}
 Intuitively, if $v_1 = 0$, then the Lyapunov exponent seems to be $\log(\lambda)$, but if $v_1 \neq 0$, then the first term of $dF^n(\phi, x, y)v$ dominates and the exponent seems to be $\log(2)$, given that $\delta_{21}$ and $\delta_{31}$ (which depend on $n$ and $\phi$) are small enough.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-16}[reasoning]
+\begin{explanation}{stm:ex1.12.3-16}
 So, we need to argue about the limiting behaviour of these terms. My idea is to bound $\chi(\phi, x, y, v)$ from above and below. We can find an upper bound using the fact that (co)sines are bounded by 1 and the fact that $\lambda$ is less than $\frac{1}{2}$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.12.3-17}[proof]
+\begin{statement}{stm:ex1.12.3-17}
 Note, since $\lambda \in (0, \frac{1}{2})$, that $|\delta_{21}| \le \pi \cdot n \cdot 2^n$ and $|\delta_{31}| \le \pi \cdot n \cdot 2^n$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-18}[proof]
-Suppose $v_1 \neq 0$. By \ref{stm:ex1.12.3-17} and \ref{stm:ex1.12.3-14}, for $n$ sufficiently large,
+\begin{statement}{stm:ex1.12.3-18}
+Suppose $v_1 \neq 0$. By (\ref{stm:ex1.12.3-17}) and (\ref{stm:ex1.12.3-14}), for $n$ sufficiently large,
 \begin{align*}
 \frac{1}{n} \log \| dF^n(\phi, x, y)v \| 
 &= \frac{1}{2} \cdot \frac{1}{n} \log \left( \| dF^n(\phi, x, y)v \|^2 \right) \\
@@ -114,14 +114,14 @@ Suppose $v_1 \neq 0$. By \ref{stm:ex1.12.3-17} and \ref{stm:ex1.12.3-14}, for $n
 &= \frac{1}{n} \left( \log(v_1 \cdot 4 \pi \cdot n) + n \log(2) \right)\\
 &\xrightarrow{n \to \infty} \log(2)
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-19}[proof]
-By \ref{stm:ex1.12.3-18}, $\chi(\phi, x, y, v) \le \log(2)$.
-\end{stm}
+\begin{statement}{stm:ex1.12.3-19}
+By (\ref{stm:ex1.12.3-18}), $\chi(\phi, x, y, v) \le \log(2)$.
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-20}[proof]
-For the lower bound, by \ref{stm:ex1.12.3-20} and \ref{stm:ex1.12.3-18},
+\begin{statement}{stm:ex1.12.3-20}
+For the lower bound, by (\ref{stm:ex1.12.3-20}) and (\ref{stm:ex1.12.3-18}),
 \begin{align*}
 \frac{1}{n} \log \| dF^n(\phi, x, y)v \| 
 &= \frac{1}{2n} \log \left( v_1^2(2^n + \delta_{21} + \delta_{31})^2 + \lambda^{2n}(v_2 + v_3)^2 \right) \\
@@ -129,27 +129,27 @@ For the lower bound, by \ref{stm:ex1.12.3-20} and \ref{stm:ex1.12.3-18},
 &= \frac{1}{n} \log (v_1 \cdot 2^n) \\
 &= \log(2) + \frac{1}{n} \log(v_1) \xrightarrow{n \to \infty} \log(2)
 \end{align*}
-\end{stm}
+\end{statement}
 
 
-\begin{stm}{stm:ex1.12.3-21}[proof]
-By \ref{stm:ex1.12.3-19} and \ref{stm:ex1.12.3-20}, $\chi(\phi, x, y, v) = \log(2)$.
-\end{stm}
+\begin{statement}{stm:ex1.12.3-21}
+By (\ref{stm:ex1.12.3-19}) and (\ref{stm:ex1.12.3-20}), $\chi(\phi, x, y, v) = \log(2)$.
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-22}[proof]
-Suppose $v_1 = 0$. By \ref{stm:ex1.12.3-22} and \ref{stm:ex1.12.3-14},
+\begin{statement}{stm:ex1.12.3-22}
+Suppose $v_1 = 0$. By (\ref{stm:ex1.12.3-22}) and (\ref{stm:ex1.12.3-14}),
 \begin{align*}
 \frac{1}{n} \log \| dF^n(\phi, x, y)v \| 
 &= \frac{1}{n} \log (\lambda^n (v_2 + v_3)) \\
 &= \log(\lambda) + \frac{1}{n} \log(v_2 + v_3) \\
 &\xrightarrow{n \to \infty} \log(\lambda)
 \end{align*}
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-23}[proof]
-By \ref{stm:ex1.12.3-22}, $\chi(\phi, x, y, v) = \log(\lambda)$.
-\end{stm}
+\begin{statement}{stm:ex1.12.3-23}
+By (\ref{stm:ex1.12.3-22}), $\chi(\phi, x, y, v) = \log(\lambda)$.
+\end{statement}
 
-\begin{stm}{stm:ex1.12.3-24}[proof]
-By \ref{stm:ex1.12.3-23} and \ref{stm:ex1.12.3-21}, the Lyapunov exponents are $\log(2)$ and $\log(\lambda)$. \qed
-\end{stm}
+\begin{statement}{stm:ex1.12.3-24}
+By (\ref{stm:ex1.12.3-23}) and (\ref{stm:ex1.12.3-21}), the Lyapunov exponents are $\log(2)$ and $\log(\lambda)$. \qed
+\end{statement}

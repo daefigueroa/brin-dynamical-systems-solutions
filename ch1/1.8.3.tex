@@ -1,234 +1,234 @@
-\sectionlabel{Exercise 1.8.3.}
+\subsection*{Exercise 1.8.3.}
 
-\begin{stm}{stm:ex1.8.3-setup}[exercise]
+\begin{exercise}{stm:ex1.8.3-setup}
 Let $\phi : \Sigma_2 = \{0,1\}^{\mathbb{Z}} \to H$ be the map that assigns to each infinite sequence $\omega = (\omega_i) \in \Sigma_2$ the unique point $\phi(\omega) = \bigcap_{-\infty}^\infty f^{-i}(R_{\omega_i})$.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:ex1.8.3-setupa}[exercise]
+\begin{exercise}{stm:ex1.8.3-setupa}
 Prove that $\phi$ is a bijection and that both $\phi$ and $\phi^{-1}$ are continuous.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue} + reasoning}:}
+\subsection*{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:ex1.8.3-1}[reasoning]
+\begin{explanation}{stm:ex1.8.3-1}
 We will show $\phi$ is injective.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-2}[final-proof]
+\begin{statement}{stm:ex1.8.3-2}
 Suppose $x, y \in \Sigma_2$ with $\phi(x) = \phi(y)$. Then 
 \[
 \bigcap_{-\infty}^\infty f^{-i}(R_{x_i}) = \phi(x) = \phi(y) = \bigcap_{-\infty}^\infty f^{-i}(R_{y_i}).
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-3a}[reasoning]
+\begin{explanation}{stm:ex1.8.3-3a}
 Is $f$ injective? It seems so, since $f$ is a map that stretches and bends the space $D$ into a horseshoe, none of the regions of the horseshoe seem to overlap, and $\phi$ is a conjugacy.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-3b}[final-proof]
+\begin{statement}{stm:ex1.8.3-3b}
 From the description of $f$, we see that $f$ is injective.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-4}[final-proof]
+\begin{statement}{stm:ex1.8.3-4}
 By definition,
 \[
 R_0 = f(D_0) \cap R \quad \text{and} \quad R_1 = f(D_1) \cap R.
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-5}[final-proof]
-From \ref{stm:ex1.8.3-3b}, \ref{stm:ex1.8.3-4}, and $D_0 \cap D_1 = \emptyset$, we get $R_0 \cap R_1 = \emptyset$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-5}
+From (\ref{stm:ex1.8.3-3b}), (\ref{stm:ex1.8.3-4}), and $D_0 \cap D_1 = \emptyset$, we get $R_0 \cap R_1 = \emptyset$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-6}[final-proof]
-By \ref{stm:ex1.8.3-3b} and \ref{stm:ex1.8.3-5}, $f^{-i}(R_0) \cap f^{-i}(R_1) = \emptyset$ for all $i \in \mathbb{Z}$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-6}
+By (\ref{stm:ex1.8.3-3b}) and (\ref{stm:ex1.8.3-5}), $f^{-i}(R_0) \cap f^{-i}(R_1) = \emptyset$ for all $i \in \mathbb{Z}$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-7}[final-proof]
-From \ref{stm:ex1.8.3-2} and \ref{stm:ex1.8.3-6}, $x_i = y_i$ for all $i \in \mathbb{Z}$, so $x = y$, so $\phi$ is injective.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-7}
+From (\ref{stm:ex1.8.3-2}) and (\ref{stm:ex1.8.3-6}), $x_i = y_i$ for all $i \in \mathbb{Z}$, so $x = y$, so $\phi$ is injective.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-12}[reasoning]
+\begin{explanation}{stm:ex1.8.3-12}
 Let's show $\phi$ is surjective.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-16}[final-proof]
+\begin{statement}{stm:ex1.8.3-16}
 Note $f(R) \cap R = R_1 \cup R_0$, and $f^{-1}(R) \subseteq R$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-17}[final-proof]
-By \ref{stm:ex1.8.3-16}, $f^{-i}(R) = f^{-i}(R_0) \cup f^{-i}(R_1)$ for all $i \geq 1$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-17}
+By (\ref{stm:ex1.8.3-16}), $f^{-i}(R) = f^{-i}(R_0) \cup f^{-i}(R_1)$ for all $i \geq 1$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-18}[final-proof]
+\begin{statement}{stm:ex1.8.3-18}
 Clearly, $R_0 \cap R_1 = \emptyset$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-19}[final-proof]
-By \ref{stm:ex1.8.3-3b} and \ref{stm:ex1.8.3-16}, for all $i \ge 0$,
+\begin{statement}{stm:ex1.8.3-19}
+By (\ref{stm:ex1.8.3-3b}) and (\ref{stm:ex1.8.3-16}), for all $i \ge 0$,
 \[
 \left(f^{-i}(R_0) \cup f^{-i}(R_1)\right) \cap R = f^{-i}(R_0 \cup R_1) \cap R = f^{-i+1}(R) \cap f^{-i}(R) \cap R.
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-13}[final-proof]
-Let $x \in H$ and $j \in \mathbb{Z}$. By \ref{stm:ex1.8.3-17}, \ref{stm:ex1.8.3-18} and \ref{stm:ex1.8.3-19}, $x \in f^j(R_0)$ or $x \in f^j(R_1)$, but not both.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-13}
+Let $x \in H$ and $j \in \mathbb{Z}$. By (\ref{stm:ex1.8.3-17}), (\ref{stm:ex1.8.3-18}) and (\ref{stm:ex1.8.3-19}), $x \in f^j(R_0)$ or $x \in f^j(R_1)$, but not both.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-31}[final-proof]
-By \ref{stm:ex1.8.3-13}, we can define $x_j = 0$ if $x \in f^j(R_0)$ and $x_j = 1$ if $x \in f^j(R_1)$.  Clearly, this gives a sequence $(x_j)_{j \in \mathbb{Z}} \in \Sigma_2$ such that $\phi((x_j)_{j \in \mathbb{Z}}) = x$.
+\begin{statement}{stm:ex1.8.3-31}
+By (\ref{stm:ex1.8.3-13}), we can define $x_j = 0$ if $x \in f^j(R_0)$ and $x_j = 1$ if $x \in f^j(R_1)$.  Clearly, this gives a sequence $(x_j)_{j \in \mathbb{Z}} \in \Sigma_2$ such that $\phi((x_j)_{j \in \mathbb{Z}}) = x$.
 So $\phi$ is surjective.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-32a}[final-proof]
-By \ref{stm:ex1.8.3-31} and \ref{stm:ex1.8.3-7}, $\phi$ is bijective.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-32a}
+By (\ref{stm:ex1.8.3-31}) and (\ref{stm:ex1.8.3-7}), $\phi$ is bijective.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-insert36a}[reasoning]
+\begin{explanation}{stm:ex1.8.3-insert36a}
 Next, we show that $\phi$ is continuous. It seems that sets of the form $f^{-i}(R_{\omega_i}) \times R_{\omega_{i+1}}, \ldots, R_{\omega_n}$ are open, and even form a basis for the topology. Proving this will simplify the remaining parts of the exercise, since it suffices to prove that the inverse images of basis sets are open.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-36}[final-proof]
+\begin{statement}{stm:ex1.8.3-36}
 Let $\omega \in \phi^{-1}(A \times B)$. For a sequence $\omega \in \{0,1\}^\mathbb{Z}$, define 
 \[
 R_{\omega_{-m}, \ldots, \omega_{m}} = \bigcap_{i = -m}^m f^{-i}(R_{\omega_i}).
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-insert40a}[final-proof]
+\begin{statement}{stm:ex1.8.3-insert40a}
 Define $\mathcal{C}_m = \{ R_{\omega_{-m},\ldots,\omega_m} \times R_{\omega_0,\ldots,\omega_m} \}$, $\omega \in \{0,1\}^\mathbb{Z}$, $m \in \mathbb{N}$, and define $\mathcal{C} = \bigcup_{m \in \mathbb{N}} \{ H \cap C : C \in \mathcal{C}_m \}$.
-\end{stm}
+\end{statement}
 
 \begin{conj}\label{conj:slope}
 $\mathcal{C}$ is a basis for the topology on $H$.
 \end{conj}
 
-\begin{stm}{conj:slopeb}[final-proof]
+\begin{statement}{conj:slopeb}
 Proof: Let $C \in \mathcal{C}$. Then $C = H \cap (R^- \times R^+)$ where $R^- \times R^+ \in \mathcal{C}_m$ for some $m \in \mathbb{N}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-38a}[reasoning]
+\begin{explanation}{stm:ex1.8.3-38a}
 Is $C$ open? Intuitively, yes, since the sets in $\mathcal{C}_m$ are closed and bounded, we can contain them in open sets in $\mathbb{R}^2$ each containing no other points from $H$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-39}[final-proof]
+\begin{statement}{stm:ex1.8.3-39}
 Note $R^- = [x_1, x_2]$ and $R^+ = [y_1, y_2]$ for $x_1,x_2,y_1,y_2 \in \mathbb{R}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-40}[final-proof]
-By \ref{stm:ex1.8.3-18}, for all $D \ne D' \in \mathcal{C}_m$, $D \cap D' = \emptyset$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-40}
+By (\ref{stm:ex1.8.3-18}), for all $D \ne D' \in \mathcal{C}_m$, $D \cap D' = \emptyset$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-41}[final-proof]
-By \ref{stm:ex1.8.3-39} and \ref{stm:ex1.8.3-40}, there exist open intervals $I^-, I^+ \subset \mathbb{R}$ such that $R^- \times R^+ \subseteq I^- \times I^+$ and such that $(I^- \times I^+) \cap D = \emptyset$ for all $D \in \mathcal{C}_m$ with $D \ne R^- \times R^+$. 
-\end{stm}
+\begin{statement}{stm:ex1.8.3-41}
+By (\ref{stm:ex1.8.3-39}) and (\ref{stm:ex1.8.3-40}), there exist open intervals $I^-, I^+ \subset \mathbb{R}$ such that $R^- \times R^+ \subseteq I^- \times I^+$ and such that $(I^- \times I^+) \cap D = \emptyset$ for all $D \in \mathcal{C}_m$ with $D \ne R^- \times R^+$. 
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-41b}[final-proof]
+\begin{statement}{stm:ex1.8.3-41b}
 Clearly, $\mathcal{C}_m$ covers $H$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-42a}[final-proof]
-By \ref{stm:ex1.8.3-41} and \ref{stm:ex1.8.3-41b}, $H \cap (R^- \times R^+) = H \cap (I^- \times I^+)$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-42a}
+By (\ref{stm:ex1.8.3-41}) and (\ref{stm:ex1.8.3-41b}), $H \cap (R^- \times R^+) = H \cap (I^- \times I^+)$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-42b}[final-proof]
-By \ref{stm:ex1.8.3-42a}, $C$ is open in $H$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-42b}
+By (\ref{stm:ex1.8.3-42a}), $C$ is open in $H$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-42c}[reasoning]
+\begin{explanation}{stm:ex1.8.3-42c}
 Aren’t we done at this point, since $H$ is covered by $\mathcal{C}_m$ for all $m$? No, we still need to check that we can build each open $U$ out of sets in $\mathcal{C}$ that are contained in $U$. Intuitively, this seems true because the rectangles in $\mathcal{C}_m$ get arbitrarily small as $m$ increases. Let's prove this.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-34}[final-proof]
+\begin{statement}{stm:ex1.8.3-34}
 Let $A$ and $B$ be open intervals in $\mathbb{R}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-34b}[final-proof]
+\begin{statement}{stm:ex1.8.3-34b}
 Let $x \in H \cap (A \times B)$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-42}[final-proof]
+\begin{statement}{stm:ex1.8.3-42}
 Let $\varepsilon = \min\{ d(x, y) : y \in A \times B \}$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-43}[final-proof]
+\begin{statement}{stm:ex1.8.3-43}
 Because $A \times B$ is open, $\varepsilon > 0$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-44}[final-proof]
+\begin{statement}{stm:ex1.8.3-44}
 Let $k = \min \left\{ n \in \mathbb{N} : \mu^{-n} \leq \varepsilon, \lambda^n \leq \varepsilon \right\}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-45}[final-proof]
-By \ref{stm:ex1.8.3-43}, and since $\lambda < 1/2$ and $\mu > 2$, $k > 0$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-45}
+By (\ref{stm:ex1.8.3-43}), and since $\lambda < 1/2$ and $\mu > 2$, $k > 0$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-46}[final-proof]
+\begin{statement}{stm:ex1.8.3-46}
 If $R^- \times R^+ \in \mathcal{C}_m$, then $R^-$ has width equal to $\mu^{-k} \leq \varepsilon$ and $R^+$ has width equal to $\lambda^k \leq \varepsilon$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-47}[final-proof]
-By \ref{stm:ex1.8.3-46}, \ref{stm:ex1.8.3-42} and \ref{stm:ex1.8.3-41b}, there exists an $R^- \times R^+ \in \mathcal{C}_k$ such that $x \in R^- \times R^+$ and $R^- \times R^+ \subseteq A \times B$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-47}
+By (\ref{stm:ex1.8.3-46}), (\ref{stm:ex1.8.3-42}) and (\ref{stm:ex1.8.3-41b}), there exists an $R^- \times R^+ \in \mathcal{C}_k$ such that $x \in R^- \times R^+$ and $R^- \times R^+ \subseteq A \times B$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-48}[final-proof]
-By \ref{stm:ex1.8.3-42b}, $H \cap R^- \times R^+$ is open, so $\mathcal{C}$ is a basis for the topology on $H$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-48}
+By (\ref{stm:ex1.8.3-42b}), $H \cap R^- \times R^+$ is open, so $\mathcal{C}$ is a basis for the topology on $H$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-49}[reasoning]
+\begin{explanation}{stm:ex1.8.3-49}
 We can use \ref{conj:slope} to prove $\phi$ is continuous, since we just need to prove $\phi^{-1}(C)$ is open for $C \in \mathcal{C}$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-51}[final-proof]
+\begin{statement}{stm:ex1.8.3-51}
 Let $C \in \mathcal{C}$. $C = H \cap (R_{\omega_{-m}, \ldots, \omega_m} \times R_{\omega_0, \ldots, \omega_m})$ for $\omega \in \{0,1\}^{\mathbb{Z}}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-52}[reasoning]
+\begin{explanation}{stm:ex1.8.3-52}
 Let's show $\phi^{-1}(C) = B(\omega, 2^{-m})$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-53}[final-proof]
+\begin{statement}{stm:ex1.8.3-53}
 Let $j \in \{-m, -m+1, \ldots, m\}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-62}[final-proof]
+\begin{statement}{stm:ex1.8.3-62}
 Suppose $z \in \phi^{-1}(C)$. By definition of $\phi$,
 \[
 \phi(z) = \bigcap_{i \in \mathbb{Z}} f^{-i}(R_{z_i}) \subseteq f^j(R_{z_j}).
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-69}[final-proof]
+\begin{statement}{stm:ex1.8.3-69}
 Since $\phi(z) \in R^+ \times R^-$, $\phi(z) \in f^j(R_{\omega_j})$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-70}[final-proof]
-By \ref{stm:ex1.8.3-18}, $f^j(R_1) \cap f^j(R_0) = \emptyset$, so $z_j = \omega_j$, so $z \in B(\omega, 2^{-m})$.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-70}
+By (\ref{stm:ex1.8.3-18}), $f^j(R_1) \cap f^j(R_0) = \emptyset$, so $z_j = \omega_j$, so $z \in B(\omega, 2^{-m})$.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-71}[final-proof]
+\begin{statement}{stm:ex1.8.3-71}
 Clearly $B(\omega, 2^{-m}) \subseteq \phi^{-1}(C)$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-72}[final-proof]
-By \ref{stm:ex1.8.3-70} and \ref{stm:ex1.8.3-71}, $\phi^{-1}(C) = B(\omega, 2^{-m})$, so $\phi^{-1}(C)$ is open, so, by \ref{conj:slope}, $\phi$ is continuous.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-72}
+By (\ref{stm:ex1.8.3-70}) and (\ref{stm:ex1.8.3-71}), $\phi^{-1}(C) = B(\omega, 2^{-m})$, so $\phi^{-1}(C)$ is open, so, by \ref{conj:slope}, $\phi$ is continuous.
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-73}[reasoning]
+\begin{explanation}{stm:ex1.8.3-73}
 Now let’s show $\phi^{-1}$ is continuous.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.8.3-74}[final-proof]
-Let $B(\gamma, 2^{-n})$ be an open ball in $\Sigma_2$. By the same argument as for \ref{stm:ex1.8.3-72},
+\begin{statement}{stm:ex1.8.3-74}
+Let $B(\gamma, 2^{-n})$ be an open ball in $\Sigma_2$. By the same argument as for (\ref{stm:ex1.8.3-72}),
 \[
 B(\gamma, 2^{-n}) = \phi^{-1}(H \cap (R_{\gamma_{-n}, \ldots, \gamma_n} \times R_{\gamma_0, \ldots, \gamma_n})).
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-76}[final-proof]
+\begin{statement}{stm:ex1.8.3-76}
 So $\phi(B(\gamma, 2^{-n})) = H \cap (R_{\gamma_{-n}, \ldots, \gamma_n} \times R_{\gamma_0, \ldots, \gamma_n})$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.8.3-77}[final-proof]
-By \ref{stm:ex1.8.3-76} and \ref{conj:slope}, $\phi(B(\gamma, 2^{-n}))$ is open, so $\phi^{-1}$ is continuous.
-\end{stm}
+\begin{statement}{stm:ex1.8.3-77}
+By (\ref{stm:ex1.8.3-76}) and \ref{conj:slope}, $\phi(B(\gamma, 2^{-n}))$ is open, so $\phi^{-1}$ is continuous.
+\end{statement}

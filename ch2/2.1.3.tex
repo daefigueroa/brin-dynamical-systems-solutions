@@ -1,65 +1,65 @@
-\sectionlabel{Exercise 2.1.3.}
+\subsection*{Exercise 2.1.3.}
 
-\begin{stm}{stm:213-1}[exercise]
+\begin{exercise}{stm:213-1}
 Let $f : X \to X$ be a topological dynamical system.
-\end{stm}
+\end{exercise}
 
-\begin{stm}{stm:213-2}[exercise]
+\begin{exercise}{stm:213-2}
 Show that $\mathcal{R}(f) \subseteq \operatorname{NW}(f)$.
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue}+ reasoning}:}
+\subsection*{Proof {\color{blue}+ reasoning}:}
 
-\begin{stm}{stm:213-3}[proof]
+\begin{statement}{stm:213-3}
 Let $x \in \mathcal{R}(f)$. 
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:213-4}[proof]
+\begin{statement}{stm:213-4}
 Let $U$ be a neighborhood of $x$, and $V$ an open set such that $V \subseteq U$ and $x \in V$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:213-5}[reasoning]
+\begin{explanation}{stm:213-5}
 We need to show that there exists an $n \geq 1$ such that $f^n(U) \cap U \neq \emptyset$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:213-6}[reasoning]
-By \ref{stm:213-3} and \ref{stm:213-4}, there exists a recurrent point $y$ in $U$.
-\end{stm}
+\begin{explanation}{stm:213-6}
+By (\ref{stm:213-3}) and (\ref{stm:213-4}), there exists a recurrent point $y$ in $U$.
+\end{explanation}
 
-\begin{stm}{stm:213-7}[reasoning]
-By \ref{stm:213-6}, there exists an increasing sequence $(n_k)$ such that 
+\begin{explanation}{stm:213-7}
+By (\ref{stm:213-6}), there exists an increasing sequence $(n_k)$ such that 
 \[
 f^{n_k}(y) \to y \quad \text{and} \quad n_k \to \infty.
 \]
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:213-8}[reasoning]
+\begin{explanation}{stm:213-8}
 Intuitively, the sequence of sets $f^{n_k}(U)$ should eventually intersect with $U$, giving our required result.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:213-9}[reasoning]
+\begin{explanation}{stm:213-9}
 A possible problem in the proof so far is that $y$ may not be in the interior of $U$, so $x$ is not necessarily in a neighborhood of $y$, so it is possible that $f^{n_k}(U)$ comes arbitrarily close to y but never intersects with $U$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:213-10}[reasoning]
-I think we can avoid this problem by making a stronger statement than \ref{stm:213-6}, using $V$ instead of $U$:
-\end{stm}
+\begin{explanation}{stm:213-10}
+I think we can avoid this problem by making a stronger statement than (\ref{stm:213-6}), using $V$ instead of $U$:
+\end{explanation}
 
-\begin{stm}{stm:213-11}[proof]
-By \ref{stm:213-3} and \ref{stm:213-4}, there exists a recurrent point $z$ in $V$.
-\end{stm}
+\begin{statement}{stm:213-11}
+By (\ref{stm:213-3}) and (\ref{stm:213-4}), there exists a recurrent point $z$ in $V$.
+\end{statement}
 
-\begin{stm}{stm:213-12}[proof]
-By \ref{stm:213-11}, there exists an increasing sequence $(m_k)$ such that 
+\begin{statement}{stm:213-12}
+By (\ref{stm:213-11}), there exists an increasing sequence $(m_k)$ such that 
 \[
 f^{m_k}(z) \to z \quad \text{and} \quad m_k \to \infty.
 \]
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:213-13}[proof]
-Since $V$ is a neighborhood of $z$, by \ref{stm:213-12} there exists an $M \geq 1$ such that $\forall i \geq M$, $f^{m_i}(z) \in V$, so $f^{m_M}(z) \in U$, hence $f^{m_M}(U) \cap U \neq \emptyset$.
-\end{stm}
+\begin{statement}{stm:213-13}
+Since $V$ is a neighborhood of $z$, by (\ref{stm:213-12}) there exists an $M \geq 1$ such that $\forall i \geq M$, $f^{m_i}(z) \in V$, so $f^{m_M}(z) \in U$, hence $f^{m_M}(U) \cap U \neq \emptyset$.
+\end{statement}
 
-\begin{stm}{stm:213-14}[proof]
-By \ref{stm:213-13}, $\mathcal{R}(f) \subseteq \operatorname{NW}(f)$.
-\end{stm}
+\begin{statement}{stm:213-14}
+By (\ref{stm:213-13}), $\mathcal{R}(f) \subseteq \operatorname{NW}(f)$.
+\end{statement}

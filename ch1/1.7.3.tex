@@ -1,275 +1,239 @@
-\sectionlabel{Exercise 1.7.3.}
+\subsection*{Exercise 1.7.3.}
 
-\begin{stm}{stm:ex1.7.3-setup173}[exercise]
+\begin{exercise}{stm:ex1.7.3-setup173}
 Show that the eigenvalues of a two-dimensional hyperbolic toral automorphism are irrational (so the stable and unstable manifolds are dense by exercise 1.11.1).
-\end{stm}
+\end{exercise}
 
-\sectionlabel{Proof {\color{blue} + reasoning}:}
+\subsection*{Proof {\color{blue} + reasoning}:}
 
-\begin{stm}{stm:ex1.7.3-q3}[reasoning]
+\begin{explanation}{stm:ex1.7.3-q3}
 Are there hyperbolic toral automorphisms that aren't represented by a matrix? No, not in this context.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-4}[final-proof]
+\begin{statement}{stm:ex1.7.3-4}
 Let $A$ be a $2 \times 2$ integer matrix such that $\det(A) = 1$ and such that for all eigenvalues $\lambda$ of $A$, $|\lambda| \neq 1$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-5}[final-proof]
+\begin{statement}{stm:ex1.7.3-5}
 Let $\lambda$ be an eigenvalue of $A$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-6}[reasoning]
+\begin{explanation}{stm:ex1.7.3-6}
 Let's try the following: first, relate the eigenvalues to the determinant. Then, conclude from the first step and the given assumptions that the eigenvalues are irrational.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-8}[final-proof]
+\begin{statement}{stm:ex1.7.3-8}
 Note that $\det(\lambda I - A) = 0$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-8a}[final-proof]
+\begin{statement}{stm:ex1.7.3-8a}
 Denote $A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-9}[final-proof]
+\begin{statement}{stm:ex1.7.3-9}
 $(\lambda - a_{11})(\lambda - a_{22}) - a_{12}a_{21} = 0$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-10}[final-proof]
+\begin{statement}{stm:ex1.7.3-10}
 $\lambda^2 - \lambda a_{11} - \lambda a_{22} + a_{11}a_{22} - a_{12}a_{21} = 0$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-12}[final-proof]
+\begin{statement}{stm:ex1.7.3-12}
 By assumption, $\det(A) = 1$, so $a_{11}a_{22} - a_{12}a_{21} = 1$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-13}[final-proof]
-Substituting $1 = a_{11}a_{22} - a_{12}a_{21}$ in \ref{stm:ex1.7.3-10} gives: $\lambda^2 - \lambda a_{11} - \lambda a_{22} + 1 = 0$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-13}
+Substituting $1 = a_{11}a_{22} - a_{12}a_{21}$ in (\ref{stm:ex1.7.3-10}) gives: $\lambda^2 - \lambda a_{11} - \lambda a_{22} + 1 = 0$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-14}[final-proof]
+\begin{statement}{stm:ex1.7.3-14}
 $\lambda^2 - \lambda(a_{11} + a_{22}) + 1 = 0$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-14b}[reasoning]
+\begin{explanation}{stm:ex1.7.3-14b}
 That was the first step. How can we conclude?
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-r15}[reasoning]
+\begin{explanation}{stm:ex1.7.3-r15}
 What given assumption have I not used yet?
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-r16}[reasoning]
-I haven't used that $|\lambda| \ne 1$. From \ref{stm:ex1.7.3-14} it may be possible to conclude that $\lambda$ is equal to $1$ or irrational, which together with \ref{stm:ex1.7.3-r16} gives that $\lambda$ is irrational.
-\end{stm}
+\begin{explanation}{stm:ex1.7.3-r16}
+I haven't used that $|\lambda| \ne 1$. From (\ref{stm:ex1.7.3-14}) it may be possible to conclude that $\lambda$ is equal to $1$ or irrational, which together with (\ref{stm:ex1.7.3-r16}) gives that $\lambda$ is irrational.
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-r17}[reasoning]
-We can factorize the left-hand side of \ref{stm:ex1.7.3-14}.
-\end{stm}
+\begin{explanation}{stm:ex1.7.3-r17}
+We can factorize the left-hand side of (\ref{stm:ex1.7.3-14}).
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-r20}[reasoning]
-However, \ref{stm:ex1.7.3-14} could have complex solutions for certain values of $a_{11} + a_{22}$.
-\end{stm}
+\begin{explanation}{stm:ex1.7.3-r20}
+However, (\ref{stm:ex1.7.3-14}) could have complex solutions for certain values of $a_{11} + a_{22}$.
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-26}[reasoning]
-If the discriminant of \ref{stm:ex1.7.3-14} is greater than $0$, \ref{stm:ex1.7.3-14} only has real roots.
-\end{stm}
+\begin{explanation}{stm:ex1.7.3-26}
+If the discriminant of (\ref{stm:ex1.7.3-14}) is greater than $0$, (\ref{stm:ex1.7.3-14}) only has real roots.
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-insert27a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert27a}
 I'm not sure how to proceed. Let's take a few steps back.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-27}[reasoning]
-Equation \ref{stm:ex1.7.3-14} is quadratic in $\lambda$, so all solutions are given by the quadratic formula.
-\end{stm}
+\begin{explanation}{stm:ex1.7.3-27}
+Equation (\ref{stm:ex1.7.3-14}) is quadratic in $\lambda$, so all solutions are given by the quadratic formula.
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-15}[final-proof]
+\begin{statement}{stm:ex1.7.3-15}
 By the quadratic formula, $\lambda = \frac{1}{2}(a_{11} + a_{22} + ((a_{11} + a_{22})^2 - 4)^{1/2})$ or $\lambda = \frac{1}{2}(a_{11} + a_{22} - ((a_{11} + a_{22})^2 - 4)^{1/2})$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-16}[final-proof]
-From \ref{stm:ex1.7.3-15} we see that $\lambda \in \mathbb{R} \setminus \mathbb{Q}$ if and only if $((a_{11} + a_{22})^2 - 4)^{1/2} \in \mathbb{R} \setminus \mathbb{Q}$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-16}
+From (\ref{stm:ex1.7.3-15}) we see that $\lambda \in \mathbb{R} \setminus \mathbb{Q}$ if and only if $((a_{11} + a_{22})^2 - 4)^{1/2} \in \mathbb{R} \setminus \mathbb{Q}$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-17}[final-proof]
+\begin{statement}{stm:ex1.7.3-17}
 By definition of $A$, $(a_{11} + a_{22}) \in \mathbb{N}$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-insert18a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert18a}
 Let's show that $\lambda$ cannot be in $\mathbb{C}$. My guess is that if $\lambda$ were in $\mathbb{C}$, its magnitude would be equal to $1$.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-a18}[final-proof]
+\begin{statement}{stm:ex1.7.3-a18}
 Suppose $((a_{11} + a_{22})^2 - 4)^{1/2} \in \mathbb{C}$. Then $|\lambda|^2 = \frac{1}{4}((a_{11} + a_{22})^2 + 4 - (a_{11} + a_{22})^2) = 1$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-20}[final-proof]
-\ref{stm:ex1.7.3-a18} contradicts \ref{stm:ex1.7.3-4}, hence $((a_{11} + a_{22})^2 - 4)^{1/2} \in \mathbb{R}$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-20}
+(\ref{stm:ex1.7.3-a18}) contradicts (\ref{stm:ex1.7.3-4}), hence $((a_{11} + a_{22})^2 - 4)^{1/2} \in \mathbb{R}$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-21}[final-proof]
-From \ref{stm:ex1.7.3-20} and \ref{stm:ex1.7.3-17}, $a_{11} + a_{22} \geq 3$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-21}
+From (\ref{stm:ex1.7.3-20}) and (\ref{stm:ex1.7.3-17}), $a_{11} + a_{22} \geq 3$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-22}[reasoning]
+\begin{explanation}{stm:ex1.7.3-22}
 We just need to show that $\lambda \notin \mathbb{Q}$. My intuition is that $((a_{11} + a_{22})^2 - 4)^{1/2}$ is always irrational, because it seems $\forall n \in \mathbb{N}$, $n^{1/2}$ is rational only if $n$ is a square number, and subtracting $4$ makes it no longer square, given $\sqrt{n} \ge 3$. Let's prove the first part.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-c23}[final-proof]
-Conjecture: $\{n \in \mathbb{N} : \sqrt{n} \in \mathbb{Q} \setminus \mathbb{N} \} = \emptyset$
-\end{stm}
+\begin{conj}\label{stm:ex1.7.3-c23}
+$\{n \in \mathbb{N} : \sqrt{n} \in \mathbb{Q} \setminus \mathbb{N} \} = \emptyset$
+\end{conj}
 
-\begin{stm}{stm:ex1.7.3-a28}[final-proof]
-Proof of \ref{stm:ex1.7.3-c23}: Suppose $\sqrt{n} \in \mathbb{Q} \setminus \mathbb{N}$. Then $\sqrt{n} = \frac{p}{q}$, where $p$ and $q$ are natural numbers.
-\end{stm}
+\begin{proof}
+Suppose for contradiction that $\sqrt{n} \in \mathbb{Q} \setminus \mathbb{N}$. Then $\sqrt{n} = \frac{p}{q}$, where $p$ and $q$ are natural numbers. Since $\sqrt{n} \notin \mathbb{N}$, $q$ does not divide $p$, so $q^2$ does not divide $p^2$, but $n = \frac{p^2}{q^2}$, hence $n q^2 = p^2$ which is a contradiction.
+\end{proof}
 
-\begin{stm}{stm:ex1.7.3-30}[final-proof]
-Since $\sqrt{n} \notin \mathbb{N}$, $q$ does not divide $p$, so $q^2$ does not divide $p^2$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-31}[final-proof]
-From \ref{stm:ex1.7.3-a28}, $n = \frac{p^2}{q^2}$, hence $n q^2 = p^2$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-32}[final-proof]
-\ref{stm:ex1.7.3-30} contradicts \ref{stm:ex1.7.3-31}, so \ref{stm:ex1.7.3-a28} is false $\square_{c23}$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-insert33a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert33a}
 Now let's prove the second part, that subtracting 4 makes the number no longer square. Intuitively, this seems true because the distance between consecutive squares will eventually be greater than any fixed number, like 4, so by subtracting a fixed number from large enough squares, we end up in between squares.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-c34}[final-proof]
-Conjecture: $\forall n \in \mathbb{N}, n \ge 3$ implies $(n^2 - 4)^{1/2} \notin \mathbb{N}$
-\end{stm}
+\begin{conj}\label{stm:ex1.7.3-c34}
+$\forall n \in \mathbb{N}, n \ge 3$ implies $(n^2 - 4)^{1/2} \notin \mathbb{N}$
+\end{conj}
 
-\begin{stm}{stm:ex1.7.3-a35}[final-proof]
-Proof of \ref{stm:ex1.7.3-c34}: Suppose $(n^2 - 4)^{1/2} = k$ where $k \in \mathbb{N}$
-\end{stm}
+\begin{proof}
+Suppose $(n^2 - 4)^{1/2} = k$ where $k \in \mathbb{N}$. Then $n^2 - 4 = k^2$, so $n^2 - k^2 = 4$. Clearly, $n > k$. Then $n^2 - k^2 \ge n^2 - (n - 1)^2 = n^2 - n^2 + 2n - 1 = 2n - 1$. So $n^2 - k^2 > 4$, which is a contradiction.
+\end{proof}
 
-\begin{stm}{stm:ex1.7.3-36}[final-proof]
-Then $n^2 - 4 = k^2$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-43}
+Now we can conclude. By (\ref{stm:ex1.7.3-21}) and (\ref{stm:ex1.7.3-c34}), $((a_{11} + a_{22})^2 - 4)^{1/2} \notin \mathbb{N}$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-37}[final-proof]
-So $n^2 - k^2 = 4$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-44}
+So, by (\ref{stm:ex1.7.3-43}), (\ref{stm:ex1.7.3-20}) and (\ref{stm:ex1.7.3-c23}), $((a_{11} + a_{22})^2 - 4)^{1/2}$ is irrational
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-38}[final-proof]
-Clearly, $n > k$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-45}
+So, by (\ref{stm:ex1.7.3-44}) and (\ref{stm:ex1.7.3-15}), $\lambda$ is irrational
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-39}[final-proof]
-Then $n^2 - k^2 \ge n^2 - (n - 1)^2 = n^2 - n^2 + 2n - 1 = 2n - 1$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-41}[final-proof]
-So $n^2 - k^2 > 4$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-42}[final-proof]
-\ref{stm:ex1.7.3-41} contradicts \ref{stm:ex1.7.3-37}, so $\square_{c34}$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-43}[final-proof]
-Now we can conclude. By \ref{stm:ex1.7.3-21} and \ref{stm:ex1.7.3-c34}, $((a_{11} + a_{22})^2 - 4)^{1/2} \notin \mathbb{N}$
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-44}[final-proof]
-So, by \ref{stm:ex1.7.3-43}, \ref{stm:ex1.7.3-20} and \ref{stm:ex1.7.3-c23}, $((a_{11} + a_{22})^2 - 4)^{1/2}$ is irrational
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-45}[final-proof]
-So, by \ref{stm:ex1.7.3-44} and \ref{stm:ex1.7.3-15}, $\lambda$ is irrational
-\end{stm}
-
-\begin{stm}{stm:ex1.7.3-insert45a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert45a}
 We still need to show that the (un)stable manifolds are dense by exercise 1.11.1.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-46}[final-proof]
+\begin{statement}{stm:ex1.7.3-46}
 Let $x \in \mathbb{T}^2$. Without loss of generality, $\lambda > 1 > \lambda^{-1}$, where $\lambda$ and $\lambda^{-1}$ are the eigenvalues of $A$. The stable manifold $W^u(x)$ is the line through $x$ parallel to $v$ where $v$ is the eigenvector corresponding to $\lambda$.
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-insert47a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert47a}
 I think the intended proof is to show that the slope of a line parallel to $v$ is irrational, hence the flow defined in section 1.11 has dense orbits, from which it follows $W^u(x)$ is dense.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-49}[final-proof]
+\begin{statement}{stm:ex1.7.3-49}
 Denote $v = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$. A line parallel to $v$ has slope equal to $\frac{v_2}{v_1}$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-insert50a}[reasoning]
+\begin{explanation}{stm:ex1.7.3-insert50a}
 My guess is that the slope is irrational because $\lambda$ is irrational and because $v$ is an eigenvector of an integer-valued matrix. Let's write out the defining equation for eigenvectors.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-52}[final-proof]
+\begin{statement}{stm:ex1.7.3-52}
 $A v = \lambda v$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-53}[final-proof]
+\begin{statement}{stm:ex1.7.3-53}
 $\begin{bmatrix} a_{11}v_1 + a_{12}v_2 \\ a_{21}v_1 + a_{22}v_2 \end{bmatrix} = \begin{bmatrix} \lambda v_1 \\ \lambda v_2 \end{bmatrix}$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-55}[final-proof]
+\begin{statement}{stm:ex1.7.3-55}
 $a_{11}v_1 + a_{12}v_2 = \lambda v_1$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-56}[final-proof]
+\begin{statement}{stm:ex1.7.3-56}
 $a_{21}v_1 + a_{22}v_2 = \lambda v_2$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-57}[final-proof]
+\begin{statement}{stm:ex1.7.3-57}
 $v_2(\lambda - a_{22}) = a_{21}v_1$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-58}[final-proof]
+\begin{statement}{stm:ex1.7.3-58}
 $v_1(\lambda - a_{11}) = a_{12}v_2$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59b}[reasoning]
+\begin{explanation}{stm:ex1.7.3-59b}
 If $a_{21} = 0$, then $v_2 v_1^{-1} = 0$. Why is this not possible? Probably because $v$ is nonzero, by assumption.
-\end{stm}
+\end{explanation}
 
-\begin{stm}{stm:ex1.7.3-59c}[final-proof]
+\begin{statement}{stm:ex1.7.3-59c}
 Since $v$ is an eigenvector, $v_1 \ne 0$ or $v_2 \ne 0$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59e}[final-proof]
-By \ref{stm:ex1.7.3-45}, $(\lambda - a_{22})$ and $(\lambda - a_{11})$ are irrational.
-\end{stm}
+\begin{statement}{stm:ex1.7.3-59e}
+By (\ref{stm:ex1.7.3-45}), $(\lambda - a_{22})$ and $(\lambda - a_{11})$ are irrational.
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59f}[final-proof]
-If $v_1 \ne 0$, then by \ref{stm:ex1.7.3-59e} and \ref{stm:ex1.7.3-58}, $v_2 \ne 0$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-59f}
+If $v_1 \ne 0$, then by (\ref{stm:ex1.7.3-59e}) and (\ref{stm:ex1.7.3-58}), $v_2 \ne 0$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59g}[final-proof]
-If $v_2 \ne 0$, then by \ref{stm:ex1.7.3-59e} and \ref{stm:ex1.7.3-57}, $v_1 \ne 0$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-59g}
+If $v_2 \ne 0$, then by (\ref{stm:ex1.7.3-59e}) and (\ref{stm:ex1.7.3-57}), $v_1 \ne 0$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59h}[final-proof]
+\begin{statement}{stm:ex1.7.3-59h}
 So, $v_1 \ne 0$ and $v_2 \ne 0$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59i}[final-proof]
-By \ref{stm:ex1.7.3-59h} and \ref{stm:ex1.7.3-57}, $v_2 v_1^{-1} = (\lambda - a_{22})^{-1} a_{21} \ne 0$
-\end{stm}
+\begin{statement}{stm:ex1.7.3-59i}
+By (\ref{stm:ex1.7.3-59h}) and (\ref{stm:ex1.7.3-57}), $v_2 v_1^{-1} = (\lambda - a_{22})^{-1} a_{21} \ne 0$
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-59j}[final-proof]
-By \ref{stm:ex1.7.3-59i} and \ref{stm:ex1.7.3-59e}, $v_2 v_1^{-1}$ is irrational
-\end{stm}
+\begin{statement}{stm:ex1.7.3-59j}
+By (\ref{stm:ex1.7.3-59i}) and (\ref{stm:ex1.7.3-59e}), $v_2 v_1^{-1}$ is irrational
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-62}[final-proof]
+\begin{statement}{stm:ex1.7.3-62}
 Denote $x = (x_1, x_2)$, let $t \in \mathbb{R}^+$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-63}[final-proof]
+\begin{statement}{stm:ex1.7.3-63}
 Let $\phi_{\frac{v_1}{v_2}}^t(x) := (x_1 + \frac{v_1}{v_2} t, x_2 + t) \mod 1$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-64}[final-proof]
+\begin{statement}{stm:ex1.7.3-64}
 Then $\bigcup_{t \in \mathbb{R}^+} \phi_{\frac{v_1}{v_2}}^t(x) \subseteq W^u(x)$
-\end{stm}
+\end{statement}
 
-\begin{stm}{stm:ex1.7.3-65}[final-proof]
+\begin{statement}{stm:ex1.7.3-65}
 By exercise 1.11.1, the orbit of $\phi_{\frac{v_1}{v_2}}$ is dense, so $W^u(x)$ is dense. For the stable manifold, the proof is similar.
-\end{stm}
+\end{statement}
