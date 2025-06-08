@@ -1,0 +1,95 @@
+\subsection*{Exercise 3.7.3.}
+
+\begin{exercise}{stm:ex3.7.3-setup}
+Show that there are only countably many non-isomorphic sofic shifts.
+\end{exercise}
+
+\begin{exercise}{stm:ex3.7.3-setup2}
+Conclude that there are subshifts that are not sofic.
+\end{exercise}
+
+\subsection*{Proof {\color{blue}+ reasoning}:}
+
+\begin{explanation}{stm:ex3.7.3-1}
+For the first part, we could show that there exists an injective function from the set of isomorphism classes of sofic subshifts into a countable set. Or, we can construct a function $\alpha$ with domain all sofic shifts, and then show that $\alpha(X) = \alpha(X')$ if $X \cong X'$. Note $X \cong X'$ means that there exists a topological conjugacy $X \to X'$.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-4}
+Alternatively, it might be possible to show there are only countably many non-isomorphic SFTs, and for any given SFT that there are only countably many factors up to isomorphism. It seems there are only countably many non-isomorphic SFTs, but the second part is harder. Perhaps we can show that each factor of an SFT is isomorphic to some representative and that there are only countably many of such representatives.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-20}
+I am not sure where to start. Let me check the relevant theory.
+\end{explanation}
+
+\begin{statement}{stm:ex3.7.3-21}
+Proposition 3.7.1 states that a subshift is sofic iff it admits a presentation by a finite directed labelled graph.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-31}
+Note, for each $m$ and $n$ in $\mathbb{N}$, up to graph isomorphism, there are only a finite number of directed labelled graphs with $m$ vertices and $n$ edges, so there are only countably many non-isomorphic finite directed labelled graphs.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-31a}
+Since a graph isomorphism corresponds to a conjugacy of the corresponding subshifts, by proposition 3.7.1, there are only countably many non-isomorphic sofic subshifts.
+\end{statement}
+
+\begin{explanation}{stm:ex3.7.3-32}
+For the next part, note that it suffices to show that there are uncountably many non-isomorphic subshifts.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-33}
+Is the set of all subshifts on $\{0,1\}$ already uncountable? Let's check the relevant theory.
+\end{explanation}
+
+\begin{statement}{stm:ex3.7.3-34}
+By exercise 3.2.2, the collection of all subshifts of $\Sigma_2$ is uncountable.
+\end{statement}
+
+\begin{explanation}{stm:ex3.7.3-35}
+This is not enough to conclude that there are uncountably many non-isomorphic subshifts of $\Sigma_2$. How can we do that?
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-36}
+Let's try something else. In general, if we want to show that there exist at least $k$ distinct isomorphism classes within some set $\mathcal{S}$ of objects and we know of an invariant $T(s)$ such that for all $s, s' \in \mathcal{S}$ $s$ being isomorphic to $s'$ implies that $T(s) = T(s')$, then we can show the required result by showing that $\left| \{ T(s) : s \in \mathcal{S} \} \right| \geq k$.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-36b}
+In our case, to show that there exist uncountably many subshifts, we can construct for each positive real number $r$ a subshift with topological entropy equal to $r$, since topological entropy is a topological invariant. Let $r \in \mathbb{R}_+$. We want to construct a subshift $X \subseteq \Sigma_2$ such that $h(X) = r$. By proposition 3.1.1, for all subshifts $X$, $$h(X) = \lim_{n \to \infty} \frac{1}{n} \log |W_n(X)|.$$ So, can we construct a subshift such that $W_n(X)$ grows exponentially with rate $rn$? 
+\end{explanation}
+
+\begin{explanation}{stm:ex3.7.3-36e}
+Again, this seems overly complicated. Instead, it seems we can use the representation of codes by block codes to show that for any subshift $X$, there exist at most countably many subshifts isomorphic to $X$.
+\end{explanation}
+
+\begin{statement}{stm:ex3.7.3-37}
+Let $X \subseteq \Sigma_2$ be a subshift.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-36l}
+Let $k, l \in \mathbb{N}$.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-37b}
+Clearly, $W_n(X)$ is finite, so there exist only finitely many functions $W_n(X) \to A_2$. Therefore, there exist only finitely many $(k,l)$-block codes $X \to \Sigma_2$, hence there exist at most countably many block codes $X \to \Sigma_2$.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-38}
+By proposition 3.1.2 every code is a block code, so by statement (\ref{stm:ex3.7.3-37b}), there exist at most countably many codes $X \to \Sigma_2$.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-39}
+If there exists a $Y \subseteq \Sigma_2$ such that $X \cong Y$, then by definition there exists an isomorphism $c_Y : X \to Y$, where $c_Y$ can be considered as a code $c_Y : X \to \Sigma_2$.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-40}
+This defines an injective function $\{Y \subseteq \Sigma_2 : Y \cong X\} \to \{c : X \to \Sigma_2,\ c \text{ is a code}\}$. Hence, by (\ref{stm:ex3.7.3-38}), $\{Y \subseteq \Sigma_2 : Y \cong X\}$ is at most countable.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-41}
+Hence, by (\ref{stm:ex3.7.3-40}), the set of all isomorphism classes of subshifts of $\Sigma_2$ is uncountable.
+\end{statement}
+
+\begin{statement}{stm:ex3.7.3-42}
+Hence, by (\ref{stm:ex3.7.3-31a}), there are subshifts that are not sofic.
+\end{statement}

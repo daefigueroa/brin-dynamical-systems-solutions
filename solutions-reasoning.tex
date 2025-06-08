@@ -1,16 +1,12 @@
 \documentclass{article}
-\usepackage{amsmath,amssymb, amsthm}
+
 \usepackage{statements}
-\usepackage{style}
+\usepackage{preamble}
 
 \newcommand{\myinclude}[1]{%
   \setcounter{stm}{0}%
   \include{#1}%
 }
-
-\newtheorem{lemma}{Lemma}
-\newtheorem{thm}{Theorem}
-\newtheorem{conj}[thm]{Conjecture}
 
 \begin{document}
 
@@ -35,6 +31,9 @@
 
 \myinclude{ch3/3.1.3}
 \myinclude{ch3/3.2.3}
+\myinclude{ch3/3.4.3}
+\myinclude{ch3/3.7.3}
+\myinclude{ch3/3.8.3}
 
 \myinclude{ch4/4.2.3}
 \myinclude{ch4/4.3.3}

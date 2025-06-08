@@ -1,0 +1,22 @@
+\subsection*{Exercise 3.4.3.}
+
+\begin{exercise}{stm:ex3.4.3-setup}
+Let \( A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} \). Calculate the zeta function of \( \Sigma^e_A \).
+\end{exercise}
+
+\subsection*{Proof {\color{blue}+ reasoning}:}
+
+\begin{explanation}{stm:ex3.4.3-1}
+To answer, we can probably skip the definition of the zeta function given in terms of fixed points, and use the expression from proposition 3.4.2.
+\end{explanation}
+
+\begin{statement}{stm:ex3.4.3-2}
+By proposition 3.4.2, \(\zeta_A(z) = \left( \det(I - zA) \right)^{-1}\).
+\end{statement}
+
+\begin{statement}{stm:ex3.4.3-3}
+Therefore, 
+\[
+\zeta_A(z) = \left( \det \begin{pmatrix} 1 - z & -z \\ -z & 1 \end{pmatrix} \right)^{-1} = \left( 1 - 2z - z^2 \right)^{-1}.
+\]
+\end{statement}

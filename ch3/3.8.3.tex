@@ -1,0 +1,52 @@
+\subsection*{Exercise 3.8.3.}
+
+\begin{exercise}{stm:ex3.8.3-setup}
+A common coding scheme called modified frequency modulation (MFM) inserts a 0 between each two symbols unless they are both 0's, in which case it inserts a 1.
+\end{exercise}
+
+\begin{exercise}{stm:ex3.8.3-setup2}
+Prove that the set of sequences produced by the MFM coding is a sofic system.
+\end{exercise}
+
+\subsection*{Proof {\color{blue}+ reasoning}:}
+
+\begin{explanation}{stm:ex3.8.3-0}
+The exercise implies that the set of sequences produced by the MFM is not a proper SFT, but only a factor of one.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.8.3-1}
+Clearly, $11$ and $0000$ are not allowed, but it doesn't seem that we can define the MFM as the complement of the sequences that contain these words.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.8.3-2}
+Let's use proposition 3.7.1 and find a finite directed labeled graph that represents the MFM.
+\end{explanation}
+
+\begin{explanation}{stm:ex3.8.3-3}
+Note that in a finite directed labeled graph the edges are mapped to labels, but not necessarily injectively.
+\end{explanation}
+
+\begin{statement}{stm:ex3.8.3-10}
+Consider the following graph.
+\[
+\begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=2.5cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=gray!10,draw=black,text=black,scale=0.9]
+
+  \node[state] (A)                    {};
+  \node[state] (B) [right of=A]      {};
+  \node[state] (C) [below of=B]      {};
+  
+  \path (A) edge [loop above] node {1} (A)
+            edge [bend left]  node {0} (B)
+        (B) edge [loop above] node {0} (B)
+            edge [bend left]  node {1} (A)
+            edge             node {0} (C)
+        (C) edge [bend left] node {0} (A);
+\end{tikzpicture}
+\]
+\end{statement}
+
+\begin{statement}{stm:ex3.8.3-11}
+This is a finite directed labeled graph that represents the set of sequences produced by the MFM, so by proposition 3.7.1, this system is sofic.
+\end{statement}
