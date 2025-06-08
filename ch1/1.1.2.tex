@@ -19,21 +19,18 @@ Let's start with (\ref{stm:112exsetup}).
 \end{explanation}
 
 \begin{statement}{stm:112exverify}
-Let $y \in Y$ be periodic.
+Let $y \in Y$ be periodic. Then there exists $n \in \mathbb{N}$ such that $g^n(y) = y$.
 \end{statement}
 
-\begin{explanation}{stm:112exwrite}
-We write the definitions and see if the correct answer follows.
-\end{explanation}
-
 \begin{statement}{stm:112excalc}
+Since $f$ is a factor of $g$,
 $$
-f(\pi(y)) \;=\; \pi\bigl(g(y)\bigr) \;=\; \pi(y).
+f^n(\pi(y)) = \pi(g^n(y)) = \pi(y).
 $$
 \end{statement}
 
 \begin{statement}{stm:112excalc-conclusion}
-So, (\ref{stm:112exsetup}) follows from (\ref{stm:112excalc}).
+So, $\pi(y)$ is periodic.
 \end{statement}
 
 \begin{explanation}{stm:112excounterexample-intro}
@@ -56,7 +53,7 @@ A & \xrightarrow{\;\alpha\;} & A
 \end{statement}
 
 \begin{explanation}{stm:112exintuition}
-Intuitively, by taking projections, we 'forget' about the effect of $\beta$. So, we can simply choose $\beta$ such that all points in $A \times B$ are non-periodic with respect to $\beta$, while choosing $\alpha$ so that all points in $A$ are periodic with respect to $\alpha$. 
+Intuitively, by taking projections, we obtain a semiconjugacy regardless of the choice of $\beta$, and non-periodic points are invariant under taking products. So, we can choose $\beta: B \rightarrow B$ such that all points in $B$ (and hence in $A \times B$) are non-periodic, while choosing $\alpha: A \rightarrow A$ such that all points in $A$ are periodic.
 \end{explanation}
 
 \begin{explanation}{stm:112exfinal-example}
@@ -73,8 +70,4 @@ We note $0$ is still a periodic point in the example above. Let's modify it.
     
 \begin{statement}{stm:112excounterexample}
 Clearly, $\beta$ has no periodic points, so $\alpha \times \beta$ has no periodic points, but all points in $A$ are periodic with respect to $\alpha$. 
-\end{statement}
-
-\begin{statement}{}
-By (\ref{stm:112excounterexample}), (\ref{stm:112exsetup2}) follows.
 \end{statement}
